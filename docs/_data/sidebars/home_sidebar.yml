@@ -10,9 +10,9 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: core
+      title: module name here
       url: core.html
     output: web
-    title: octopus-core
+    title: octoflow
   output: web
   title: Sidebar

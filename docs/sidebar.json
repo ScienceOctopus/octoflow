@@ -1,6 +1,6 @@
 {
-  "octopus-core": {
+  "octoflow": {
     "Overview": "/",
-    "core": "core.html"
+    "module name here": "core.html"
   }
 }

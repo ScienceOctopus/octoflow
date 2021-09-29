@@ -6,8 +6,8 @@ index = {}
 
 modules = []
 
-doc_url = "https://markusstrasser.github.io/octopus-core/"
+doc_url = "https://markusstrasser.github.io/octoflow/"
 
-git_url = "https://github.com/markusstrasser/octopus-core/tree/master/"
+git_url = "https://github.com/markusstrasser/octoflow/tree/master/"
 
 def custom_doc_links(name): return None
