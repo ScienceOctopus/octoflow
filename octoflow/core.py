@@ -2,7 +2,7 @@
 
 __all__ = ['find_sentence_in_abstract', 'split_into_sentences', 'alphabets', 'prefixes', 'suffixes', 'starters',
            'acronyms', 'websites', 'get_pubmed_records', 'get_attribute_text', 'get_segment', 'sentence_has_phrase',
-           'find_sentence_in_abstract']
+           'find_sentence_in_abstract', 'replace_outof_vocab_words']
 
 # Cell
 def find_sentence_in_abstract(paragraph, cue_phrases):
@@ -119,3 +119,20 @@ def find_sentence_in_abstract(paragraph, bias=0):
     if i < 0:
         return ""
     return get(p_sents, i)
+
+# Cell
+
+def replace_outof_vocab_words(text, vocab=vocab30k, nlp=nlp, extra_vocab=extra_vocab, special_tokens=special_tokens):
+    vocab += extra_vocab
+    newtext = ""
+    for token in nlp(text):
+        t = token.text
+        if special_tokens.get(t):
+            t=special_tokens.get(t)
+        elif token.lemma_.lower() not in vocab and token.tag_ is not None:
+            t= "ii" + token.tag_.lower()
+        newtext += t + " "
+
+    return newtext
+
+replace_outof_vocab_words('Pancreaticobiliary maljunction (PBM) refers to the union of the pancreatic and biliary ducts outside of the duodenal wall.')
