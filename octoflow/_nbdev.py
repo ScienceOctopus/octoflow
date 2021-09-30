@@ -2,9 +2,20 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {}
+index = {"find_sentence_in_abstract": "00_utils.ipynb",
+         "split_into_sentences": "00_utils.ipynb",
+         "alphabets": "00_utils.ipynb",
+         "prefixes": "00_utils.ipynb",
+         "suffixes": "00_utils.ipynb",
+         "starters": "00_utils.ipynb",
+         "acronyms": "00_utils.ipynb",
+         "websites": "00_utils.ipynb",
+         "get_pubmed_records": "00_utils.ipynb",
+         "get_attribute_text": "00_utils.ipynb",
+         "get_segment": "00_utils.ipynb",
+         "sentence_has_phrase": "00_utils.ipynb"}
 
-modules = []
+modules = ["core.py"]
 
 doc_url = "https://markusstrasser.github.io/octoflow/"
 
