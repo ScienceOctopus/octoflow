@@ -45,6 +45,4 @@ https://github.com/revuel/PatternOmatic
 ### AWS and CI/CD
 
 * nbdev
-* GH actions
-* rory.bio
-* 
+* GH actions [failing builds]
