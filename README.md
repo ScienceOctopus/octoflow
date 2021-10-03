@@ -1,5 +1,5 @@
 # Octopus: eLife sprint 2021
-This repository is for participants of the eLife spring 221 to play around!
+This repository is for participants of the eLife spring 2021 to play around!
 
 
 
