@@ -122,7 +122,8 @@ def find_sentence_in_abstract(paragraph, bias=0):
 
 # Cell
 
-def replace_outof_vocab_words(text, vocab=vocab30k, nlp=nlp, extra_vocab=extra_vocab, special_tokens=special_tokens):
+
+def replace_outof_vocab_words(text, vocab, nlp=nlp, extra_vocab=extra_vocab, special_tokens=special_tokens):
     vocab += extra_vocab
     newtext = ""
     for token in nlp(text):
@@ -135,4 +136,3 @@ def replace_outof_vocab_words(text, vocab=vocab30k, nlp=nlp, extra_vocab=extra_v
 
     return newtext
 
-replace_outof_vocab_words('Pancreaticobiliary maljunction (PBM) refers to the union of the pancreatic and biliary ducts outside of the duodenal wall.')
