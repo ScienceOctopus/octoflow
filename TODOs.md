@@ -20,7 +20,7 @@
 
   DATASETs `/datasets`
 
-  * ACL2k: processed dataset from the paper [Identifying problems and solutions in scientific text](https://link.springer.com/content/pdf/10.1007/s11192-018-2718-6.pdf). Includes ~500 problem statements and 1500 non-problem statements from ACL (*computational linguistics*) papers
-  * 
+  * `problem_statements.csv`: processed dataset consisting of 3000+ labels. Rows with "PMID" entry are biomedical and human-labeled by a team member. Check "source" column. Includes ~500 problem statements and 1500 non-problem statements from ACL (*computational linguistics*) papers; source: [Identifying problems and solutions in scientific text](https://link.springer.com/content/pdf/10.1007/s11192-018-2718-6.pdf)
+
 
   
