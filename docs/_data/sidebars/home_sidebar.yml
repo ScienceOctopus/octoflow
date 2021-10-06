@@ -10,11 +10,11 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: module name here
-      url: core.html
-    - output: web,pdf
       title: Title
       url: summarization.html
+    - output: web,pdf
+      title: Finding (Problem Statement) Signal in Sentence Phrasing
+      url: text_patterns.html
     output: web
     title: octoflow
   output: web

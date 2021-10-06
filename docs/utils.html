@@ -234,6 +234,76 @@ nb_path: "00_utils.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span> <span class="k">as</span> <span class="nn">req</span>
+
+<span class="c1"># url = &quot;https://github.com/derekchuank/high-frequency-vocabulary/blob/master/30k.txt&quot;</span>
+<span class="c1"># res = req.get(url)</span>
+<span class="c1"># vocab30k = res.text.split(&quot;\t\n&quot;)</span>
+<span class="c1"># vocab30k[:5]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="replace_outof_vocab_words" class="doc_header"><code>replace_outof_vocab_words</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L141" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>replace_outof_vocab_words</code>(<strong><code>text</code></strong>, <strong><code>vocab</code></strong>, <strong><code>nlp</code></strong>=<em><code>&lt;spacy.lang.en.English object at 0x7fd7b8b6a978&gt;</code></em>, <strong><code>extra_vocab</code></strong>=<em><code>['-PRON-', '-pron-', '.', ',', ';']</code></em>, <strong><code>special_tokens</code></strong>=<em><code>{'(': '-lrb-', ')': '-rrb-'}</code></em>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">patterns</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ing$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBG&#39;</span><span class="p">),</span>               <span class="c1"># gerunds</span>
     <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.*ed$&#39;</span><span class="p">,</span> <span class="s1">&#39;VBD&#39;</span><span class="p">),</span>                <span class="c1"># simple past</span>
@@ -285,11 +355,13 @@ nb_path: "00_utils.ipynb"
     <span class="s2">&quot;RESULTS&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">get_segment</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;RESULTS&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">],</span>
     <span class="s2">&quot;CONCLUSIONS&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">get_segment</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="s2">&quot;CONCLUSIONS&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">]</span>
      <span class="p">}</span>
+
 <span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
 <span class="n">df2</span><span class="p">[</span><span class="s2">&quot;PMID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s2">&quot;PMID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">df2</span><span class="p">),</span> <span class="n">df</span><span class="p">[:</span><span class="mi">6768</span><span class="p">][</span><span class="s2">&quot;PMID&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">df2</span><span class="p">[:</span><span class="mi">6768</span><span class="p">][</span><span class="s2">&quot;PMID&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">dfx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df2</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;PMID&quot;</span><span class="p">)</span>
-<span class="n">dfx</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">dfx</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;enriched_pm_10k.csv&quot;</span><span class="p">)</span>
+
+<span class="n">dfx</span><span class="o">.</span><span class="n">head</span><span class="p">(),</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">df2</span><span class="p">),</span> <span class="n">df</span><span class="p">[:</span><span class="mi">6768</span><span class="p">][</span><span class="s2">&quot;PMID&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">df2</span><span class="p">[:</span><span class="mi">6768</span><span class="p">][</span><span class="s2">&quot;PMID&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -325,29 +397,6 @@ nb_path: "00_utils.ipynb"
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-4-43a7277e5b77&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> spacy
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">from</span> spacytextblob<span class="ansi-blue-fg">.</span>spacytextblob <span class="ansi-green-fg">import</span> SpacyTextBlob
-<span class="ansi-green-intense-fg ansi-bold">      3</span> 
-<span class="ansi-green-intense-fg ansi-bold">      4</span> nlp <span class="ansi-blue-fg">=</span> spacy<span class="ansi-blue-fg">.</span>load<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;en_core_web_sm&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> nlp<span class="ansi-blue-fg">.</span>add_pipe<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;spacytextblob&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;spacy&#39;</pre>
-</div>
-</div>
-
 </div>
 </div>
 

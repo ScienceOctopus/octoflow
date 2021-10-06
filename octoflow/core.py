@@ -2,7 +2,7 @@
 
 __all__ = ['find_sentence_in_abstract', 'split_into_sentences', 'alphabets', 'prefixes', 'suffixes', 'starters',
            'acronyms', 'websites', 'get_pubmed_records', 'get_attribute_text', 'get_segment', 'sentence_has_phrase',
-           'find_sentence_in_abstract', 'replace_outof_vocab_words']
+           'find_sentence_in_abstract', 'replace_outof_vocab_words', 'nlp', 'extra_vocab', 'special_tokens']
 
 # Cell
 def find_sentence_in_abstract(paragraph, cue_phrases):
@@ -122,6 +122,21 @@ def find_sentence_in_abstract(paragraph, bias=0):
 
 # Cell
 
+import spacy
+import en_core_web_md
+with open("vocab30k.txt") as f:
+    vocab30k = f.read().split("\t\n")
+
+nlp = en_core_web_md.load()
+
+extra_vocab = [
+               "-PRON-", "-pron-", ".", ",", ";"  #lemmatizer inconsitency
+]
+
+special_tokens = {
+    "(": "-lrb-",
+    ")": "-rrb-"
+}
 
 def replace_outof_vocab_words(text, vocab, nlp=nlp, extra_vocab=extra_vocab, special_tokens=special_tokens):
     vocab += extra_vocab

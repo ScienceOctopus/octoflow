@@ -1,7 +1,7 @@
 {
   "octoflow": {
     "Overview": "/",
-    "module name here": "core.html",
-    "Title": "summarization.html"
+    "Title": "summarization.html",
+    "Finding (Problem Statement) Signal in Sentence Phrasing": "text_patterns.html"
   }
 }
