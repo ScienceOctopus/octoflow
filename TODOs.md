@@ -24,11 +24,8 @@
 
   * **Bespoke App** for open source contributors to label data and **create Regex-like pattern matching** through an easy to learn syntax eliminating/supporting software dev / modeling
 
-    * 
 
-  * 
-
-    
+  * **Advanced: Automatic Pattern discovery** : Given, examples of text, find the underlying common patterns of subsets of them. This probably involves evolutionary algorithms, a good comp. linguistics knowledge and will warrant a stand-alone library. [Example: PatternOmatic](https://github.com/revuel/PatternOmatic/blob/develop/PatternOmatic/nlp/bnf.py)(doesn't really work)
 
   DATASETs `/datasets`
 
