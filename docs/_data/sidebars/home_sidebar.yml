@@ -16,6 +16,9 @@ entries:
       title: Finding (Problem Statement) Signal in Sentence Phrasing
       url: text_patterns.html
     - output: web,pdf
+      title: Pattern Sanity Check on CORE Abstracts
+      url: pattern_CORE.html
+    - output: web,pdf
       title: Integrate Labeled Dataset
       url: integrate_spreadsheet.html
     output: web

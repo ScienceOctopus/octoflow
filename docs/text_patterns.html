@@ -58,7 +58,7 @@ nb_path: "02_text_patterns.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="take_while" class="doc_header"><code>take_while</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L159" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>take_while</code>(<strong><code>fn</code></strong>, <strong><code>coll</code></strong>)</p>
+<h4 id="take_while" class="doc_header"><code>take_while</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L146" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>take_while</code>(<strong><code>fn</code></strong>, <strong><code>coll</code></strong>)</p>
 </blockquote>
 <p>Yield values from coll until fn is False</p>
 
@@ -83,7 +83,7 @@ nb_path: "02_text_patterns.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="partition" class="doc_header"><code>partition</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L167" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>partition</code>(<strong><code>n</code></strong>, <strong><code>coll</code></strong>, <strong><code>step</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="partition" class="doc_header"><code>partition</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L154" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>partition</code>(<strong><code>n</code></strong>, <strong><code>coll</code></strong>, <strong><code>step</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -107,7 +107,7 @@ nb_path: "02_text_patterns.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="partition_all" class="doc_header"><code>partition_all</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L171" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>partition_all</code>(<strong><code>n</code></strong>, <strong><code>coll</code></strong>, <strong><code>step</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="partition_all" class="doc_header"><code>partition_all</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L158" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>partition_all</code>(<strong><code>n</code></strong>, <strong><code>coll</code></strong>, <strong><code>step</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -131,7 +131,7 @@ nb_path: "02_text_patterns.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="n_grams" class="doc_header"><code>n_grams</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L174" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>n_grams</code>(<strong><code>texts</code></strong>, <strong><code>n_gram</code></strong>=<em><code>2</code></em>)</p>
+<h4 id="n_grams" class="doc_header"><code>n_grams</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L161" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>n_grams</code>(<strong><code>texts</code></strong>, <strong><code>n_gram</code></strong>=<em><code>2</code></em>)</p>
 </blockquote>
 
 </div>
@@ -162,7 +162,7 @@ nb_path: "02_text_patterns.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="lemmatize" class="doc_header"><code>lemmatize</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L181" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>lemmatize</code>(<strong><code>text</code></strong>, <strong><code>nlp</code></strong>=<em><code>&lt;spacy.lang.en.English object at 0x7f1bcb1c3908&gt;</code></em>)</p>
+<h4 id="lemmatize" class="doc_header"><code>lemmatize</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L168" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>lemmatize</code>(<strong><code>text</code></strong>, <strong><code>nlp</code></strong>=<em><code>&lt;spacy.lang.en.English object at 0x7f291dbeac88&gt;</code></em>)</p>
 </blockquote>
 
 </div>
@@ -274,12 +274,12 @@ nb_path: "02_text_patterns.ipynb"
     <tr style="text-align: right;">
       <th></th>
       <th>Unnamed: 0</th>
-      <th>PMID</th>
-      <th>source</th>
       <th>Title</th>
+      <th>PMID</th>
       <th>text</th>
-      <th>labels</th>
       <th>DOI</th>
+      <th>labels</th>
+      <th>source</th>
       <th>lemmatized</th>
     </tr>
   </thead>
@@ -288,33 +288,33 @@ nb_path: "02_text_patterns.ipynb"
       <th>0</th>
       <td>0</td>
       <td>NaN</td>
-      <td>acl_cambridge</td>
       <td>NaN</td>
       <td>the difficulty with this task lie in the fact ...</td>
-      <td>1</td>
       <td>NaN</td>
+      <td>1</td>
+      <td>acl_cambridge</td>
       <td>the difficulty with this task lie in the fact ...</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1</td>
       <td>NaN</td>
-      <td>acl_cambridge</td>
       <td>NaN</td>
       <td>the problem with rich annotation be that they ...</td>
-      <td>1</td>
       <td>NaN</td>
+      <td>1</td>
+      <td>acl_cambridge</td>
       <td>the problem with rich annotation be that they ...</td>
     </tr>
     <tr>
       <th>2</th>
       <td>2</td>
       <td>NaN</td>
-      <td>acl_cambridge</td>
       <td>NaN</td>
       <td>as a consequence , when adapt exist method and...</td>
-      <td>1</td>
       <td>NaN</td>
+      <td>1</td>
+      <td>acl_cambridge</td>
       <td>as a consequence , when adapt exist method and...</td>
     </tr>
   </tbody>
@@ -451,50 +451,57 @@ nb_path: "02_text_patterns.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;the fact that&#39;, (12, 21)),
+<pre>[(&#39;the fact that&#39;, (13, 21)),
  (&#39;be use for&#39;, (3, 24)),
  (&#39;et al .&#39;, (9, 79)),
  (&#39;al . ,&#39;, (9, 66)),
  (&#39;that they be&#39;, (12, 12)),
- (&#39;one of the&#39;, (23, 34)),
+ (&#39;one of the&#39;, (37, 46)),
  (&#39;be that the&#39;, (66, 9)),
+ (&#39;, there be&#39;, (5, 16)),
+ (&#39;large number of&#39;, (6, 15)),
  (&#39;be that it&#39;, (52, 3)),
- (&#39;- of -&#39;, (6, 23)),
- (&#39;the quality of&#39;, (7, 15)),
+ (&#39;- of -&#39;, (6, 25)),
+ (&#39;the quality of&#39;, (7, 17)),
+ (&#39;, such as&#39;, (6, 16)),
  (&#39;that it be&#39;, (12, 18)),
  (&#39;it be not&#39;, (5, 18)),
  (&#39;n - gram&#39;, (8, 27)),
  (&#39;in the training&#39;, (6, 18)),
  (&#39;the training datum&#39;, (6, 30)),
- (&#39;have not be&#39;, (5, 23)),
+ (&#39;have not be&#39;, (5, 24)),
  (&#39;it do not&#39;, (10, 24)),
  (&#39;to the same&#39;, (4, 18)),
- (&#39;in term of&#39;, (6, 18)),
- (&#39;the use of&#39;, (5, 25)),
- (&#39;, which be&#39;, (8, 22)),
+ (&#39;in term of&#39;, (6, 19)),
+ (&#39;the use of&#39;, (5, 29)),
+ (&#39;, which be&#39;, (10, 23)),
+ (&#39;, it be&#39;, (6, 16)),
  (&#39;be able to&#39;, (6, 18)),
- (&#39;as well as&#39;, (5, 21)),
+ (&#39;as well as&#39;, (6, 21)),
  (&#39;they do not&#39;, (7, 15)),
- (&#39;the most common&#39;, (18, 13)),
+ (&#39;the most common&#39;, (29, 15)),
  (&#39;take into account&#39;, (5, 18)),
- (&#39;can not be&#39;, (5, 19)),
+ (&#39;can not be&#39;, (5, 20)),
  (&#39;can be use&#39;, (3, 27)),
  (&#39;we do not&#39;, (3, 18)),
- (&#39;the number of&#39;, (9, 39)),
- (&#39;in order to&#39;, (3, 18)),
+ (&#39;, and the&#39;, (6, 15)),
+ (&#39;the number of&#39;, (9, 42)),
+ (&#39;in order to&#39;, (4, 18)),
+ (&#39;depend on the&#39;, (3, 18)),
  (&#39;be use to&#39;, (3, 25)),
  (&#39;the treatment of&#39;, (2, 19)),
  (&#39;- to -&#39;, (3, 24)),
- (&#39;the effect of&#39;, (2, 28)),
- (&#39;there be a&#39;, (4, 27)),
+ (&#39;the effect of&#39;, (2, 33)),
+ (&#39;there be a&#39;, (5, 28)),
  (&#39;a set of&#39;, (1, 21)),
- (&#39;base on the&#39;, (1, 29)),
- (&#39;) be a&#39;, (23, 19)),
- (&#39;be one of&#39;, (15, 16)),
- (&#39;of the most&#39;, (17, 8)),
- (&#39;be a common&#39;, (23, 10)),
- (&#39;be the most&#39;, (14, 17)),
- (&#39;in patient with&#39;, (2, 23)),
+ (&#39;base on the&#39;, (1, 30)),
+ (&#39;) be a&#39;, (45, 25)),
+ (&#39;be a rare&#39;, (20, 7)),
+ (&#39;be one of&#39;, (24, 27)),
+ (&#39;of the most&#39;, (28, 10)),
+ (&#39;be a common&#39;, (28, 14)),
+ (&#39;be the most&#39;, (22, 21)),
+ (&#39;in patient with&#39;, (8, 23)),
  (&#39;) have be&#39;, (1, 20))]</pre>
 </div>
 
@@ -528,31 +535,38 @@ nb_path: "02_text_patterns.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;in the&#39;, (81, 331)),
- (&#39;, and&#39;, (47, 221)),
- (&#39;be that&#39;, (279, 12)),
- (&#39;of the&#39;, (154, 519)),
- (&#39;as a&#39;, (16, 96)),
+<pre>[(&#39;in the&#39;, (99, 360)),
+ (&#39;, and&#39;, (63, 246)),
+ (&#39;be that&#39;, (280, 12)),
+ (&#39;of the&#39;, (182, 576)),
+ (&#39;as a&#39;, (19, 106)),
+ (&#39;with the&#39;, (28, 74)),
  (&#39;be use&#39;, (13, 106)),
- (&#39;be the&#39;, (87, 70)),
- (&#39;be not&#39;, (37, 159)),
- (&#39;do not&#39;, (45, 144)),
- (&#39;, the&#39;, (44, 126)),
- (&#39;, which&#39;, (36, 93)),
- (&#39;can be&#39;, (18, 96)),
- (&#39;number of&#39;, (20, 108)),
- (&#39;that the&#39;, (82, 75)),
- (&#39;there be&#39;, (19, 85)),
- (&#39;to be&#39;, (28, 120)),
- (&#39;to the&#39;, (48, 229)),
- (&#39;be a&#39;, (104, 181)),
- (&#39;) be&#39;, (64, 88)),
- (&#39;it be&#39;, (28, 106)),
- (&#39;on the&#39;, (24, 143)),
- (&#39;of a&#39;, (14, 103)),
- (&#39;the same&#39;, (19, 98)),
- (&#39;have be&#39;, (26, 133)),
- (&#39;for the&#39;, (19, 102)),
+ (&#39;be the&#39;, (97, 84)),
+ (&#39;be not&#39;, (42, 162)),
+ (&#39;do not&#39;, (46, 145)),
+ (&#39;, the&#39;, (46, 137)),
+ (&#39;, which&#39;, (43, 99)),
+ (&#39;of this&#39;, (35, 70)),
+ (&#39;can be&#39;, (20, 100)),
+ (&#39;number of&#39;, (24, 114)),
+ (&#39;that the&#39;, (82, 82)),
+ (&#39;there be&#39;, (24, 95)),
+ (&#39;be an&#39;, (25, 79)),
+ (&#39;to be&#39;, (35, 122)),
+ (&#39;to the&#39;, (53, 239)),
+ (&#39;by the&#39;, (16, 86)),
+ (&#39;be a&#39;, (165, 222)),
+ (&#39;) be&#39;, (107, 111)),
+ (&#39;, but&#39;, (35, 72)),
+ (&#39;the most&#39;, (62, 56)),
+ (&#39;it be&#39;, (32, 109)),
+ (&#39;on the&#39;, (25, 151)),
+ (&#39;and the&#39;, (24, 82)),
+ (&#39;of a&#39;, (14, 111)),
+ (&#39;the same&#39;, (19, 100)),
+ (&#39;have be&#39;, (29, 143)),
+ (&#39;for the&#39;, (21, 115)),
  (&#39;, we&#39;, (6, 122))]</pre>
 </div>
 
@@ -595,12 +609,12 @@ nb_path: "02_text_patterns.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>([(&#39;be that&#39;, (279, 12)),
-  (&#39;problem of&#39;, (57, 1)),
-  (&#39;problem be&#39;, (22, 1)),
-  (&#39;limitation of&#39;, (48, 1)),
+<pre>([(&#39;the problem&#39;, (57, 1)),
+  (&#39;be that&#39;, (280, 12)),
+  (&#39;problem of&#39;, (58, 1)),
+  (&#39;limitation of&#39;, (48, 2)),
   (&#39;shortcoming of&#39;, (24, 1))],
- [(&#39;be that it&#39;, (52, 3)), (&#39;lead cause of&#39;, (9, 1))])</pre>
+ [(&#39;be that it&#39;, (52, 3))])</pre>
 </div>
 
 </div>
@@ -625,7 +639,7 @@ nb_path: "02_text_patterns.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">negatives</span><span class="p">[</span><span class="n">negatives</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;problem of&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()[</span><span class="s2">&quot;text&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">negatives</span><span class="p">[</span><span class="n">negatives</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;limitation of&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()[</span><span class="s2">&quot;text&quot;</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -640,7 +654,7 @@ nb_path: "02_text_patterns.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;peripheral neuropathy be the most common problem of diabetes .&#39;</pre>
+<pre>&#39;the translucency and opacity of ceramic play a significant role in emulate the natural color of tooth , but study of the masking property and limitation of dental ceramic when use as monolayer restoration be lack&#39;</pre>
 </div>
 
 </div>
@@ -666,7 +680,9 @@ In that case I'd feel OK with using "problem of" as a hard-coded pattern-matchin
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">bi_grams_pos_only</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bgs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">bi_grams_pos_only</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">tgs</span> <span class="o">=</span> <span class="p">[(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tri_grams_pos_only</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">bgs</span><span class="p">,</span> <span class="n">tgs</span>
 </pre></div>
 
     </div>
@@ -681,28 +697,68 @@ In that case I'd feel OK with using "problem of" as a hard-coded pattern-matchin
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;with this&#39;, 11),
- (&#39;the problem&#39;, 57),
- (&#39;problem with&#39;, 20),
- (&#39;main drawback&#39;, 16),
- (&#39;drawback of&#39;, 57),
- (&#39;limitation be&#39;, 41),
- (&#39;the disadvantage&#39;, 15),
- (&#39;disadvantage of&#39;, 16),
- (&#39;method be&#39;, 14),
- (&#39;shortcoming be&#39;, 18),
- (&#39;disadvantage be&#39;, 12),
- (&#39;a serious&#39;, 13),
- (&#39;issue of&#39;, 14),
- (&#39;one drawback&#39;, 11),
- (&#39;main limitation&#39;, 11),
- (&#39;major drawback&#39;, 13),
- (&#39;drawback be&#39;, 67),
- (&#39;another limitation&#39;, 14),
- (&#39;a drawback&#39;, 17),
- (&#39;the drawback&#39;, 38),
- (&#39;of use&#39;, 14),
- (&#39;the major&#39;, 14)]</pre>
+<pre>([(&#39;with this&#39;, 11),
+  (&#39;problem with&#39;, 20),
+  (&#39;main drawback&#39;, 16),
+  (&#39;drawback of&#39;, 57),
+  (&#39;limitation be&#39;, 41),
+  (&#39;the disadvantage&#39;, 15),
+  (&#39;disadvantage of&#39;, 16),
+  (&#39;method be&#39;, 14),
+  (&#39;shortcoming be&#39;, 18),
+  (&#39;disadvantage be&#39;, 12),
+  (&#39;a serious&#39;, 16),
+  (&#39;issue of&#39;, 14),
+  (&#39;one drawback&#39;, 11),
+  (&#39;main limitation&#39;, 11),
+  (&#39;major drawback&#39;, 13),
+  (&#39;drawback be&#39;, 67),
+  (&#39;another limitation&#39;, 14),
+  (&#39;a drawback&#39;, 17),
+  (&#39;the drawback&#39;, 38),
+  (&#39;of use&#39;, 14)],
+ [(&#39;lie in the&#39;, 7),
+  (&#39;be that they&#39;, 32),
+  (&#39;the problem of&#39;, 44),
+  (&#39;approach be the&#39;, 9),
+  (&#39;be the fact&#39;, 7),
+  (&#39;the main drawback&#39;, 12),
+  (&#39;limitation be that&#39;, 32),
+  (&#39;the disadvantage of&#39;, 7),
+  (&#39;, the problem&#39;, 8),
+  (&#39;the problem be&#39;, 8),
+  (&#39;problem of the&#39;, 7),
+  (&#39;method be that&#39;, 10),
+  (&#39;limitation be the&#39;, 7),
+  (&#39;disadvantage be that&#39;, 10),
+  (&#39;be that there&#39;, 9),
+  (&#39;the issue of&#39;, 10),
+  (&#39;drawback of this&#39;, 7),
+  (&#39;the main limitation&#39;, 11),
+  (&#39;main limitation of&#39;, 9),
+  (&#39;approach be that&#39;, 19),
+  (&#39;major drawback of&#39;, 7),
+  (&#39;drawback be that&#39;, 57),
+  (&#39;drawback be the&#39;, 7),
+  (&#39;of this approach&#39;, 8),
+  (&#39;this approach be&#39;, 9),
+  (&#39;main drawback be&#39;, 8),
+  (&#39;limitation of the&#39;, 17),
+  (&#39;the drawback of&#39;, 20),
+  (&#39;the drawback be&#39;, 16),
+  (&#39;shortcoming be that&#39;, 12),
+  (&#39;that it do&#39;, 7),
+  (&#39;be that we&#39;, 10),
+  (&#39;be that a&#39;, 9),
+  (&#39;have the drawback&#39;, 9),
+  (&#39;another limitation be&#39;, 8),
+  (&#39;a drawback of&#39;, 8),
+  (&#39;drawback of the&#39;, 8),
+  (&#39;problem with this&#39;, 7),
+  (&#39;model be that&#39;, 7),
+  (&#39;problem be that&#39;, 14),
+  (&#39;a drawback be&#39;, 7),
+  (&#39;be a serious&#39;, 10)])</pre>
 </div>
 
 </div>
@@ -720,100 +776,11 @@ In that case I'd feel OK with using "problem of" as a hard-coded pattern-matchin
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">[(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">Counter</span><span class="p">(</span><span class="n">tri_grams_pos_only</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">v</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;ngrams_pos_only_lemmatized.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">bgs</span><span class="o">+</span><span class="n">tgs</span><span class="p">]))</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[(&#39;lie in the&#39;, 7),
- (&#39;be that they&#39;, 31),
- (&#39;the problem of&#39;, 44),
- (&#39;approach be the&#39;, 9),
- (&#39;be the fact&#39;, 7),
- (&#39;the main drawback&#39;, 12),
- (&#39;limitation be that&#39;, 32),
- (&#39;the disadvantage of&#39;, 7),
- (&#39;, the problem&#39;, 8),
- (&#39;the problem be&#39;, 8),
- (&#39;problem of the&#39;, 7),
- (&#39;method be that&#39;, 10),
- (&#39;limitation be the&#39;, 7),
- (&#39;disadvantage be that&#39;, 10),
- (&#39;be that there&#39;, 9),
- (&#39;the issue of&#39;, 10),
- (&#39;drawback of this&#39;, 7),
- (&#39;the main limitation&#39;, 11),
- (&#39;main limitation of&#39;, 9),
- (&#39;approach be that&#39;, 19),
- (&#39;major drawback of&#39;, 7),
- (&#39;drawback be that&#39;, 57),
- (&#39;drawback be the&#39;, 7),
- (&#39;of this approach&#39;, 8),
- (&#39;this approach be&#39;, 9),
- (&#39;main drawback be&#39;, 8),
- (&#39;limitation of the&#39;, 17),
- (&#39;the drawback of&#39;, 20),
- (&#39;the drawback be&#39;, 16),
- (&#39;shortcoming be that&#39;, 12),
- (&#39;that it do&#39;, 7),
- (&#39;be that we&#39;, 10),
- (&#39;be that a&#39;, 9),
- (&#39;have the drawback&#39;, 9),
- (&#39;another limitation be&#39;, 8),
- (&#39;a drawback of&#39;, 8),
- (&#39;drawback of the&#39;, 8),
- (&#39;problem with this&#39;, 7),
- (&#39;model be that&#39;, 7),
- (&#39;problem be that&#39;, 14),
- (&#39;a drawback be&#39;, 7),
- (&#39;be a serious&#39;, 7)]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;hi you&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;hi you&quot;</span><span class="p">,</span> <span class="s2">&quot;hey&quot;</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -831,6 +798,22 @@ In that case I'd feel OK with using "problem of" as a hard-coded pattern-matchin
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -936,6 +919,40 @@ In that case I'd feel OK with using "problem of" as a hard-coded pattern-matchin
 Name: text, dtype: object</pre>
 </div>
 
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>128M	downloads/data.json
+108M	downloads/sample_4k.json
+28M	downloads/sample_1k.json
+132K	downloads/oct7_test300.csv
+</pre>
+</div>
 </div>
 
 </div>

@@ -2,8 +2,7 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"find_sentence_in_abstract": "00_utils.ipynb",
-         "split_into_sentences": "00_utils.ipynb",
+index = {"split_into_sentences": "00_utils.ipynb",
          "alphabets": "00_utils.ipynb",
          "prefixes": "00_utils.ipynb",
          "suffixes": "00_utils.ipynb",
@@ -14,6 +13,7 @@ index = {"find_sentence_in_abstract": "00_utils.ipynb",
          "get_attribute_text": "00_utils.ipynb",
          "get_segment": "00_utils.ipynb",
          "sentence_has_phrase": "00_utils.ipynb",
+         "find_sentence_in_abstract": "00_utils.ipynb",
          "replace_outof_vocab_words": "00_utils.ipynb",
          "nlp": "02_text_patterns.ipynb",
          "extra_vocab": "00_utils.ipynb",

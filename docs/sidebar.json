@@ -3,6 +3,7 @@
     "Overview": "/",
     "Title": "summarization.html",
     "Finding (Problem Statement) Signal in Sentence Phrasing": "text_patterns.html",
+    "Pattern Sanity Check on CORE Abstracts": "pattern_CORE.html",
     "Integrate Labeled Dataset": "integrate_spreadsheet.html"
   }
 }
