@@ -32,6 +32,237 @@ nb_path: "00_utils.ipynb"
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>sh setup.sh
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already satisfied: nbdev in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (1.1.22)
+Requirement already satisfied: nbconvert&lt;6 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (5.6.1)
+Requirement already satisfied: fastcore&gt;=1.3.21 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (1.3.26)
+Requirement already satisfied: ghapi in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (0.1.19)
+Requirement already satisfied: jupyter in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (1.0.0)
+Requirement already satisfied: fastrelease in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (0.1.12)
+Requirement already satisfied: packaging in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (21.0)
+Requirement already satisfied: pyyaml in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (5.4.1)
+Requirement already satisfied: pip in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (21.2.4)
+Requirement already satisfied: nbformat&gt;=4.4.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (5.1.3)
+Requirement already satisfied: ipykernel in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (5.5.5)
+Requirement already satisfied: jupyter-client&lt;7.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbdev) (6.1.12)
+Requirement already satisfied: pyzmq&gt;=13 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (22.3.0)
+Requirement already satisfied: tornado&gt;=4.1 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (6.1)
+Requirement already satisfied: traitlets in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (4.3.3)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (2.8.2)
+Requirement already satisfied: jupyter-core&gt;=4.6.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (4.8.1)
+Requirement already satisfied: defusedxml in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (0.7.1)
+Requirement already satisfied: bleach in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (4.1.0)
+Requirement already satisfied: pygments in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (2.10.0)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (0.3)
+Requirement already satisfied: jinja2&gt;=2.4 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (3.0.1)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (0.8.4)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (1.5.0)
+Requirement already satisfied: testpath in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (0.5.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jinja2&gt;=2.4-&gt;nbconvert&lt;6-&gt;nbdev) (2.0.1)
+Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbformat&gt;=4.4.0-&gt;nbdev) (3.2.0)
+Requirement already satisfied: ipython-genutils in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from nbformat&gt;=4.4.0-&gt;nbdev) (0.2.0)
+Requirement already satisfied: importlib-metadata in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (4.8.1)
+Requirement already satisfied: setuptools in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (58.0.4)
+Requirement already satisfied: attrs&gt;=17.4.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (21.2.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (0.17.3)
+Requirement already satisfied: six&gt;=1.11.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (1.16.0)
+Requirement already satisfied: decorator in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from traitlets-&gt;jupyter-client&lt;7.0-&gt;nbdev) (5.1.0)
+Requirement already satisfied: webencodings in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from bleach-&gt;nbconvert&lt;6-&gt;nbdev) (0.5.1)
+Requirement already satisfied: typing-extensions&gt;=3.6.4 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from importlib-metadata-&gt;jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (3.10.0.2)
+Requirement already satisfied: zipp&gt;=0.5 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from importlib-metadata-&gt;jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (3.5.0)
+Requirement already satisfied: ipython&gt;=5.0.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from ipykernel-&gt;nbdev) (5.8.0)
+Requirement already satisfied: prompt-toolkit&lt;2.0.0,&gt;=1.0.4 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (1.0.15)
+Requirement already satisfied: simplegeneric&gt;0.8 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (0.8.1)
+Requirement already satisfied: pickleshare in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (0.7.5)
+Requirement already satisfied: pexpect in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (4.8.0)
+Requirement already satisfied: wcwidth in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from prompt-toolkit&lt;2.0.0,&gt;=1.0.4-&gt;ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (0.2.5)
+Requirement already satisfied: qtconsole in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jupyter-&gt;nbdev) (5.1.1)
+Requirement already satisfied: ipywidgets in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jupyter-&gt;nbdev) (7.6.5)
+Requirement already satisfied: notebook in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jupyter-&gt;nbdev) (5.7.11)
+Requirement already satisfied: jupyter-console in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jupyter-&gt;nbdev) (5.2.0)
+Requirement already satisfied: widgetsnbextension~=3.5.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from ipywidgets-&gt;jupyter-&gt;nbdev) (3.5.1)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from ipywidgets-&gt;jupyter-&gt;nbdev) (1.0.2)
+Requirement already satisfied: prometheus-client in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from notebook-&gt;jupyter-&gt;nbdev) (0.11.0)
+Requirement already satisfied: terminado&gt;=0.8.1 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from notebook-&gt;jupyter-&gt;nbdev) (0.12.1)
+Requirement already satisfied: Send2Trash in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from notebook-&gt;jupyter-&gt;nbdev) (1.8.0)
+Requirement already satisfied: ptyprocess in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from terminado&gt;=0.8.1-&gt;notebook-&gt;jupyter-&gt;nbdev) (0.7.0)
+Requirement already satisfied: pyparsing&gt;=2.0.2 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from packaging-&gt;nbdev) (2.4.7)
+Requirement already satisfied: qtpy in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from qtconsole-&gt;jupyter-&gt;nbdev) (1.11.1)
+Collecting fastai
+  Using cached fastai-2.5.2-py3-none-any.whl (186 kB)
+Collecting spacy
+  Using cached spacy-3.1.3-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.9 MB)
+Requirement already satisfied: pydash in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from -r requirements.txt (line 3)) (5.1.0)
+Requirement already satisfied: pandas in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from -r requirements.txt (line 4)) (0.22.0)
+Requirement already satisfied: biopython in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from -r requirements.txt (line 5)) (1.79)
+Collecting spacytextblob
+  Using cached spacytextblob-3.0.1-py3-none-any.whl (4.1 kB)
+Collecting torch&lt;1.10,&gt;=1.7.0
+  Downloading torch-1.9.1-cp36-cp36m-manylinux1_x86_64.whl (831.4 MB)
+     |████████████████████████████    | 728.6 MB 79.5 MB/s eta 0:00:02</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub_data_rate_limit`.
+
+Current values:
+NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+NotebookApp.rate_limit_window=3.0 (secs)
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |████████████████████████████████| 831.4 MB 11 kB/s s eta 0:00:01
+Requirement already satisfied: pip in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (21.2.4)
+Collecting matplotlib
+  Downloading matplotlib-3.3.4-cp36-cp36m-manylinux1_x86_64.whl (11.5 MB)
+     |████████████████████████████████| 11.5 MB 51.6 MB/s eta 0:00:01
+Collecting pillow&gt;6.0.0
+  Downloading Pillow-8.3.2-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
+     |████████████████████████████████| 3.0 MB 54.8 MB/s eta 0:00:01
+Collecting fastprogress&gt;=0.2.4
+  Downloading fastprogress-1.0.0-py3-none-any.whl (12 kB)
+Collecting torchvision&gt;=0.8.2
+  Downloading torchvision-0.10.1-cp36-cp36m-manylinux1_x86_64.whl (22.1 MB)
+     |████████████████████████████████| 22.1 MB 47.6 MB/s eta 0:00:01
+Collecting scikit-learn
+  Downloading scikit_learn-0.24.2-cp36-cp36m-manylinux2010_x86_64.whl (22.2 MB)
+     |████████████████████████████████| 22.2 MB 59.4 MB/s eta 0:00:01
+Collecting scipy
+  Downloading scipy-1.5.4-cp36-cp36m-manylinux1_x86_64.whl (25.9 MB)
+     |████████████████████████████████| 25.9 MB 52.0 MB/s eta 0:00:01
+Requirement already satisfied: fastcore&lt;1.4,&gt;=1.3.8 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (1.3.26)
+Requirement already satisfied: pyyaml in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (5.4.1)
+Requirement already satisfied: requests in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (2.26.0)
+Collecting fastdownload&lt;2,&gt;=0.0.5
+  Downloading fastdownload-0.0.5-py3-none-any.whl (13 kB)
+Requirement already satisfied: packaging in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (21.0)
+Collecting wasabi&lt;1.1.0,&gt;=0.8.1
+  Downloading wasabi-0.8.2-py3-none-any.whl (23 kB)
+Collecting spacy-legacy&lt;3.1.0,&gt;=3.0.8
+  Downloading spacy_legacy-3.0.8-py2.py3-none-any.whl (14 kB)
+Collecting preshed&lt;3.1.0,&gt;=3.0.2
+  Downloading preshed-3.0.5-cp36-cp36m-manylinux2014_x86_64.whl (126 kB)
+     |████████████████████████████████| 126 kB 64.1 MB/s eta 0:00:01
+Collecting murmurhash&lt;1.1.0,&gt;=0.28.0
+  Downloading murmurhash-1.0.5-cp36-cp36m-manylinux2014_x86_64.whl (20 kB)
+Collecting blis&lt;0.8.0,&gt;=0.4.0
+  Downloading blis-0.7.4-cp36-cp36m-manylinux2014_x86_64.whl (9.8 MB)
+     |████████████████████████████████| 9.8 MB 53.7 MB/s eta 0:00:01
+Collecting pydantic!=1.8,!=1.8.1,&lt;1.9.0,&gt;=1.7.4
+  Downloading pydantic-1.8.2-cp36-cp36m-manylinux2014_x86_64.whl (10.2 MB)
+     |████████████████████████████████| 10.2 MB 50.8 MB/s eta 0:00:01
+Requirement already satisfied: setuptools in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 2)) (58.0.4)
+Collecting catalogue&lt;2.1.0,&gt;=2.0.6
+  Downloading catalogue-2.0.6-py3-none-any.whl (17 kB)
+Requirement already satisfied: typing-extensions&lt;4.0.0.0,&gt;=3.7.4 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 2)) (3.10.0.2)
+Collecting cymem&lt;2.1.0,&gt;=2.0.2
+  Downloading cymem-2.0.5-cp36-cp36m-manylinux2014_x86_64.whl (35 kB)
+Collecting srsly&lt;3.0.0,&gt;=2.4.1
+  Downloading srsly-2.4.1-cp36-cp36m-manylinux2014_x86_64.whl (456 kB)
+     |████████████████████████████████| 456 kB 69.1 MB/s eta 0:00:01
+Collecting pathy&gt;=0.3.5
+  Downloading pathy-0.6.0-py3-none-any.whl (42 kB)
+     |████████████████████████████████| 42 kB 2.1 MB/s  eta 0:00:01
+Collecting typer&lt;0.5.0,&gt;=0.3.0
+  Downloading typer-0.4.0-py3-none-any.whl (27 kB)
+Requirement already satisfied: jinja2 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 2)) (3.0.1)
+Requirement already satisfied: numpy&gt;=1.15.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 2)) (1.19.5)
+Collecting tqdm&lt;5.0.0,&gt;=4.38.0
+  Downloading tqdm-4.62.3-py2.py3-none-any.whl (76 kB)
+     |████████████████████████████████| 76 kB 8.0 MB/s  eta 0:00:01
+Collecting thinc&lt;8.1.0,&gt;=8.0.9
+  Downloading thinc-8.0.10-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (625 kB)
+     |████████████████████████████████| 625 kB 48.5 MB/s eta 0:00:01
+Requirement already satisfied: pytz&gt;=2011k in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from pandas-&gt;-r requirements.txt (line 4)) (2021.1)
+Requirement already satisfied: python-dateutil&gt;=2 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from pandas-&gt;-r requirements.txt (line 4)) (2.8.2)
+Collecting textblob&lt;0.16.0,&gt;=0.15.3
+  Downloading textblob-0.15.3-py2.py3-none-any.whl (636 kB)
+     |████████████████████████████████| 636 kB 49.2 MB/s eta 0:00:01
+Requirement already satisfied: zipp&gt;=0.5 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from catalogue&lt;2.1.0,&gt;=2.0.6-&gt;spacy-&gt;-r requirements.txt (line 2)) (3.5.0)
+Requirement already satisfied: pyparsing&gt;=2.0.2 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from packaging-&gt;fastai-&gt;-r requirements.txt (line 1)) (2.4.7)
+Collecting dataclasses&lt;1.0,&gt;=0.6
+  Downloading dataclasses-0.8-py3-none-any.whl (19 kB)
+Collecting smart-open&lt;6.0.0,&gt;=5.0.0
+  Downloading smart_open-5.2.1-py3-none-any.whl (58 kB)
+     |████████████████████████████████| 58 kB 10.2 MB/s eta 0:00:01
+Requirement already satisfied: six&gt;=1.5 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from python-dateutil&gt;=2-&gt;pandas-&gt;-r requirements.txt (line 4)) (1.16.0)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (2.0.6)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (3.1)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (2021.5.30)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (1.26.6)
+Collecting nltk&gt;=3.1
+  Downloading nltk-3.6.3-py3-none-any.whl (1.5 MB)
+     |████████████████████████████████| 1.5 MB 53.7 MB/s eta 0:00:01
+Collecting click
+  Downloading click-8.0.1-py3-none-any.whl (97 kB)
+     |████████████████████████████████| 97 kB 1.9 MB/s  eta 0:00:01
+Collecting regex
+  Downloading regex-2021.9.30-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (747 kB)
+     |████████████████████████████████| 747 kB 49.6 MB/s eta 0:00:01
+Collecting joblib
+  Downloading joblib-1.1.0-py2.py3-none-any.whl (306 kB)
+     |████████████████████████████████| 306 kB 69.2 MB/s eta 0:00:01
+Collecting contextvars&lt;3,&gt;=2.4
+  Downloading contextvars-2.4.tar.gz (9.6 kB)
+Collecting immutables&gt;=0.9
+  Downloading immutables-0.16-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.whl (103 kB)
+     |████████████████████████████████| 103 kB 66.5 MB/s eta 0:00:01
+Requirement already satisfied: importlib-metadata in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from click-&gt;nltk&gt;=3.1-&gt;textblob&lt;0.16.0,&gt;=0.15.3-&gt;spacytextblob-&gt;-r requirements.txt (line 6)) (4.8.1)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages (from jinja2-&gt;spacy-&gt;-r requirements.txt (line 2)) (2.0.1)
+Collecting cycler&gt;=0.10
+  Downloading cycler-0.10.0-py2.py3-none-any.whl (6.5 kB)
+Collecting kiwisolver&gt;=1.0.1
+  Downloading kiwisolver-1.3.1-cp36-cp36m-manylinux1_x86_64.whl (1.1 MB)
+     |████████████████████████████████| 1.1 MB 38.6 MB/s eta 0:00:01
+Collecting threadpoolctl&gt;=2.0.0
+  Downloading threadpoolctl-3.0.0-py3-none-any.whl (14 kB)
+Building wheels for collected packages: contextvars
+  Building wheel for contextvars (setup.py) ... done
+  Created wheel for contextvars: filename=contextvars-2.4-py3-none-any.whl size=7680 sha256=d1dc02b0061388abae0a369c94c27e5f2cc8bbb9680044b3a8abdbb867ec296b
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/41/11/53/911724983aa48deb94792432e14e518447212dd6c5477d49d3
+Successfully built contextvars
+Installing collected packages: murmurhash, immutables, dataclasses, cymem, click, catalogue, wasabi, typer, tqdm, srsly, smart-open, regex, pydantic, preshed, joblib, contextvars, blis, torch, threadpoolctl, thinc, spacy-legacy, scipy, pillow, pathy, nltk, kiwisolver, fastprogress, cycler, torchvision, textblob, spacy, scikit-learn, matplotlib, fastdownload, spacytextblob, fastai
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 
 <div class="output_wrapper">
 <div class="output">
@@ -40,7 +271,7 @@ nb_path: "00_utils.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="find_sentence_in_abstract" class="doc_header"><code>find_sentence_in_abstract</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L111" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_sentence_in_abstract</code>(<strong><code>paragraph</code></strong>, <strong><code>bias</code></strong>=<em><code>0</code></em>)</p>
+<h4 id="find_sentence_in_abstract" class="doc_header"><code>find_sentence_in_abstract</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L112" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_sentence_in_abstract</code>(<strong><code>paragraph</code></strong>, <strong><code>bias</code></strong>=<em><code>0</code></em>)</p>
 </blockquote>
 <p>checks paragraph for key sentences. Returns first matching hit</p>
 
@@ -72,7 +303,103 @@ nb_path: "00_utils.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="split_into_sentences" class="doc_header"><code>split_into_sentences</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L33" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>split_into_sentences</code>(<strong><code>text</code></strong>)</p>
+<h4 id="split_into_sentences" class="doc_header"><code>split_into_sentences</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L34" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>split_into_sentences</code>(<strong><code>text</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="get_pubmed_records" class="doc_header"><code>get_pubmed_records</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L65" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_pubmed_records</code>(<strong><code>pmids</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="get_attribute_text" class="doc_header"><code>get_attribute_text</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L78" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_attribute_text</code>(<strong><code>AbstractText</code></strong>, <strong><code>NlmCategory</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="get_segment" class="doc_header"><code>get_segment</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L92" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_segment</code>(<strong><code>record</code></strong>, <strong><code>segment_label</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -103,7 +430,7 @@ nb_path: "00_utils.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_pubmed_records" class="doc_header"><code>get_pubmed_records</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L64" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_pubmed_records</code>(<strong><code>pmids</code></strong>)</p>
+<h4 id="sentence_has_phrase" class="doc_header"><code>sentence_has_phrase</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L106" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sentence_has_phrase</code>(<strong><code>sentence</code></strong>, <strong><code>cue_phrases</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -127,86 +454,7 @@ nb_path: "00_utils.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_attribute_text" class="doc_header"><code>get_attribute_text</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L77" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_attribute_text</code>(<strong><code>AbstractText</code></strong>, <strong><code>NlmCategory</code></strong>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_segment" class="doc_header"><code>get_segment</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L91" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_segment</code>(<strong><code>record</code></strong>, <strong><code>segment_label</code></strong>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="sentence_has_phrase" class="doc_header"><code>sentence_has_phrase</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L105" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>sentence_has_phrase</code>(<strong><code>sentence</code></strong>, <strong><code>cue_phrases</code></strong>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="find_sentence_in_abstract" class="doc_header"><code>find_sentence_in_abstract</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L111" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_sentence_in_abstract</code>(<strong><code>paragraph</code></strong>, <strong><code>bias</code></strong>=<em><code>0</code></em>)</p>
+<h4 id="find_sentence_in_abstract" class="doc_header"><code>find_sentence_in_abstract</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L112" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>find_sentence_in_abstract</code>(<strong><code>paragraph</code></strong>, <strong><code>bias</code></strong>=<em><code>0</code></em>)</p>
 </blockquote>
 <p>checks paragraph for key sentences. Returns first matching hit</p>
 
@@ -260,7 +508,7 @@ nb_path: "00_utils.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="replace_outof_vocab_words" class="doc_header"><code>replace_outof_vocab_words</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L141" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>replace_outof_vocab_words</code>(<strong><code>text</code></strong>, <strong><code>vocab</code></strong>, <strong><code>nlp</code></strong>=<em><code>&lt;spacy.lang.en.English object at 0x7fd7b8b6a978&gt;</code></em>, <strong><code>extra_vocab</code></strong>=<em><code>['-PRON-', '-pron-', '.', ',', ';']</code></em>, <strong><code>special_tokens</code></strong>=<em><code>{'(': '-lrb-', ')': '-rrb-'}</code></em>)</p>
+<h4 id="replace_outof_vocab_words" class="doc_header"><code>replace_outof_vocab_words</code><a href="https://github.com/markusstrasser/octoflow/tree/master/octoflow/core.py#L142" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>replace_outof_vocab_words</code>(<strong><code>text</code></strong>, <strong><code>vocab</code></strong>, <strong><code>nlp</code></strong>=<em><code>&lt;spacy.lang.en.English object at 0x7f28dd2ecb38&gt;</code></em>, <strong><code>extra_vocab</code></strong>=<em><code>['-PRON-', '-pron-', '.', ',', ';']</code></em>, <strong><code>special_tokens</code></strong>=<em><code>{'(': '-lrb-', ')': '-rrb-'}</code></em>)</p>
 </blockquote>
 
 </div>

@@ -15,6 +15,9 @@ entries:
     - output: web,pdf
       title: Finding (Problem Statement) Signal in Sentence Phrasing
       url: text_patterns.html
+    - output: web,pdf
+      title: Integrate Labeled Dataset
+      url: integrate_spreadsheet.html
     output: web
     title: octoflow
   output: web

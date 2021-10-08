@@ -3,10 +3,9 @@ pip3 install -r requirements.txt
 
 python3 -m spacy download en_core_web_md 
 
-
-nbdev_build_lib && nbdev_clean_nbs && nbdev_build_docs
-
 git config --global user.name "Markus Strasser"
 git config --global user.email strasser.ms@gmail.com
+
+nbdev_build_lib && nbdev_clean_nbs && nbdev_build_docs
 
 

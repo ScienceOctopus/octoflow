@@ -4,4 +4,3 @@ pydash
 pandas
 biopython
 spacytextblob
-PatternOmatic
