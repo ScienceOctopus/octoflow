@@ -15,9 +15,14 @@ index = {"find_sentence_in_abstract": "00_utils.ipynb",
          "get_segment": "00_utils.ipynb",
          "sentence_has_phrase": "00_utils.ipynb",
          "replace_outof_vocab_words": "00_utils.ipynb",
-         "nlp": "00_utils.ipynb",
+         "nlp": "02_text_patterns.ipynb",
          "extra_vocab": "00_utils.ipynb",
-         "special_tokens": "00_utils.ipynb"}
+         "special_tokens": "00_utils.ipynb",
+         "take_while": "02_text_patterns.ipynb",
+         "partition": "02_text_patterns.ipynb",
+         "partition_all": "02_text_patterns.ipynb",
+         "n_grams": "02_text_patterns.ipynb",
+         "lemmatize": "02_text_patterns.ipynb"}
 
 modules = ["core.py"]
 
