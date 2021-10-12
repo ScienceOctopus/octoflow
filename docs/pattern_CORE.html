@@ -36,6 +36,24 @@ nb_path: "99_pattern_CORE.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> autoreload
+<span class="o">%</span><span class="k">autoreload</span> 2
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;downloads/sample_4k.json&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -133,7 +151,7 @@ nb_path: "99_pattern_CORE.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">octoflow.core</span> <span class="kn">import</span> <span class="n">lemmatize</span><span class="p">,</span> <span class="n">find_sentence_in_abstract</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">octoflow.core</span> <span class="kn">import</span> <span class="n">lemmatize</span><span class="p">,</span> <span class="n">find_sentence_in_abstract</span><span class="p">,</span> <span class="n">split_into_sentences</span><span class="p">,</span> <span class="n">sentence_has_phrase</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 
@@ -219,24 +237,7 @@ nb_path: "99_pattern_CORE.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="p">[</span> <span class="k">for</span> <span class="n">abst</span> <span class="ow">in</span> <span class="n">hits</span><span class="p">[</span><span class="s2">&quot;abstract&quot;</span><span class="p">]]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hits</span><span class="p">[</span><span class="n">hits</span><span class="p">[</span><span class="s2">&quot;abstract&quot;</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hits</span>
 </pre></div>
 
     </div>
@@ -368,6 +369,202 @@ nb_path: "99_pattern_CORE.ipynb"
 </table>
 <p>309 rows × 5 columns</p>
 </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pydash</span> <span class="kn">import</span> <span class="n">find_index</span>
+
+<span class="k">def</span> <span class="nf">find_sentence_in_abstract</span><span class="p">(</span><span class="n">paragraph</span><span class="p">,</span> <span class="n">bias</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;checks paragraph for key sentences. Returns first matching hit&quot;&quot;&quot;</span>
+    <span class="n">p_sents</span> <span class="o">=</span> <span class="n">split_into_sentences</span><span class="p">(</span><span class="n">paragraph</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">find_index</span><span class="p">(</span><span class="n">p_sents</span><span class="p">,</span> <span class="n">sentence_has_phrase</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">idx</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    
+    <span class="n">i</span> <span class="o">=</span> <span class="n">idx</span> <span class="o">+</span> <span class="n">bias</span> <span class="c1">#bias- for sentence before or after</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">get</span><span class="p">(</span><span class="n">p_sents</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_first_with_pattern</span><span class="p">(</span><span class="n">paragraph</span><span class="p">,</span> <span class="n">patterns</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">split_into_sentences</span><span class="p">(</span><span class="n">paragraph</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">substring</span> <span class="ow">in</span> <span class="n">s</span> <span class="k">for</span> <span class="n">substring</span> <span class="ow">in</span> <span class="n">patterns</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+<span class="c1">#df[df[&quot;lemma_text&quot;].str.contains(&quot;|&quot;.join(ngrams))]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mask1</span> <span class="o">=</span> <span class="p">[</span><span class="n">get_first_with_pattern</span><span class="p">(</span><span class="n">abst</span><span class="p">,</span> <span class="n">ngrams</span><span class="p">)</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span> <span class="k">for</span> <span class="n">abst</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;lemma_text&quot;</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">re</span> <span class="kn">import</span> <span class="n">search</span>
+<span class="n">mask2</span> <span class="o">=</span> <span class="p">[</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ngrams</span><span class="p">),</span> <span class="n">abst</span><span class="p">)</span>  <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">abst</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;lemma_text&quot;</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">mask1</span><span class="p">][</span><span class="s2">&quot;title&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">mask2</span><span class="p">][</span><span class="s2">&quot;title&quot;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>11      True
+38      True
+44      True
+57      True
+61      True
+        ... 
+2887    True
+2914    True
+2927    True
+2930    True
+2942    True
+Name: title, Length: 244, dtype: bool</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lemmatize</span><span class="p">(</span><span class="s2">&quot;Ph.D&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Ph . D&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hits</span><span class="p">[</span><span class="s2">&quot;lemma_text&quot;</span><span class="p">][</span><span class="mi">11</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;this article discuss some of the merit and demerit of the single - payer model of health care financing , with particular reference to the English National Health Service ( NHS ) . specifically , it be argue that the main merit be that the model can directly provide universal health care coverage , thus eradicate or at least alleviate market failure and equity concern , and that it can achieve this with relatively low total health care expenditure in general and — as compare to the commercial multiple insurance model — low administrative cost in particular . a perceive demerit of the single - payer model be that it can lead to excessive health care rationing , particularly in term of waiting time , although it be argue here that long wait be probably cause by insufficient funding rather than by the single - payer model per se . moreover , rationing of one form or another occur in all health care system , and single - payer model may be the good option if the aim be to incorporate structured ration such that an entire population be subject to the same rule and be thus treat equitably . a far perceive disadvantage of the single - payer model be that it offer limited choice , which be necessarily true with respect to choice of insurer , but choice of provider can be , and increasingly be , a feature of centrally tax - finance health care system . no model of health care funding be perfect ; trade - off be inevitable . whether the merit of the single - payer model be judge to outweigh the demerit will typically vary both across country at any point in time and within a country over time&#39;</pre>
 </div>
 
 </div>

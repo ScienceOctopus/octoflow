@@ -88,7 +88,7 @@ def get_segment(record, segment_label):
 
 # Cell
 import itertools
-
+from pydash import find_index
 #OLD one-off functions that need refactoring
 def sentence_has_phrase(sentence, cue_phrases):
     for c in cue_phrases: #unsafe scope
