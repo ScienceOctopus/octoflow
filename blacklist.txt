@@ -1,5 +1,6 @@
 survey
 underrepresented
+l=minority
 I|We ?will examine
 This study aimed
 Therefore, 
