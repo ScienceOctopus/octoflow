@@ -1,10 +1,13 @@
 survey
 underrepresented
+I|We ?will examine
 This study aimed
 Therefore, 
 to define and discuss
 assessed the efficacy
 compare the
+l=[be discuss]
+l=[result be ?give]
 may offer a 
 is important for
 ethical
