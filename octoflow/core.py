@@ -139,8 +139,6 @@ def replace_outof_vocab_words(text, vocab, nlp=nlp, extra_vocab=extra_vocab, spe
 
     return newtext
 
-
-
 # Cell
 
 def take_while(fn, coll):
