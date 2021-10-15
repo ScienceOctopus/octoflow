@@ -1,10 +1,18 @@
 survey
 underrepresented
+l=minority
+I|We ?will examine
 This study aimed
+can be used to
+l=be used to
 Therefore, 
 to define and discuss
 assessed the efficacy
-compare the
+a case report
+analysis of
+l=compare the
+l=[be discuss]
+l=[result be ?give]
 may offer a 
 is important for
 ethical
@@ -22,4 +30,6 @@ effects remain unknown
 is a treatment 
 is the recommended 
 is essential
-design of a 
+design of a
+issue of
+
