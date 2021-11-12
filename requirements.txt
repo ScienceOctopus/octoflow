@@ -6,3 +6,5 @@ biopython
 spacytextblob
 sentence-transformers
 bertopic
+top2vec
+top2vec[sentence_encoders]
