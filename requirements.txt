@@ -5,3 +5,4 @@ pandas
 biopython
 spacytextblob
 sentence-transformers
+bertopic
