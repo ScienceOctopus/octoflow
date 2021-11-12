@@ -24,6 +24,8 @@
     
   * Bespoke **App** for Language Model Interpretation ala Markus' [Netlens](https://github.com/deepfx/netlens)
 
+
+  * **Clustering and Analysis** (use clusteval or hnet) or define custom cluster-quality metric. Try different approaches (HDBSCAN, UMAP, T-SNE)
     
 
   * **Bespoke App** for open source contributors to label data and **create Regex-like pattern matching** through an easy to learn syntax eliminating/supporting software dev / modeling
