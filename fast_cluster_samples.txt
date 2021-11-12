@@ -1,0 +1,296 @@
+Cluster 1, #164 Elements 
+	 Obesity is a serious public health concern with an increasing prevalence worldwide .
+	 Obesity is a serious public health problem that is growing alarmingly worldwide .
+	 Obesity is a serious public health problem , the prevalence of which is increasing dramatically all over the world .
+	 ...
+	 The survey findings suggest the majority of the Australian population recognises obesity to be a serious health problem , and support government regulation of the food environment as a population-level preventative strategy .
+	 The global prevalence of obesity poses such a serious concern that the World Health Organization ( WHO ) has described it as a " global epidemic . " Recent literature suggests that the genesis of the problem occurs in the first years of life as feeding patterns , dietary habits , and parental feeding practices are established .
+	 Childhood obesity represents a social burden.
+
+Cluster 2, #133 Elements 
+	 In recent years , the increasing number of antibiotic-resistant bacteria has become a serious health concern .
+	 Recently , the rapid emergence of antibiotic-resistant pathogens has caused a serious health problem .
+	 Antibiotic resistance is an increasing phenomenon and has become a serious public health concern .
+	 ...
+	 Bacterial infection is a serious problem threatening human health .
+	 The main consequences of use and abuse of antibiotics is the development and diffusion of antibiotic resistance that has become a serious global problem .
+	 Drug resistance is a common phenomenon of pathogens , creating a serious problem of inactivation of drugs and antibiotics resulting in occurrence of diseases .
+
+Cluster 3, #99 Elements 
+	 This study was a prospective, randomized, controlled study.
+	 This was a prospective, randomized controlled trial.
+	 This was a randomized, prospective, investigator-blinded study.
+	 ...
+	 In this prospective, monocentric, two-armed, non-blinded randomized, controlled clinical trial, a total of 43 participants were included.
+	 Pilot observational cohort study.
+	 A quantitative cross-sectional study nested within a randomised controlled trial.
+
+Cluster 4, #98 Elements 
+	 Drug-resistant tuberculosis is a serious problem throughout the world .
+	 Drug resistant tuberculosis is a serious problem in control of tuberculosis .
+	 Multi-drug resistant tuberculosis is a serious clinical problem .
+	 ...
+	 The increasing rate of appearance of multidrug-resistant strains of Mycobacterium tuberculosis ( MDR-TB ) is a serious problem at the present time .
+	 The high rates of resistance to ethionamide , capreomycin , and kanamycin show the real burden of drug resistance in the region and pose a serious problem for the treatment of patients with multidrug-resistant tuberculosis .
+	 Tuberculosis caused by Mycobacterium tuberculosis ( MTB ) remains a serious global public health concern .
+
+Cluster 5, #96 Elements 
+	 Viral hepatitis is a serious public health problem with hepatitis B virus ( HBV ) being one of its principle causes affecting billions of people globally .
+	 Hepatitis B virus ( HBV ) infection is a serious global public health problem affecting billions of people globally .
+	 Hepatitis B virus ( HBV ) infection is a serious public health problem worldwide .
+	 ...
+	 HCV ( hepatitis C virus ) infection is a serious health care problem that affects more than 170 million people worldwide .
+	 Hepatitis C virus ( HCV ) infection is a serious public health problem .
+	 Hepatitis B virus infection poses a serious health problem in Taiwan , and plays an important role in the development of chronic hepatitis , liver cirrhosis and hepatoma ; the latter two are among the 10 leading causes of death in Taiwan .
+
+Cluster 6, #62 Elements 
+	 Suicide is a serious public health problem worldwide .
+	 Suicide is a serious public health problem around the world .
+	 Suicide is a serious social and public health problem .
+	 ...
+	 Suicidal behaviours are internationally considered as a serious health problem and , consequently , considerable efforts are being made in the search for factors related with this behaviour .
+	 Suicide is an under attended public health problem in Bangladesh as there is no central suicide database and no national suicide surveillance system in the country
+	 Suicide is a serious public health problem in Mato Grosso do Sul , and has had an alarming and disproportionate impact on the indigenous population for more than a decade .
+
+Cluster 7, #53 Elements 
+	 Intimate partner violence constitutes a serious health problem worldwide .
+	 Intimate partner violence is a serious global problem that damages the health and prosperity of individuals , their families , community , and society .
+	 Intimate partner violence ( IPV ) is a serious public health problem , linked with a number of poor health outcomes .
+	 ...
+	 Dating violence (DV) is still a global problem of enormous proportions
+	 Female same-sex intimate partner violence ( FSSIPV ) is a serious problem that affects the health and safety of lesbian and bisexual women .
+	 Intimate partner violence ( IPV ) is a serious public health concern that affects many Latinx couples .
+
+Cluster 8, #51 Elements 
+	 Diabetes mellitus ( DM ) is a serious global health problem currently affecting over 450   million people worldwide .
+	 Diabetes mellitus ( DM ) is a serious medical problem affecting millions of peoples worldwide , and has a great socio-economic impacts .
+	  Diabetes mellitus (DM) is considered to be a significant public health problem globally
+	 ...
+	 Type 2 diabetes is a serious clinical problem in both India and the UK .
+	 Diabetes mellitus ( DM ) is a serious public health problem and can cause long-term damage to the brain , resulting in cognitive impairment in these patients .
+	 Diabetes is a serious and chronic problem that can be attributed to the insufficient release of the insulin or when body does not respond to the insulin which is already present .
+
+Cluster 9, #49 Elements 
+	 Methicillin-resistant Staphylococcus aureus ( MRSA ) strains are a major cause of hospital-acquired infections and are considered a serious public health concern .
+	 Methicillin-resistant Staphylococcus aureus ( MRSA ) isolates is a serious public health problem whose ever-increasing rate is commensurate with the pressure it is exerting on the healthcare system .
+	 Methicillin-resistant Staphylococcus aureus ( MRSA ) isolates are a serious public health problem whose ever-increasing rate is commensurate with the pressure it is exerting on the healthcare system .
+	 ...
+	 Nosocomial methicillin-resistant Staphylococcus aureus ( MRSA ) infection in infants has become a serious concern and a new means of preventing the transmission of MRSA in the community needs to be considered .
+	 Methicillin resistance in Staphylococcus aureus and in coagulase-negative staphylococci represents a serious problem both for the microbiologist and the physician .
+	 Infections with methicillin-resistant Staphylococcus aureus ( MRSA ) and methicillin-resistant coagulase-negative Staphylococcus ( MR-CNS ) are a serious problem in hospitals because these bacteria produce penicillin-binding protein 2 ' ( PBP2 ' or PBP2a ) , which shows low affinity to β-lactam antibiotics .
+
+Cluster 10, #47 Elements 
+	 Because of its high prevalence worldwide , osteoporosis is considered a serious public health concern .
+	 The high worldwide prevalence of osteoporosis means it is considered a serious public health concern , possibly leading to physical disability and an increased mortality rate .
+	 Osteoporosis is a serious worldwide public health concern .
+	 ...
+	 It is possible to avoid developing a serious osteoporosis and having bone fracture if we realise the problem at the proper time and take the risk factors into consideration .
+	 CONTEXT : Low bone mineral density ( BMD ) is a serious public health problem .
+	 It is essential to evaluate osteoporosis risk factors , mainly the modifiable , like the lifestyle , in Mexican women in order to prevent it , since it is a serious public health problem .
+
+Cluster 11, #44 Elements 
+	 Leishmaniasis is a serious health problem in various endemic areas .
+	 Leishmaniasis remains a serious public health problem in several parts of the developing world .
+	 Leishmaniasis is a serious health problem in some parts of the world .
+	 ...
+	 Human immunodeficiency virus ( HIV ) coinfection with Leishmania infantum or Leishmania donovani , the agents of visceral leishmaniasis ( or kala-azar ) , has become a fatal public health problem in the tropics where kala-azar is endemic .
+	 Zoonotic Cutaneous Leishmaniasis ( ZCL ) is still a serious health problem in Iran .
+	 Zoonotic Cutaneous Leishmaniasis ( ZCL ) due to Leishmania major ( L. major ) is still a serious public health problem in Tunisia .
+
+Cluster 12, #43 Elements 
+	 Malaria remains a serious health problem in many parts of the world .
+	 Malaria is still a serious public health problem in some parts of the world .
+	 Malaria remains a serious public health problem globally .
+	 ...
+	 The paper concludes by arguing that malaria in urban India is a serious problem that can not be neglected .
+	 Malaria , the most virulent parasitic disease , has become a devastating health problem in tropical and subtropical regions , especially in Africa , due to favorable temperature and rainfall conditions for the development of the causative vector .
+	 The results of the present study reveals that malaria is still a serious health problem in Sistan and Baluchistan province , Iran .
+
+Cluster 13, #41 Elements 
+	 Substance abuse among young people has become a serious public health problem for years .
+	 Substance use disorders among youth remain a serious public health problem .
+	 Substance use by adolescents and young adults continues to be a serious problem .
+	 ...
+	 Underage alcohol drinking is a severe public health problem .
+	 Binge drinking of alcohol during adolescence is a serious public health concern with long-term consequences , including increased pain , fear , and anxiety .
+	 Drug misuse is a serious public health problem .
+
+Cluster 14, #38 Elements 
+	 Air pollution has become a serious public health problem for many cities around the world .
+	 Air pollution has become a serious public health problem globally .
+	 Urban air pollution is a serious worldwide problem due to its impact on human health .
+	 ...
+	 Environmental pollution has reached a global echo and represents a serious problem for human health .
+	 With the explosive economic development of China over the past few decades , air pollution has become a serious environmental problem and has attracted increasing global concern .
+	 Particulate air pollution is a serious problem in Beijing .
+
+Cluster 15, #37 Elements 
+	 The pollution of environmental systems with heavy metals is becoming a serious problem worldwide .
+	 Environmental pollution by heavy metals has become a serious problem in the world .
+	 Pollution of the environment with heavy metals is a serious problem , which is recognized in most countries of the world .
+	 ...
+	 For this reason , soil metal pollution has become a severe problem in many parts of the world .
+	 Environmental pollution by potentially toxic elements ( PTEs ) has become a serious problem with increasing industrialization and the disturbance of natural biogeochemical cycles .
+	 The accumulation of heavy metal in the soil is a serious concern for sustainable food production due to their toxic effects on plants and other living things .
+
+Cluster 16, #36 Elements 
+	 Influenza is one of the most common human respiratory diseases , and represents a serious public health concern .
+	 Influenza is an acute respiratory illness and has become a serious public health problem worldwide .
+	 Influenza is a serious public health concern worldwide , as it causes significant morbidity and mortality .
+	 ...
+	 Influenza is a serious economic concern due to the costly countermeasures it necessitates .
+	 Currently , H5N1 influenza viruses remain a serious public health concern in Asia and now in Europe .
+	 Seasonal influenza has become a serious public health problem worldwide , and vaccination is recognized as the most effective preventative measure .
+
+Cluster 17, #35 Elements 
+	 A total of 106 patients (68F, 38M) with a mean age of 49.
+	 In all, 2051 patients [median (range)], aged 41 (1-101) years, 72.
+	 Included in this study were 17 patients, 6 women and 11 men, with a mean age of 58 years (19-87).
+	 ...
+	 Fifty patients aged 25 to 90 years (34 females), who had a mean follow-up of 6,3 years (range 4-14 years), were selected.
+	 From 273 eligible patients, we received data from 135 patients, 9 of them died during the follow-up time at the median age of 46years (range 30-64years).
+	 In total, 198 patients were randomized and 175 patients completed the trial with a mean age of 49.
+
+Cluster 18, #35 Elements 
+	 Falls in older adults are a serious problem for individuals , their families , and the health care system .
+	 Falls in older adults are a serious public health problem associated with irreversible health consequences and responsible for a substantial economic burden on health care systems .
+	 Falls are a serious health problem in older adults .
+	 ...
+	 Patient fall has been a severe problem in healthcare facilities around the world due to its prevalence and cost .
+	 Falls are a serious problem among older cancer patients .
+	 Fall events and their severe consequences represent not only a threatening problem for the affected individual , but also cause a significant burden for health care systems .
+
+Cluster 19, #35 Elements 
+	 Dengue virus infections are a serious public health problem in tropical and subtropical areas of the world .
+	 Dengue is a serious infectious disease and a growing public health problem in many tropical and sub-tropical countries .
+	 Dengue infection poses a serious public health problem in most tropical and subtropical areas .
+	 ...
+	 Dengue Haemorrhagic Fever ( DHF ) is a serious and often fatal paediatric problem in Myanmar .
+	 Dengue fever is a serious concern for Japanese people staying in Southeast Asia .
+	 Two flaviviruses , Japanese encephalitis ( JE ) virus and Dengue ( DEN ) virus which have high pathogenicity for humans , continue to pose a serious public health problem in tropical and subtropical countries of the world .
+
+Cluster 20, #33 Elements 
+	 Arsenic ( As ) contamination in soil and groundwater has become a serious problem to public health .
+	 Arsenic contamination of soil and groundwater is a serious problem worldwide .
+	 Arsenic ( As ) contamination of water is a serious problem in developing countries .
+	 ...
+	 Arsenic concentrations of tubewell water that exceed acceptable limits poses a serious health problem in Bangladesh .
+	 The neurotoxicity of arsenic is a serious health problem , especially for children .
+	 Arsenic ( As ) in rice grains is a serious food safety concern .
+
+Cluster 21, #32 Elements 
+	 Chronic kidney disease ( CKD ) is becoming a serious health problem ; the number of people with impaired renal function is rapidly rising , especially in industrialized countries .
+	 Chronic kidney disease ( CKD ) is a serious health problem due to high mortality and morbidity , negative impact on the patients ' quality of life ( QOL ) , high diagnostic and therapeutic cost , and the burden on society .
+	 Chronic kidney disease ( CKD ) is a serious health problem worldwide .
+	 ...
+	 To retard progression of chronic kidney disease (CKD) and reduce end-stage kidney disease, it is important to detect acute kidney function worsening on CKD (AW-CKD) immediately and bring back their kidney functions to baselines by appropriate treatment
+	 The progression of chronic kidney disease is accompanied by multi-organ disorders , among which cardiovascular diseases have the status of a serious clinical problem .
+	 Chronic kidney disease ( CKD ) represents a serious concern for the Mexican population since the main predisposing diseases ( diabetes , hypertension , etc . ) have a high prevalence in the country .
+
+Cluster 22, #31 Elements 
+	 Schistosomiasis , caused mainly by S. mansoni , S. haematobium and S. japonicum , continues to be a serious tropical disease and public health problem resulting in an unacceptably high level of morbidity in countries where it is endemic .
+	 The inherent morbidity and mortality caused by schistosomiasis is a serious public health problem in developing countries .
+	 In spite of numerous efforts towards the control of its transmission , schistosomiasis still remains an important parasitic disease and represents a serious public health concern and a major economical problem in a lot of developing countries .
+	 ...
+	 Manson 's schistosomiasis continues to be a severe public health problem in Brazil , where thousands of people live under the risk of contracting this parasitosis .
+	 Urinary schistosomosis is a serious public health problem prevalent in low-income rural regions of sub-Saharan Africa , including coastal part of Kenya .
+	 Schistosoma japonicum is one of the three major blood fluke species , the etiological agents of schistosomiasis which remains a serious public health problem with an estimated 200 million people infected in 76 countries .
+
+Cluster 23, #31 Elements 
+	 Tobacco smoking is a serious health problem worldwide and a leading cause of mortality .
+	 Tobacco smoking is a serious health and social problem .
+	 Smoking is a serious public health problem and an important risk factor of many diseases .
+	 ...
+	 Altogether this study emphasizes the importance of active smoking as a serious public health problem particularly for children and women .
+	 Even though it is diminishing in Europe , smoking is still a serious health problem .
+	 The smoking related respiratory diseases represent a serious medical , social , and economic problem .
+
+Cluster 24, #30 Elements 
+	 Sepsis is a serious and growing health problem among patients admitted to intensive care units .
+	 Sepsis is not only a threat to the health of individual patients but also presents a serious epidemiological problem .
+	 Sepsis remains a serious clinical problem despite intense efforts to improve survival .
+	 ...
+	 We are interested in how and why anaesthetics increase infections in intensive care patients ; a serious problem as more than 50 % of patients with severe sepsis will die .
+	 Sepsis and septic shock are a serious problem , particularly in the geriatric population .
+	 Neonatal late-onset sepsis ( LOS ) is a serious problem in neonatal intensive care .
+
+Cluster 25, #30 Elements 
+	 Prescription opioid misuse and abuse is a serious public health concern that can lead to overdose , addiction , and death .
+	 Prescription opioid abuse and addiction , along with consequences such as overdose death and increasing transition to heroin use , constitute a devastating public health problem in the United States .
+	 Prescription opioid abuse and misuse are a serious problem in the U.S. today .
+	 ...
+	 Overdose is a serious problem as for people addicted to opioid drug injections ( ODI ) as well as for the community in general .
+	 Frequent use of opioid analgesics with other DIMs is a serious problem for drivers and increases the risk of accidents .
+	 The misuse of prescription drugs is a serious public health problem .
+
+Cluster 26, #29 Elements 
+	 Child abuse is a serious social health problem all over the world with important adverse effects .
+	 Child abuse is a serious health problem , which threatens children and has a wide reaching effect on family and society .
+	 Child abuse is a serious public health problem and affects the victims ' physical and mental health and development .
+	 ...
+	 Child sexual abuse ( CSA ) is a serious problem not only in the community but also in institutional settings such as youth-serving organizations , churches , and schools .
+	 The under-reporting of child sexual abuse by victims is a serious problem that may prolong the suffering of victims and leave perpetrators free to continue offending .
+	 Physical abuse of children is a severe social problem and is usually identified by the presence of bruises of various ages .
+
+Cluster 27, #29 Elements 
+	 It represents a serious problem for public health .
+	 It represents a serious global public health problem .
+	 It has become a serious public health concern , threatening people 's health .
+	 ...
+	 It is a challenge to physicians , a serious problem to patients and a human and financial loss to the community .
+	 It is considered a serious public health problem mainly in tropical and subtropical regions around the world .
+	 It is not only a severe health problem in Poland , but as well as in the whole world .
+
+Cluster 28, #28 Elements 
+	 Chagas disease is a serious public health problem in Latin America where about ten million individuals show Trypanosoma cruzi infection .
+	 Trypanosoma cruzi , responsible for Chagas disease , is a serious public health problem in Latin America with eight million people infected in the world .
+	 Chagas disease is a serious public health problem in Ecuador , where nearly 230,000 individuals show Trypanosoma cruzi infection .
+	 ...
+	 In Venezuela , Chagas disease ( ChD ) is considered a serious health problem , with about 6 million people at risk ; and acute outbreaks due to oral transmission of Chagas Disease ( OChD ) are becoming increasingly important .
+	 Chagas disease remains a serious health problem for countries where the most common mode of transmission is infection contracted from the feces of a Triatominae insect vector .
+	 Chagas ' disease , caused by the protozoan Trypanosoma cruzi , represents a serious health problem in Latin America , and the available chemotherapy , which is based on 2 nitro-derivatives , is not satisfactory .
+
+Cluster 29, #27 Elements 
+	 Breast cancer is a serious health problem worldwide , representing the second cause of death through malignancies among women in developed countries .
+	 The high morbidity and mortality of breast cancer among women is a serious problem .
+	 Breast cancer represents a serious public health problem worldwide , for its high incidence , morbidity , mortality , and its high cost treatment .
+	 ...
+	 The already high and still rising mortality rate for breast carcinoma continues to represent a serious problem , especially since neither surgical treatment nor radiotherapy has a significant influence on the prognosis of the disease .
+	 Breast cancer is a serious health problem that preferentially metastasizes to bone .
+	 Breast cancer poses a serious public health problem , and it is hoped that identification of genetic and environmental factors that contribute to the development of breast cancer will enhance prevention efforts .
+
+Cluster 30, #26 Elements 
+	 Asthma is a serious health problem around the world , and affects approximately 10 - 15 % of children and 5 - 10 % of adults .
+	 Asthma is a serious health problem , with both mortality and severity increasing in developed countries ( 55 - 57 ) .
+	 Asthma is a serious global health problem that affects people of all ages .
+	 ...
+	 Asthma is a serious problem for low-income preteens living in disadvantaged communities .
+	 Forty-eight children with physician-diagnosed asthma (Asthma group) and 31 age-matched normal controls (Control group) were recruited from the Asthma and Allergy Center at Inje University Sanggye Paik Hospital, Seoul, Korea from January 2010 to September of 2012.
+	 Asthmatic death in the elderly is a serious problem worldwide .
+
+Cluster 31, #25 Elements 
+	 Drug resistance continues to be a serious problem in cancer therapy .
+	 However , as in the case of most targeted anti-cancer therapies , the emergence of drug resistance is a serious concern .
+	 Resistance of cancer cells to chemotherapeutics and emerging targeted drugs is a devastating problem in the treatment of cancer patients .
+	 ...
+	 However , acquired resistance to this drug has become a serious problem in the treatment of brain tumor patients .
+	 Resistance to chemotherapy remains a serious problem in the successful treatment of gastric and esophageal cancers .
+	 However , multidrug resistance ( MDR ) becomes a severe problem after long-term administration of chemotherapy drugs .
+
+Cluster 32, #25 Elements 
+	 Anaemia is known to have an impact on child development and mortality and is a severe public health problem in most countries in sub-Saharan Africa .
+	 Childhood anaemia is considered a severe public health problem in most countries of sub-Saharan Africa .
+	 Anaemia is associated with poor health outcomes and is considered a serious public health problem particularly in low- and middle-income countries .
+	 ...
+	 Results showed that the prevalence of anaemia among pregnant women in Kiboga district was high enough ( 63.1 % ) to be described as a severe public health problem .
+	 Anemia is a serious public health concern especially in women of reproductive age ( WRA ) as it causes a high burden of morbidity and mortality and persists through intergenerational cycle .
+	 Iron deficiency anemia is a severe public health problem in developing countries .
+
+Cluster 33, #25 Elements 
+	 Malnutrition is a serious public health problem , particularly in developing countries , linked to a substantial increase in the risk of mortality and morbidity .
+	 Malnutrition is a severe problem of public health over all the world , particularly in Latin America .
+	 Malnutrition constitutes a serious problem of public health .
+	 ...
+	 The study concludes that maternal malnutrition is a serious problem in the study area and that there are contextual risk factors that could be addressed to partially tackle the problem .
+	 It has been recognized that malnutrition in hospital is a serious problem that may go undetected .
+	 This study indicates that undernutrition is a serious problem among rural Malawians aged 45 - 75 years .
