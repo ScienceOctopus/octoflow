@@ -1,0 +1,454 @@
+reperfusion	 -->ischemic	 -->myocardial
+		 -->cerebral
+		 -->perfusion
+		 -->neurons
+		 -->myocardial
+		 -->cerebral
+		 -->perfusion
+		 -->neurons
+	transplantation	 -->nephrotoxicity
+		 -->cyclosporine
+		 -->cyclosporin
+		 -->allograft
+		 -->gvhd
+		 -->shortage
+		 -->donor
+		 -->donors
+		 -->graft
+		 -->transplant
+		 -->interferon
+	ischemia	 -->vascular
+		 -->limb
+		 -->ischemic	 -->myocardial
+		 -->cerebral
+		 -->perfusion
+		 -->neurons
+		 -->myocardial
+		 -->cerebral
+		 -->perfusion
+		 -->neurons
+		 -->mesenteric
+		 -->ischaemia
+		 -->intestine
+	diabetes	 -->dkd
+		 -->microvascular
+		 -->mexico
+		 -->indigenous
+	gastrointestinal
+	intestinal	 -->eosinophilic
+		 -->bowel
+		 -->distention
+		 -->hypopigmentation
+		 -->hypomelanosis
+		 -->mesenteric
+		 -->ischaemia
+		 -->intestine
+	stress	 -->ptsd
+		 -->posttraumatic
+	adhesions
+	postoperative	 -->adhesion
+		 -->nausea
+		 -->vomiting
+		 -->epidural
+		 -->analgesia
+		 -->thoracotomy
+	pain	 -->neuropathic
+		 -->neuropathy
+	rhinosinusitis
+	respiratory	 -->nasal
+		 -->distress
+		 -->ards
+		 -->ventilation
+		 -->surfactant
+		 -->antenatal
+		 -->newborn
+		 -->bronchopulmonary
+	bone	 -->osteoporosis	 -->glucocorticoid
+		 -->steroid
+		 -->metastases
+		 -->metastatic
+	depression	 -->depressive
+	depressive
+	disorder	 -->borderline
+		 -->personality
+		 -->bpd
+		 -->bipolar
+		 -->affective
+		 -->ptsd
+		 -->posttraumatic
+	diabetic	 -->ulceration
+		 -->dkd
+		 -->microvascular
+	ulcers	 -->ulceration
+		 -->ulcer	 -->sores
+		 -->pus
+		 -->leg
+		 -->sores
+		 -->pus
+		 -->leg
+	nausea
+	vomiting
+	chemotherapy	 -->multidrug
+		 -->neutropenia
+		 -->hematologic
+		 -->myelotoxic
+		 -->corynebacterium
+	medication	 -->adherence
+		 -->prescribed
+	mental	 -->borderline
+		 -->personality
+		 -->bpd
+		 -->bipolar
+		 -->affective
+	distress
+	ards
+	lung	 -->ventilation
+		 -->fibrosis
+		 -->ipf
+		 -->myofibroblasts
+		 -->idiopathic
+		 -->epithelial
+	cardiac	 -->scd
+		 -->death
+		 -->atrial
+		 -->fibrillation
+		 -->arrhythmia
+	esophageal	 -->esophagectomy
+		 -->caustic
+	osteoporosis	 -->glucocorticoid
+		 -->steroid
+	fractures	 -->fracture
+		 -->femoral
+	postpartum
+	mothers
+	postnatal	 -->surfactant
+		 -->antenatal
+		 -->newborn
+		 -->bronchopulmonary
+	uti
+	urinary	 -->utis
+		 -->urine
+		 -->prostatectomy
+		 -->extraperitoneal
+		 -->lrpe
+		 -->transperitoneal
+	utis
+	coli	 -->escherichia
+	endodontic
+	dental	 -->caries
+	incontinence	 -->fecal
+		 -->faecal
+		 -->urine
+		 -->prostatectomy
+		 -->extraperitoneal
+		 -->lrpe
+		 -->transperitoneal
+	hiv	 -->coinfection
+	immunodeficiency	 -->coinfection
+	liver	 -->fatty
+		 -->alcoholic
+		 -->nonalcoholic
+		 -->steatohepatitis
+		 -->hepatotoxicity
+		 -->acetaminophen
+		 -->graft
+		 -->transplant
+		 -->interferon
+	surfactant
+	antenatal
+	neonatal	 -->newborn
+		 -->bronchopulmonary
+		 -->tetanus
+		 -->pertussis
+	infants	 -->newborn
+		 -->bronchopulmonary
+		 -->asphyxia
+		 -->preterm
+	tbi
+	traumatic
+	brain	 -->cerebral
+		 -->perfusion
+		 -->neurons
+	radiation	 -->radiotherapy
+	carcinoma	 -->hcc
+		 -->hepatocellular
+	diarrhea
+	diarrheal
+	diarrhoea	 -->difficile
+		 -->clostridium
+		 -->bacterium
+	allergy	 -->allergies
+		 -->allergic
+		 -->anaphylaxis
+	spinal	 -->lumbar
+		 -->degenerative
+		 -->spine
+	injury	 -->acute
+	laparoscopic	 -->hernia
+		 -->hernias
+		 -->incisional
+		 -->abdominal
+	prostate	 -->pca
+		 -->androgen
+		 -->prostatectomy
+		 -->extraperitoneal
+		 -->lrpe
+		 -->transperitoneal
+	pneumoniae	 -->kpc
+		 -->crkp
+		 -->nicu
+	cleft
+	palate
+	lip
+	clefts
+	congenital	 -->syphilis
+	tuberculosis	 -->coinfection
+		 -->mycobacterium
+		 -->mycobacterial
+		 -->strains
+	tb	 -->coinfection
+	malnutrition	 -->elderly
+		 -->undernutrition
+	intracerebral
+	ich
+	hemorrhage	 -->subarachnoid
+		 -->aneurysmal
+	suicidal	 -->harm
+		 -->prisoners
+	workplace	 -->employees
+		 -->workplaces
+	adolescents	 -->adolescent
+	dengue	 -->denv
+	drinking
+	alcohol	 -->college
+		 -->alcoholism
+		 -->fetal
+	pollution	 -->china
+		 -->haze
+	ischemic	 -->myocardial
+		 -->cerebral
+		 -->perfusion
+		 -->neurons
+	cartilage
+	osteoarthritis
+	knee	 -->articular
+		 -->nerve
+		 -->peroneal
+		 -->neurolysis
+	ckd
+	kidney	 -->nephrotoxicity
+		 -->cyclosporine
+		 -->cyclosporin
+		 -->acute
+	renal	 -->nephrotoxicity
+		 -->cyclosporine
+		 -->cyclosporin
+	falls	 -->falling
+	fall	 -->falling
+	abortion	 -->clandestine
+		 -->abortions
+		 -->misoprostol
+		 -->caesareans
+		 -->conceive
+	nephropathy	 -->dkd
+		 -->microvascular
+		 -->thrombectomy
+	peritoneal
+	dialysis	 -->peritonitis
+		 -->hemodialysis
+		 -->haemodialysis
+		 -->hypotension
+	addiction	 -->internet
+		 -->gaming
+		 -->games
+	amr
+	antimicrobial	 -->gonorrhoeae
+		 -->gonorrhoea
+		 -->gonorrhea
+		 -->gonococcal
+	dating
+	stalking
+	violence	 -->relationships
+		 -->women
+		 -->gender
+		 -->ipv
+		 -->domestic
+		 -->intimate
+	bullying	 -->workplaces
+		 -->victimization
+	wounds
+	deficiency	 -->vitamin
+		 -->iodine
+		 -->pregnant
+		 -->idd
+	anaemia	 -->anemia
+	antibodies	 -->fviii
+		 -->hemophilia
+		 -->haemophilia
+		 -->inhibitor
+	hbv
+	hepatitis	 -->hcv	 -->graft
+		 -->transplant
+		 -->interferon
+		 -->viral
+		 -->graft
+		 -->transplant
+		 -->interferon
+		 -->hev
+	waste
+	disposal	 -->sludge
+		 -->sewage
+		 -->wastewater
+	foodborne	 -->monocytogenes
+		 -->listeria
+		 -->listeriosis
+	aging	 -->multimorbidity
+	pregnancy	 -->caesareans
+		 -->conceive
+		 -->fetal
+		 -->teenage
+		 -->pregnancies
+		 -->placental
+		 -->unintended
+		 -->contraceptive
+		 -->prematurity
+		 -->unplanned
+	leishmaniasis	 -->cutaneous
+		 -->morocco
+		 -->visceral
+		 -->leishmania
+		 -->brazil
+	nitrate
+	nitrogen
+	groundwater	 -->arsenic
+	hemodialysis
+	haemodialysis
+	hypotension
+	thrombosis	 -->venous
+		 -->thromboembolism
+		 -->vein
+	aureus	 -->staphylococci
+		 -->mrsa
+	staphylococcus	 -->staphylococci
+		 -->mrsa
+	malaria	 -->falciparum
+		 -->chloroquine
+		 -->plasmodium	 -->artemisinin
+		 -->placental
+		 -->artemisinin
+		 -->placental
+	hcv	 -->graft
+		 -->transplant
+		 -->interferon
+	milk
+	dairy	 -->mastitis
+	lactamases
+	lactamase
+	pesticide
+	pesticides	 -->organophosphorus
+		 -->organophosphate
+		 -->rodenticide
+	elder
+	abuse	 -->neglect
+		 -->exploitation
+	neglect
+	older	 -->exploitation
+	echinococcosis
+	cystic	 -->echinococcus
+		 -->aeruginosa
+		 -->pseudomonas
+	plastic
+	plastics	 -->microplastics
+		 -->microplastic
+		 -->nanoplastics
+	biofilm	 -->biofilms
+	soil	 -->soils	 -->cadmium
+		 -->cadmium
+		 -->erosion
+		 -->land
+		 -->desertification
+		 -->salinity
+		 -->salinization
+		 -->salt
+		 -->arid
+	soils	 -->cadmium
+	venous
+	thromboembolism
+	vein
+	embolism	 -->pe
+		 -->ctpa
+		 -->tomography
+		 -->diagnosis
+	ulcer	 -->sores
+		 -->pus
+		 -->leg
+	acinetobacter
+	carbapenem	 -->carbapenemase	 -->kpc
+		 -->crkp
+		 -->nicu
+		 -->kpc
+		 -->crkp
+		 -->nicu
+	eutrophication	 -->freshwaters
+		 -->tributaries
+		 -->ecosystems
+		 -->phosphorus
+		 -->phosphate
+		 -->phosphogypsum
+		 -->farmlands
+	denv
+	virus	 -->hev
+	copd
+	pulmonary	 -->pe
+		 -->ctpa
+		 -->tomography
+		 -->diagnosis
+		 -->fibrosis
+		 -->ipf
+		 -->myofibroblasts
+		 -->idiopathic
+		 -->epithelial
+	fever	 -->typhoid
+		 -->typhus
+	pe
+	ctpa
+	angiography	 -->tomography
+		 -->diagnosis
+		 -->subarachnoid
+		 -->aneurysmal
+	falciparum
+	chloroquine
+	plasmodium	 -->artemisinin
+		 -->placental
+	anabolic
+	doping
+	androgenic
+	steroids
+	sports	 -->sport
+		 -->concussion
+		 -->concussions
+		 -->athletes
+	poisoning	 -->poisonings
+		 -->organophosphorus
+		 -->organophosphate
+		 -->rodenticide
+		 -->delphinium
+		 -->larkspur
+		 -->rangelands
+		 -->locoweed
+		 -->poisonous
+	carbapenemase	 -->kpc
+		 -->crkp
+		 -->nicu
+	meningococcal
+	meningitidis
+	neisseria	 -->gonorrhoeae
+		 -->gonorrhoea
+		 -->gonorrhea
+		 -->gonococcal
+	aspiration
+	ingestion	 -->caustic
+	hospitals	 -->overcrowding
+		 -->emergency
+		 -->department
+	
