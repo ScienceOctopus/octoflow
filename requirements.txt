@@ -1,4 +1,5 @@
 fastai
+flatdict
 spacy
 bertopic
 matplotlib
