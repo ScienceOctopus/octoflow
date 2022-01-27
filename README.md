@@ -24,9 +24,7 @@
     
   * Bespoke **App** for Language Model Interpretation ala Markus' [Netlens](https://github.com/deepfx/netlens)
 
-
   * **Clustering and Analysis** (use clusteval or hnet) or define custom cluster-quality metric. Try different approaches (HDBSCAN, UMAP, T-SNE)
-    
 
   * **Bespoke App** for open source contributors to label data and **create Regex-like pattern matching** through an easy to learn syntax eliminating/supporting software dev / modeling
 
@@ -35,7 +33,9 @@
 
 ## DATASETs `/datasets`
 
- * `problem_statements.csv`: processed dataset consisting of 3500+ labels. Rows with "PMID" entry are biomedical and human-labeled by a team member. Check "source" column. Includes ~500 problem statements and 1500 non-problem statements from ACL (*computational linguistics*) papers; source: [Identifying problems and solutions in scientific text](https://link.springer.com/content/pdf/10.1007/s11192-018-2718-6.pdf)
+* Datasets in public Google Drive @ https://drive.google.com/drive/folders/1SN6nHxgW9InLpJhUm7bzirU4wzd7NT0G
+
+* `problem_statements.csv`: processed dataset consisting of 3500+ labels. Rows with "PMID" entry are biomedical and human-labeled by a team member. Check "source" column. Includes ~500 problem statements and 1500 non-problem statements from ACL (*computational linguistics*) papers; source: [Identifying problems and solutions in scientific text](https://link.springer.com/content/pdf/10.1007/s11192-018-2718-6.pdf)
 
 
 
