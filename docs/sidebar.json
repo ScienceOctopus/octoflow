@@ -1,9 +1,14 @@
 {
   "octoflow": {
     "Overview": "/",
-    "Title": "summarization.html",
+    "Title": "merge_csvs.html",
     "Finding (Problem Statement) Signal in Sentence Phrasing": "text_patterns.html",
     "Pattern Sanity Check on CORE Abstracts": "pattern_CORE.html",
-    "Integrate Labeled Dataset": "integrate_spreadsheet.html"
+    "Text Analysis ": "text_analysis.html",
+    "Closed Links in Eucledian Clustering": "flat_connecting.html",
+    "Integrate Labeled Dataset": "integrate_spreadsheet.html",
+    "Recursive Clustering and Summarization": "recursive_cluster.html",
+    "STEM SUBSET OF CORE": "stem_only.html",
+    "Clustering Sentences (non-hierachical)": "topic_clustering.html"
   }
 }

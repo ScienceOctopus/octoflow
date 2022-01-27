@@ -11,7 +11,7 @@ entries:
       url: /
     - output: web,pdf
       title: Title
-      url: summarization.html
+      url: merge_csvs.html
     - output: web,pdf
       title: Finding (Problem Statement) Signal in Sentence Phrasing
       url: text_patterns.html
@@ -19,8 +19,23 @@ entries:
       title: Pattern Sanity Check on CORE Abstracts
       url: pattern_CORE.html
     - output: web,pdf
+      title: 'Text Analysis '
+      url: text_analysis.html
+    - output: web,pdf
+      title: Closed Links in Eucledian Clustering
+      url: flat_connecting.html
+    - output: web,pdf
       title: Integrate Labeled Dataset
       url: integrate_spreadsheet.html
+    - output: web,pdf
+      title: Recursive Clustering and Summarization
+      url: recursive_cluster.html
+    - output: web,pdf
+      title: STEM SUBSET OF CORE
+      url: stem_only.html
+    - output: web,pdf
+      title: Clustering Sentences (non-hierachical)
+      url: topic_clustering.html
     output: web
     title: octoflow
   output: web

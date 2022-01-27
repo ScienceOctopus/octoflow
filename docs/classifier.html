@@ -39,11 +39,13 @@ nb_path: "03_classifier.ipynb"
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 <span class="kn">import</span> <span class="nn">fastai</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;datasets/problem_statements.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;downloads/40k_balanced_pm_acl.csv&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">])</span>
 <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_nomask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="c1">#backup</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
 <span class="n">df_test</span> <span class="o">=</span> <span class="n">df</span><span class="p">[:</span><span class="mi">300</span><span class="p">]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="mi">300</span><span class="p">:]</span>
+
 <span class="n">fastai</span><span class="o">.</span><span class="n">__version__</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 </pre></div>
 
@@ -56,14 +58,56 @@ nb_path: "03_classifier.ipynb"
 
 <div class="output_area">
 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>42140
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;2.5.2&#39;, 3279)</pre>
+<pre>(&#39;2.5.3&#39;, 41840)</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_length&quot;</span><span class="p">]</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_length&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">]</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -87,6 +131,25 @@ nb_path: "03_classifier.ipynb"
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages/ipykernel_launcher.py:3: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  This is separate from the ipykernel package so we can avoid doing imports until
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -102,6 +165,31 @@ nb_path: "03_classifier.ipynb"
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages/ipykernel_launcher.py:1: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  &#34;&#34;&#34;Entry point for launching an IPython kernel.
+/home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -135,6 +223,36 @@ nb_path: "03_classifier.ipynb"
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.text.all</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">dls</span> <span class="o">=</span> <span class="n">TextDataLoaders</span><span class="o">.</span><span class="n">from_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">text_col</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">label_col</span><span class="o">=</span><span class="s1">&#39;lab&#39;</span><span class="p">)</span>
+
+<span class="n">dls</span><span class="o">.</span><span class="n">show_batch</span><span class="p">()</span>
+
+<span class="n">learn</span> <span class="o">=</span> <span class="n">text_classifier_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">AWD_LSTM</span><span class="p">,</span> <span class="n">drop_mult</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">FBeta</span><span class="p">(</span><span class="n">beta</span><span class="o">=</span><span class="mi">1</span><span class="p">)])</span>
+<span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
+<span class="n">learn</span><span class="o">.</span><span class="n">show_results</span><span class="p">()</span>
+
+
+<span class="n">interp</span> <span class="o">=</span> <span class="n">ClassificationInterpretation</span><span class="o">.</span><span class="n">from_learner</span><span class="p">(</span><span class="n">learn</span><span class="p">)</span>
+<span class="n">interp</span><span class="o">.</span><span class="n">plot_top_losses</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  
+<span class="n">interp</span><span class="o">.</span><span class="n">plot_confusion_matrix</span><span class="p">()</span>
+
+<span class="n">learn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;We discuss the implications of a more &#39;civic-minded journalism.&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -147,15 +265,11 @@ nb_path: "03_classifier.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>█</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages/numpy/core/_asarray.py:83: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray
-  return array(a, dtype, copy=False, order=order)
+<pre>epoch     train_loss  valid_loss  accuracy  fbeta_score  time    
+0         0.039256    0.034981    0.987027  0.987857     00:22     
+epoch     train_loss  valid_loss  accuracy  fbeta_score  time    
+0         0.037926    0.032206    0.988016  0.988824     00:45     
+1         0.030831    0.029084    0.988386  0.989168     00:46     
 </pre>
 </div>
 </div>
@@ -173,18 +287,8 @@ nb_path: "03_classifier.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dls</span><span class="o">.</span><span class="n">show_batch</span><span class="p">()</span>
-
-<span class="n">learn</span> <span class="o">=</span> <span class="n">text_classifier_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">AWD_LSTM</span><span class="p">,</span> <span class="n">drop_mult</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">FBeta</span><span class="p">(</span><span class="n">beta</span><span class="o">=</span><span class="mi">1</span><span class="p">)])</span>
-<span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
-<span class="n">learn</span><span class="o">.</span><span class="n">show_results</span><span class="p">()</span>
-<span class="n">learn</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;model_3&quot;</span><span class="p">)</span>
-
-<span class="n">interp</span> <span class="o">=</span> <span class="n">ClassificationInterpretation</span><span class="o">.</span><span class="n">from_learner</span><span class="p">(</span><span class="n">learn</span><span class="p">)</span>
-<span class="n">interp</span><span class="o">.</span><span class="n">plot_top_losses</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  
-<span class="n">interp</span><span class="o">.</span><span class="n">plot_confusion_matrix</span><span class="p">()</span>
-
-<span class="n">learn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;We discuss the implications of a more &#39;civic-minded journalism.&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">export</span><span class="p">(</span><span class="s1">&#39;oct15_40k.pkl&#39;</span><span class="p">)</span>
+<span class="n">learn</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;oc15_40k&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -197,207 +301,43 @@ nb_path: "03_classifier.ipynb"
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea ">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>text</th>
-      <th>category</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>xxbos iicd , if all of the a ; , are in a then so is at least one of the iinnp ; , ii . xxmaj in fact , the other two conditions are just special cases of this condition . iinnp the assertion component of the latter is essentially limited to atomic iinns and their iinns , so that ordinary statements such as xxmaj most students who passed the xxup ai exam also passed the theory exam , or xxmaj if xxmaj kim and xxmaj sandy get divorced , then xxmaj kim will probably get custody of their children , can not be represented , let alone reasoned with</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>xxbos xxmaj in this iijj study , patients with personality disorders -lrb- n ii_sp iisym ii_sp iicd -rrb- treated at iinnp xxmaj psychotherapy xxmaj xxunk , xxmaj mental xxmaj health xxmaj services , xxmaj xxunk xxmaj xxunk of xxmaj xxunk were xxunk to two different kinds of treatment ii : a standardized treatment package with a xxunk number of treatment hours -lrb- basic hospital service -rrb- and iils ii : a specialized treatment program for the most severely affected patients without a iivbn restricted number of treatment hours and significantly more individual psychotherapy -lrb- xxunk...</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>xxbos xxmaj examples are iijj clauses ii , these are an old xxmaj indo iihyph xxmaj european feature which most modern xxmaj european languages have lost ii : , extensive use of complex iinn , and rampant pro iijj drop . using only those iinnps that exactly match clean lists leaves out some good data -lrb- iirb , a tuple with an iinn of ii ` ` xxmaj univ of xxmaj wash ii '' will not match against a list of universities that spells it as ii ` ` xxmaj university of xxmaj washington ii '' -rrb-</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>xxbos xxmaj examples are iijj clauses ii , these are an old xxmaj indo iihyph xxmaj european feature which most modern xxmaj european languages have lost ii : , extensive use of complex iinn , and rampant pro iijj drop . using only those iinnps that exactly match clean lists leaves out some good data -lrb- iirb , a tuple with an iinn of ii ` ` xxmaj univ of xxmaj wash ii '' will not match against a list of universities that spells it as ii ` ` xxmaj university of xxmaj washington ii '' -rrb-</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>xxbos xxmaj for suffix separation , we identify a number of linguistic rules for both xxmaj tamil and xxmaj english . in assigning an induced word cluster to a known target category , such as noun , and evaluating the goodness of the cluster according to how well it represents the class noun , the assumption is made that it is fine for a target class to be represented by multiple induced clusters , but it is unacceptable for a single induced category to represent a combination of multiple target categories</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>xxbos xxmaj for suffix separation , we identify a number of linguistic rules for both xxmaj tamil and xxmaj english . in assigning an induced word cluster to a known target category , such as noun , and evaluating the goodness of the cluster according to how well it represents the class noun , the assumption is made that it is fine for a target class to be represented by multiple induced clusters , but it is unacceptable for a single induced category to represent a combination of multiple target categories</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>xxbos xxmaj for suffix separation , we identify a number of linguistic rules for both xxmaj tamil and xxmaj english . in assigning an induced word cluster to a known target category , such as noun , and evaluating the goodness of the cluster according to how well it represents the class noun , the assumption is made that it is fine for a target class to be represented by multiple induced clusters , but it is unacceptable for a single induced category to represent a combination of multiple target categories</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>xxbos a major limitation of xxunk natural language to xxup xxunk iihyph xxup xxunk is that the assertion component of the latter is essentially limited to atomic iinns and their iinns , so that ordinary statements such as xxmaj most students who passed the xxup ai exam also passed the theory exam , or xxmaj if xxmaj kim and xxmaj sandy get divorced , then xxmaj kim will probably get custody of their children , can not be represented , let alone reasoned with</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>xxbos xxmaj the iijj structure of ii ` ` ii ` ` switching ii '' is ii : ii ` ` ii ` ` schools ii '' ii : agent ii : ; ii ` ` ii ` ` constantly ii '' ii : time iisym frequency ii , ; ii ` ` ii ` ` uniforms ii '' ii : theme iiuh . the resulting reliance on manually annotated examples , which are expensive and time iihyph consuming to create</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Path(&#39;models/oc15_40k.pth&#39;)</pre>
 </div>
 
 </div>
 
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>epoch     train_loss  valid_loss  accuracy  fbeta_score  time    
-0         0.622685    0.469395    0.786260  0.611111     00:02     
-epoch     train_loss  valid_loss  accuracy  fbeta_score  time    
-0         0.478588    0.542257    0.741985  0.606061     00:03     
-1         0.422714    0.288439    0.879389  0.752351     00:03     
-2         0.346093    0.277274    0.882443  0.744186     00:03     
-3         0.290636    0.261418    0.890076  0.755102     00:03     
-█</pre>
 </div>
 </div>
 
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>text</th>
-      <th>category</th>
-      <th>category_</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>xxbos iicd , if all of the a ; , are in a then so is at least one of the iinnp ; , ii . xxmaj in fact , the other two conditions are just special cases of this condition . iinnp the assertion component of the latter is essentially limited to atomic iinns and their iinns , so that ordinary statements such as xxmaj most students who passed the xxup ai exam also passed the theory exam , or xxmaj if xxmaj kim and xxmaj sandy get divorced , then xxmaj kim will probably get custody of their children , can not be represented , let alone reasoned with</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>xxbos iicd , if all of the a ; , are in a then so is at least one of the iinnp ; , ii . xxmaj in fact , the other two conditions are just special cases of this condition . iinnp the assertion component of the latter is essentially limited to atomic iinns and their iinns , so that ordinary statements such as xxmaj most students who passed the xxup ai exam also passed the theory exam , or xxmaj if xxmaj kim and xxmaj sandy get divorced , then xxmaj kim will probably get custody of their children , can not be represented , let alone reasoned with</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>xxbos a iinn which is common to all of these approaches using a ii ` ` xxunk correct ii '' measurement to evaluate models of part iihyph of iihyph speech xxunk is that in assigning an induced word cluster to a known target category , such as noun , and evaluating the goodness of the cluster according to how well it represents the class noun , the assumption is made that it is fine for a target class to be represented by multiple induced clusters , but it is unacceptable for a single induced category to represent a combination of multiple target categories</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>xxbos xxmaj although patients receiving iinn -lrb- iinnp -rrb- have significantly different backgrounds , including a history of progressive iijj disease , compared with those not receiving iinn -lrb- iinns -rrb- , there are no studies evaluating the risks for loss of primary iinn -lrb- xxup xxunk -rrb- and need for target lesion iinn -lrb- iinnp -rrb- in iijj patients following xxunk self iihyph xxunk iinn iinn -lrb- iinnp -rrb- implantation to iivb -lrb- xxup xxunk -rrb- artery iijj lesions , after adjusting for differences using iinn score -lrb- xxup ps -rrb- analysis in observed charac...</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>xxbos xxmaj examples are iijj clauses ii , these are an old xxmaj indo iihyph xxmaj european feature which most modern xxmaj european languages have lost ii : , extensive use of complex iinn , and rampant pro iijj drop . using only those iinnps that exactly match clean lists leaves out some good data -lrb- iirb , a tuple with an iinn of ii ` ` xxmaj univ of xxmaj wash ii '' will not match against a list of universities that spells it as ii ` ` xxmaj university of xxmaj washington ii '' -rrb-</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>xxbos xxmaj the iijj structure of ii ` ` ii ` ` switching ii '' is ii : ii ` ` ii ` ` schools ii '' ii : agent ii : ; ii ` ` ii ` ` constantly ii '' ii : time iisym frequency ii , ; ii ` ` ii ` ` uniforms ii '' ii : theme iiuh . the resulting reliance on manually annotated examples , which are expensive and time iihyph consuming to create</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>xxbos xxmaj bridging the two are genres such as discussion boards , web iinnp , and mailing lists . they strongly depend on the arbitrarily defined window size parameter and do not iivb all error types equally , iirb , pk iivbz false negatives more than false positives and wd iivbz false positive and negative boundaries more at the beginning and end of the text -lrb- iinnp , et al . , iicd -rrb-</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>xxbos xxmaj xxunk the answer of a yes iisym no query is simply a matter of parsing a query , adding its semantic parse to the xxup kb , and iivbg the xxunk function ii : which is iijj in iinnp iiuh . the fact that the iinn of iinn at the micro iijj planning level is restricted to the iinn and the linguistic realization of rhetorical relations</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>xxbos xxmaj an equivalent notation , using the xxmaj xerox ii ` ` ii ` ` contain ii '' operator ii : iiadd ii , is ii$ iinfp ii . xxmaj art ii : iinfp ii ` ` ii ` ` iivb ii . . they require an exact match of the constituents in extracted phrases , so it faces the risk of losing coverage of the rules</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
 </div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Sanity-Check:-Tough-Cases">Sanity Check: Tough Cases<a class="anchor-link" href="#Sanity-Check:-Tough-Cases"> </a></h2><p>0 = non-problem
+1 = problem</p>
 
 </div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-<div class="output_area">
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;Anaphylaxis is a life-threatening emergency of which reliable epidemiological data are lacking&quot;</span><span class="p">)</span>
+</pre></div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>█</pre>
+    </div>
 </div>
 </div>
 
-<div class="output_area">
-
-
-<div class="output_html rendered_html output_subarea ">
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>input</th>
-      <th>target</th>
-      <th>predicted</th>
-      <th>probability</th>
-      <th>loss</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>xxbos xxmaj evidence for treating iijj iinn with acupuncture is xxunk .</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0.9905828237533569</td>
-      <td>4.66521692276001</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>xxbos xxmaj xxunk skin biopsies are essential procedures xxunk physicians diagnose iijj lesions .</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0.9815025925636292</td>
-      <td>3.9901232719421387</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>xxbos xxmaj addressing xxunk dependence is key to effective xxunk xxunk</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0.9788379669189453</td>
-      <td>3.855548620223999</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-</div>
+<div class="output_wrapper">
+<div class="output">
 
 <div class="output_area">
 
@@ -411,19 +351,7 @@ epoch     train_loss  valid_loss  accuracy  fbeta_score  time
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;0&#39;, tensor(0), tensor([0.9287, 0.0713]))</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-
-
-<div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARYAAAEmCAYAAACnN7/iAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjMuNCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8QVMy6AAAACXBIWXMAAAsTAAALEwEAmpwYAAATxUlEQVR4nO3ceZxVdd3A8c8XSVDEFSilzEwWkYpNKE3BXJLURE0NfbTcrUdNsbLFx9TMl0/ZK3nUVNxyz3pVllvYogm4gabmUmipqZiIuIC5oHyfP+4ZGrZhwN+dOwOf9+s1L+eec+4533GYD+ece5nITCSppE6NHkDSysewSCrOsEgqzrBIKs6wSCrOsEgqzrCsoiJijYi4PiJeiYifv4v97B8Rt5ScrVEiYpuI+Fuj51gZhO9jad8iYj9gHNAfmAPcD3wvMye/y/0eABwNbJWZb7/bOdu7iEigT2Y+3uhZVgWesbRjETEOOAs4HXgvsDHwY2D3Arv/IDB9VYhKa0RE50bPsFLJTD/a4QewDjAX2LuFbbpQC8+M6uMsoEu1bhTwDHA8MBN4DjioWncK8BYwrzrGIcDJwJXN9r0JkEDn6vEXgX9QO2t6Ati/2fLJzZ63FTAVeKX671bN1t0GfBeYUu3nFqDHUr62pvm/3mz+McBngOnAbOBbzbYfDtwJvFxtew6werXu9uprea36evdttv8TgH8BVzQtq57z4eoYQ6rHGwEvAKMa/WejI3w0fAA/lvKNgZ2Bt5t+sJeyzanAXUAvoCdwB/Ddat2o6vmnAu+pfiD/DaxXrV80JEsNC9ANeBXoV63bENii+nxBWID1gZeAA6rnja0eb1Ctvw34O9AXWKN6fMZSvram+U+q5j+s+sG+GugObAG8Dnyo2n4o8PHquJsAjwLHNttfApstYf//Sy3QazQPS7XNYcAjwJrARODMRv+56CgfXgq1XxsAs7LlS5X9gVMzc2ZmvkDtTOSAZuvnVevnZeZN1P627reC88wHBkbEGpn5XGY+vIRtdgEey8wrMvPtzLwG+CuwW7NtLs3M6Zn5OvAzYFALx5xH7X7SPOCnQA9gfGbOqY7/CPAxgMy8NzPvqo77JHABMLIVX9N3MvPNap6FZOaFwOPA3dRi+u1l7E8Vw9J+vQj0WMa1/0bAU80eP1UtW7CPRcL0b2Ct5R0kM1+jdvlwJPBcRNwYEf1bMU/TTL2bPf7XcszzYma+U33e9IP/fLP1rzc9PyL6RsQNEfGviHiV2n2pHi3sG+CFzHxjGdtcCAwEzs7MN5exrSqGpf26E3iT2n2FpZlB7SZsk42rZSviNWqn/E3e13xlZk7MzB2p/c39V2o/cMuap2mmZ1dwpuVxHrW5+mTm2sC3gFjGc1p8STQi1qJ23+pi4OSIWL/AnKsEw9JOZeYr1O4vnBsRYyJizYh4T0SMjojvV5tdA5wYET0joke1/ZUreMj7gW0jYuOIWAf4ZtOKiHhvROweEd2oxW4utcuIRd0E9I2I/SKic0TsCwwAbljBmZZHd2r3geZWZ1NfWmT988Cmy7nP8cC0zDwUuBE4/11PuYowLO1YZv6Q2ntYTqR24/Jp4CjgumqT04BpwIPAX4D7qmUrcqzfAddW+7qXhWPQqZpjBrVXSkay+A8umfkisCu1V6JepPaKzq6ZOWtFZlpOXwX2o/Zq04XUvpbmTgYui4iXI2KfZe0sInandgO96escBwyJiP2LTbwS8w1ykorzjEVScYZFUnGGRVJxhkVSce3qH15F5zUyVu/e6DFUB4M337jRI6gOnnrqSWbNmrXY+4XaV1hW706Xfst8JVAd0JS7z2n0CKqDrUcMW+JyL4UkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBVnWCQVZ1gkFWdYJBXXudEDrMw6dQqmXPV1Zsx8hb2+cj6/v/hY1urWFYBe63dn2kNPss+4C/n86GGM++KORARz//0Gx5x+LX+Z/myDp9eyPP300xx60IHMnPk8EcHBhxzOUcd8BYAfn3M2F5x/Lquttho7j96F08/4foOnbVt1DUtE7AyMB1YDLsrMM+p5vPbmqP22429PPE/3KiY7HHLWgnXXnHko19/2IABPzniRnQ49i5fnvM5OWw/g3BPHsu2BZzZiZC2Hzp07c8b3f8jgIUOYM2cOW40YyvY77MjMmc9zw/W/5p57H6BLly7MnDmz0aO2ubpdCkXEasC5wGhgADA2IgbU63jtTe9e67LzJ7fg0l/dsdi67t26MnLLvlx/ay0sdz3wBC/PeR2Aex58gt7vXbctR9UK2nDDDRk8ZAgA3bt3p3//zZkx41kmXHAeX/36N+jSpQsAvXr1auSYDVHPeyzDgccz8x+Z+RbwU2D3Oh6vXfnB1/bi2+OvY/78XGzdbtt9lNvu+RtzXntjsXVfHLMVE6c80hYjqqCnnnyS++//M1sOH8Hj06czZfIkttlqBDt+aiTTpk5t9Hhtrp5h6Q083ezxM9Wyld7obQYyc/Yc/vzo00tcv8/OQ/nZb+9dbPm2w/rwhTGf4MTxv673iCpo7ty5jN1nL37ww7NYe+21efudt5k9eza3T7mL08/4Af+13z5kLv4XzMqs4a8KRcThETEtIqbl2683epwiPjFoU3Yd+RH+euMpXH7GQYzasi+XnHYgABus241hW2zCzZMeWug5A/tsxHkn7cfex01g9iuvNWJsrYB58+Yxdp+92Hfs/ozZY08Aevd+P2P22JOIYMvhw+nUqROzZs1q8KRtq543b58FPtDs8furZQvJzAnABIBOa/ZaKbJ+0tm/4aSzfwPANkP7cOyB23PwiZcDsMcOg7l50kO8+dbbC7b/wPvW46dnHsYh/3M5j/9z1bvR11FlJkcedgj9+m/OV44bt2D5bp8dw59uu5WRo7bjsenTeeutt+jRo0cDJ2179QzLVKBPRHyIWlA+D+xXx+N1CHt/eihnXnrLQsu+efho1l+3G2d9c18A3n5nPp/cf9V6ebIjumPKFK6+6goGDvwII4YOAuCU007nCwcdzBGHHszQQQNZ/T2rc9EllxERjR22jUU9r/0i4jPAWdRebr4kM7/X0vad1uyVXfrtU7d51DgvTT2n0SOoDrYeMYx77522WDXr+j6WzLwJuKmex5DU/jT85q2klY9hkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVRc56WtiIizgVza+sw8pi4TSerwlhoWYFqbTSFppbLUsGTmZW05iKSVR0tnLABERE/gBGAA0LVpeWZ+qo5zSerAWnPz9irgUeBDwCnAk8DUOs4kqYNrTVg2yMyLgXmZ+afMPBjwbEXSUi3zUgiYV/33uYjYBZgBrF+/kSR1dK0Jy2kRsQ5wPHA2sDZwXF2nktShLTMsmXlD9ekrwHb1HUfSyqA1rwpdyhLeKFfda5GkxbTmUuiGZp93Bfagdp9FkpaoNZdCv2j+OCKuASbXbSJJHV5rzlgW1QfoVXoQgI/135g/Th5fj12rwaY/N6fRI6gO3pg3f4nLW3OPZQ4L32P5F7V34krSErXmUqh7WwwiaeWxzHfeRsQfWrNMkpq09PtYugJrAj0iYj0gqlVrA73bYDZJHVRLl0JHAMcCGwH38p+wvAqcU9+xJHVkLf0+lvHA+Ig4OjPPbsOZJHVwrfnXzfMjYt2mBxGxXkR8uX4jSeroWhOWwzLz5aYHmfkScFjdJpLU4bUmLKtFRNP9FSJiNWD1+o0kqaNrzTtvfwtcGxEXVI+PAG6u30iSOrrWhOUE4HDgyOrxg8D76jaRpA5vmZdCmTkfuJva77odTu3XUj5a37EkdWQtvUGuLzC2+pgFXAuQmf6yJ0ktaulS6K/AJGDXzHwcICL8lZSSlqmlS6E9geeAWyPiwojYnv+8+1aSlmqpYcnM6zLz80B/4FZqb+/vFRHnRcRObTSfpA6oNTdvX8vMqzNzN+D9wJ/x97FIakFr3iC3QGa+lJkTMnP7eg0kqeNbrrBIUmsYFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZFknFGRZJxRkWScUZljbyzjvvMPITw/j8Xp8FIDM57eQT2fJjmzNiyEAu+PHZDZ5QrXHSV7/MqMGbsucOIxYsu+WGX7HH9sMZ9MF1ePiB+xYsf/mlFzlk3134eP8NOf1/jm/EuA1Tt7BExCURMTMiHqrXMTqS88/9P/r267/g8dVXXMazzzzD3X9+mLvve4g9P7dvA6dTa+2+9/6cd/kvF1q2Wb8B/GjCVQwdsfVCy1fv0pX/Pv5Exn37tLYcsV2o5xnLT4Cd67j/DuPZZ5/hd7+9iQO+ePCCZZdedD5f++aJdOpU+xb07NWrUeNpOQwdsTVrr7veQss27dOPTT7cZ7Ft11yzG0OGf4IuXbu21XjtRt3Ckpm3A7Prtf+O5FtfH8fJ3ztjQUQAnnjiH/zqFz/jU58cwd5jduHvjz/WwAmlshp+jyUiDo+IaRExbdasFxo9TnETb76Bnj17MWjw0IWWv/Xmm3Tp0pU/Tr6bAw86lKO/dGiDJpTK69zoATJzAjABYPCQYdngcYq7+847uPnG6/ndxJt58403mDPnVY44+EA26v1+dtt9DwB2/ewYjjrykAZPKpXT8DOWld1Jp57Ow489xQOP/p2LLruKbUZuxwWXXM5ndv0sk/50GwBTJv2JzTbr29hBpYIafsayqjr2+BM4/OADOO+c8XRbqxvjz72g0SOpFU446iCm3TmZl196kR2H9+dL477FOuuuxxknfY2XZs/iqIP2pt+Aj3D+ldcBMHqrgcyd8yrz5s3j1ok3cv6V1/Hhvv1bPshKIDLrc/UREdcAo4AewPPAdzLz4paeM3jIsPzj5LvrMo8a6+kX/93oEVQHY3cZycMP3heLLq/bGUtmjq3XviW1b95jkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUXGRmo2dYICJeAJ5q9BxtpAcwq9FDqLhV7fv6wczsuejCdhWWVUlETMvMYY2eQ2X5fa3xUkhScYZFUnGGpXEmNHoA1YXfV7zHIqkOPGORVJxhkVScYZFUXOdGD7AqiIj+wO5A72rRs8BvMvPRxk0l1Y9nLHUWEScAPwUCuKf6COCaiPhGI2eT6sVXheosIqYDW2TmvEWWrw48nJl9GjOZ6ikiDsrMSxs9R6N4xlJ/84GNlrB8w2qdVk6nNHqARvIeS/0dC/whIh4Dnq6WbQxsBhzVqKH07kXEg0tbBby3LWdpb7wUagMR0QkYzsI3b6dm5juNm0rvVkQ8D3waeGnRVcAdmbmkM9VVgmcsbSAz5wN3NXoOFXcDsFZm3r/oioi4rc2naUc8Y5FUnDdvJRVnWCQVZ1i0QES8ExH3R8RDEfHziFjzXezrJxHxuerziyJiQAvbjoqIrVbgGE9GRI8VnVH1Y1jU3OuZOSgzBwJvAUc2XxkRK3SzPzMPzcxHWthkFLDcYVH7ZVi0NJOAzaqziUkR8RvgkYhYLSJ+EBFTI+LBiDgCIGrOiYi/RcTvgV5NO4qI2yJiWPX5zhFxX0Q8EBF/iIhNqAXsuOpsaZuI6BkRv6iOMTUitq6eu0FE3BIRD0fERdRe1lU75MvNWkx1ZjIa+G21aAgwMDOfiIjDgVcyc8uI6AJMiYhbgMFAP2AAtTeHPQJcssh+ewIXAttW+1o/M2dHxPnA3Mw8s9ruauBHmTk5IjYGJgKbA98BJmfmqRGxC3BIXf9HaIUZFjW3RkTcX30+CbiY2iXKPZn5RLV8J+CjTfdPgHWAPsC2wDXVm/5mRMQfl7D/jwO3N+0rM2cvZY4dgAERC05I1o6Itapj7Fk998aIWPSNaWonDIuaez0zBzVfUP1wv9Z8EXB0Zk5cZLvPFJyjE/DxzHxjCbOoA/Aei5bXROBLEfEegIjoGxHdgNuBfat7MBsC2y3huXcB20bEh6rnrl8tnwN0b7bdLcDRTQ8iYlD16e3AftWy0cB6pb4olWVYtLwuonb/5L6IeAi4gNqZ76+Ax6p1lwN3LvrEzHwBOBz4ZUQ8AFxbrboe2KPp5i1wDDCsujn8CP95deoUamF6mNol0T/r9DXqXfIt/ZKK84xFUnGGRVJxhkVScYZFUnGGRVJxhkVScYZFUnH/D7dhjCi9jLwSAAAAAElFTkSuQmCC
-"
->
+<pre>(&#39;1&#39;, TensorText(1), TensorText([0.0353, 0.9647]))</pre>
 </div>
 
 </div>
@@ -490,24 +418,7 @@ epoch     train_loss  valid_loss  accuracy  fbeta_score  time
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mkdir</span> <span class="n">downloads</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;downloads/oct7_test300.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;downloads/oct15_40k_test300.csv&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -537,7 +448,7 @@ epoch     train_loss  valid_loss  accuracy  fbeta_score  time
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>accuracy in test set: 0.8966666666666666
+<pre>accuracy in test set: 0.9833333333333333
 </pre>
 </div>
 </div>
@@ -599,7 +510,7 @@ epoch     train_loss  valid_loss  accuracy  fbeta_score  time
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>accuracy in test set with no masking: 0.8966666666666666
+<pre>accuracy in test set with no masking: 0.9866666666666667
 </pre>
 </div>
 </div>
