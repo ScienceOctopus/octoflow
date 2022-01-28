@@ -40,7 +40,7 @@ nb_path: "merge_csvs.ipynb"
 <span class="kn">import</span> <span class="nn">glob</span>
 
 
-<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;datasets/pubmed_meta&quot;</span> <span class="c1"># use your path</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;downloads/pubmed_meta&quot;</span> <span class="c1"># use your path</span>
 <span class="n">all_files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;/*.csv&quot;</span><span class="p">)</span>
 
 <span class="n">li</span> <span class="o">=</span> <span class="p">[]</span>
@@ -50,7 +50,7 @@ nb_path: "merge_csvs.ipynb"
     <span class="n">li</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
 <span class="n">frame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">li</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">frame</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;datasets/concated.csv&quot;</span><span class="p">)</span>
+<span class="n">frame</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;downloads/concated.csv&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -292,6 +292,325 @@ NotebookApp.rate_limit_window=3.0 (secs)
 </div>
 </div>
 
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |████████████████████████████████| 881.9 MB 8.2 kB/s              
+Requirement already satisfied: fastcore&lt;1.4,&gt;=1.3.22 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (1.3.27)
+Requirement already satisfied: typing-extensions&lt;4.0.0.0,&gt;=3.7.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (3.10.0.2)
+Requirement already satisfied: thinc&lt;8.1.0,&gt;=8.0.12 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (8.0.13)
+Requirement already satisfied: murmurhash&lt;1.1.0,&gt;=0.28.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (1.0.6)
+Requirement already satisfied: setuptools in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: tqdm&lt;5.0.0,&gt;=4.38.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (4.62.3)
+Requirement already satisfied: numpy&gt;=1.15.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (1.19.5)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,&lt;1.9.0,&gt;=1.7.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (1.8.2)
+Requirement already satisfied: langcodes&lt;4.0.0,&gt;=3.2.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (3.3.0)
+Requirement already satisfied: typer&lt;0.5.0,&gt;=0.3.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (0.4.0)
+Requirement already satisfied: spacy-loggers&lt;2.0.0,&gt;=1.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (1.0.1)
+Requirement already satisfied: wasabi&lt;1.1.0,&gt;=0.8.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: jinja2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (2.11.3)
+Requirement already satisfied: cymem&lt;2.1.0,&gt;=2.0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (2.0.6)
+Requirement already satisfied: srsly&lt;3.0.0,&gt;=2.4.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (2.4.2)
+Requirement already satisfied: blis&lt;0.8.0,&gt;=0.4.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (0.7.5)
+Requirement already satisfied: catalogue&lt;2.1.0,&gt;=2.0.6 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (2.0.6)
+Requirement already satisfied: pathy&gt;=0.3.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (0.6.1)
+Requirement already satisfied: spacy-legacy&lt;3.1.0,&gt;=3.0.8 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (3.0.8)
+Requirement already satisfied: preshed&lt;3.1.0,&gt;=3.0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (3.0.6)
+Collecting hdbscan&gt;=0.8.27
+  Using cached hdbscan-0.8.27.tar.gz (6.4 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting bertopic
+  Downloading bertopic-0.9.2-py2.py3-none-any.whl (57 kB)
+     |████████████████████████████████| 57 kB 8.3 MB/s             
+  Downloading bertopic-0.9.1-py2.py3-none-any.whl (55 kB)
+     |████████████████████████████████| 55 kB 7.0 MB/s              
+  Downloading bertopic-0.9.0-py2.py3-none-any.whl (55 kB)
+     |████████████████████████████████| 55 kB 7.5 MB/s              
+  Downloading bertopic-0.8.1-py2.py3-none-any.whl (53 kB)
+     |████████████████████████████████| 53 kB 4.1 MB/s              
+  Downloading bertopic-0.8.0-py2.py3-none-any.whl (53 kB)
+     |████████████████████████████████| 53 kB 3.3 MB/s              
+  Downloading bertopic-0.7.0-py2.py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 11.5 MB/s             
+  Downloading bertopic-0.6.0-py2.py3-none-any.whl (25 kB)
+Collecting umap-learn&gt;=0.5.0
+  Using cached umap-learn-0.5.2.tar.gz (86 kB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: cycler&gt;=0.10 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from matplotlib-&gt;-r requirements.txt (line 5)) (0.10.0)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from matplotlib-&gt;-r requirements.txt (line 5)) (2.8.1)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from matplotlib-&gt;-r requirements.txt (line 5)) (1.3.1)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.3 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from matplotlib-&gt;-r requirements.txt (line 5)) (2.4.7)
+Requirement already satisfied: pytz&gt;=2017.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pandas-&gt;-r requirements.txt (line 7)) (2021.1)
+Collecting textblob&lt;0.16.0,&gt;=0.15.3
+  Using cached textblob-0.15.3-py2.py3-none-any.whl (636 kB)
+Collecting transformers&lt;5.0.0,&gt;=4.6.0
+  Using cached transformers-4.15.0-py3-none-any.whl (3.4 MB)
+Collecting tokenizers&gt;=0.10.3
+  Downloading tokenizers-0.11.4-cp36-cp36m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (6.8 MB)
+     |████████████████████████████████| 6.8 MB 85.7 MB/s            
+Requirement already satisfied: nltk in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from sentence-transformers-&gt;-r requirements.txt (line 10)) (3.4.4)
+Collecting sentencepiece
+  Downloading sentencepiece-0.1.96-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     |████████████████████████████████| 1.2 MB 52.7 MB/s            
+Collecting huggingface-hub
+  Using cached huggingface_hub-0.4.0-py3-none-any.whl (67 kB)
+Collecting top2vec
+  Downloading top2vec-1.0.25-py3-none-any.whl (23 kB)
+  Downloading top2vec-1.0.24-py3-none-any.whl (22 kB)
+  Downloading top2vec-1.0.23-py3-none-any.whl (22 kB)
+  Downloading top2vec-1.0.22-py3-none-any.whl (22 kB)
+Collecting gensim
+  Downloading gensim-4.1.2-cp36-cp36m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (24.1 MB)
+     |████████████████████████████████| 24.1 MB 69.9 MB/s            
+Collecting wordcloud
+  Downloading wordcloud-1.8.1-cp36-cp36m-manylinux1_x86_64.whl (366 kB)
+     |████████████████████████████████| 366 kB 117.4 MB/s            
+Collecting tensorflow-text
+  Downloading tensorflow_text-2.6.0-cp36-cp36m-manylinux1_x86_64.whl (4.4 MB)
+     |████████████████████████████████| 4.4 MB 94.1 MB/s            
+Collecting tensorflow-hub
+  Using cached tensorflow_hub-0.12.0-py2.py3-none-any.whl (108 kB)
+Collecting tensorflow
+  Downloading tensorflow-2.6.2-cp36-cp36m-manylinux2010_x86_64.whl (458.3 MB)
+     |█████████████████████▉          | 313.2 MB 72.5 MB/s eta 0:00:03 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub_data_rate_limit`.
+
+Current values:
+NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+NotebookApp.rate_limit_window=3.0 (secs)
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |████████████████████████████████| 458.3 MB 15 kB/s               
+Requirement already satisfied: zipp&gt;=0.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from catalogue&lt;2.1.0,&gt;=2.0.6-&gt;spacy-&gt;-r requirements.txt (line 3)) (3.4.0)
+Requirement already satisfied: six in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from cycler&gt;=0.10-&gt;matplotlib-&gt;-r requirements.txt (line 5)) (1.15.0)
+Requirement already satisfied: cython&gt;=0.27 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from hdbscan&gt;=0.8.27-&gt;bertopic-&gt;-r requirements.txt (line 4)) (0.29.22)
+Requirement already satisfied: joblib&gt;=1.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from hdbscan&gt;=0.8.27-&gt;bertopic-&gt;-r requirements.txt (line 4)) (1.0.1)
+Requirement already satisfied: dataclasses&lt;1.0,&gt;=0.6 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pathy&gt;=0.3.5-&gt;spacy-&gt;-r requirements.txt (line 3)) (0.8)
+Requirement already satisfied: smart-open&lt;6.0.0,&gt;=5.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pathy&gt;=0.3.5-&gt;spacy-&gt;-r requirements.txt (line 3)) (5.2.1)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (1.26.7)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (2021.5.30)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (2.0.9)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (3.1)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from scikit-learn-&gt;fastai-&gt;-r requirements.txt (line 1)) (2.1.0)
+Requirement already satisfied: contextvars&lt;3,&gt;=2.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from thinc&lt;8.1.0,&gt;=8.0.12-&gt;spacy-&gt;-r requirements.txt (line 3)) (2.4)
+Requirement already satisfied: filelock in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from transformers&lt;5.0.0,&gt;=4.6.0-&gt;sentence-transformers-&gt;-r requirements.txt (line 10)) (3.0.12)
+Collecting tokenizers&gt;=0.10.3
+  Downloading tokenizers-0.10.3-cp36-cp36m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (3.3 MB)
+     |████████████████████████████████| 3.3 MB 58.0 MB/s            
+Requirement already satisfied: regex!=2019.12.17 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from transformers&lt;5.0.0,&gt;=4.6.0-&gt;sentence-transformers-&gt;-r requirements.txt (line 10)) (2020.11.13)
+Requirement already satisfied: importlib-metadata in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from transformers&lt;5.0.0,&gt;=4.6.0-&gt;sentence-transformers-&gt;-r requirements.txt (line 10)) (3.7.0)
+Collecting sacremoses
+  Using cached sacremoses-0.0.47-py2.py3-none-any.whl (895 kB)
+Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from typer&lt;0.5.0,&gt;=0.3.0-&gt;spacy-&gt;-r requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: numba&gt;=0.49 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from umap-learn&gt;=0.5.0-&gt;bertopic-&gt;-r requirements.txt (line 4)) (0.52.0)
+Collecting pynndescent&gt;=0.5
+  Using cached pynndescent-0.5.6.tar.gz (1.1 MB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jinja2-&gt;spacy-&gt;-r requirements.txt (line 3)) (1.1.1)
+Collecting termcolor~=1.1.0
+  Using cached termcolor-1.1.0.tar.gz (3.9 kB)
+  Preparing metadata (setup.py) ... done
+Collecting grpcio&lt;2.0,&gt;=1.37.0
+  Downloading grpcio-1.43.0-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.1 MB)
+     |████████████████████████████████| 4.1 MB 82.0 MB/s            
+Requirement already satisfied: wrapt~=1.12.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (1.12.1)
+Requirement already satisfied: protobuf&gt;=3.9.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (3.15.2)
+Collecting typing-extensions&lt;4.0.0.0,&gt;=3.7.4
+  Downloading typing_extensions-3.7.4.3-py3-none-any.whl (22 kB)
+Collecting flatbuffers~=1.12.0
+  Downloading flatbuffers-1.12-py2.py3-none-any.whl (15 kB)
+Requirement already satisfied: h5py~=3.1.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (3.1.0)
+Collecting tensorboard&lt;2.7,&gt;=2.6.0
+  Downloading tensorboard-2.6.0-py3-none-any.whl (5.6 MB)
+     |████████████████████████████████| 5.6 MB 45.2 MB/s            
+Collecting tensorflow-estimator&lt;2.7,&gt;=2.6.0
+  Downloading tensorflow_estimator-2.6.0-py2.py3-none-any.whl (462 kB)
+     |████████████████████████████████| 462 kB 117.4 MB/s            
+Collecting absl-py~=0.10
+  Downloading absl_py-0.15.0-py3-none-any.whl (132 kB)
+     |████████████████████████████████| 132 kB 126.9 MB/s            
+Requirement already satisfied: wheel~=0.35 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (0.36.2)
+Collecting astunparse~=1.6.3
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting keras&lt;2.7,&gt;=2.6.0
+  Downloading keras-2.6.0-py2.py3-none-any.whl (1.3 MB)
+     |████████████████████████████████| 1.3 MB 56.4 MB/s            
+Collecting opt-einsum~=3.3.0
+  Using cached opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+Collecting gast==0.4.0
+  Using cached gast-0.4.0-py3-none-any.whl (9.8 kB)
+Collecting clang~=5.0
+  Downloading clang-5.0.tar.gz (30 kB)
+  Preparing metadata (setup.py) ... done
+Collecting keras-preprocessing~=1.1.2
+  Using cached Keras_Preprocessing-1.1.2-py2.py3-none-any.whl (42 kB)
+Requirement already satisfied: google-pasta~=0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (0.2.0)
+Requirement already satisfied: immutables&gt;=0.9 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from contextvars&lt;3,&gt;=2.4-&gt;thinc&lt;8.1.0,&gt;=8.0.12-&gt;spacy-&gt;-r requirements.txt (line 3)) (0.15)
+Requirement already satisfied: cached-property in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from h5py~=3.1.0-&gt;tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (1.5.1)
+Requirement already satisfied: llvmlite&lt;0.36,&gt;=0.35.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from numba&gt;=0.49-&gt;umap-learn&gt;=0.5.0-&gt;bertopic-&gt;-r requirements.txt (line 4)) (0.35.0)
+Collecting markdown&gt;=2.6.8
+  Using cached Markdown-3.3.6-py3-none-any.whl (97 kB)
+Collecting tensorboard-data-server&lt;0.7.0,&gt;=0.6.0
+  Using cached tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+Collecting tensorboard-plugin-wit&gt;=1.6.0
+  Using cached tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+Collecting google-auth-oauthlib&lt;0.5,&gt;=0.4.1
+  Using cached google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Requirement already satisfied: werkzeug&gt;=0.11.15 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorboard&lt;2.7,&gt;=2.6.0-&gt;tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (2.0.2)
+Collecting google-auth&lt;2,&gt;=1.6.3
+  Downloading google_auth-1.35.0-py2.py3-none-any.whl (152 kB)
+     |████████████████████████████████| 152 kB 122.7 MB/s            
+Collecting cachetools&lt;5.0,&gt;=2.0.0
+  Downloading cachetools-4.2.4-py3-none-any.whl (10 kB)
+Collecting pyasn1-modules&gt;=0.2.1
+  Using cached pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from google-auth&lt;2,&gt;=1.6.3-&gt;tensorboard&lt;2.7,&gt;=2.6.0-&gt;tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (4.7.2)
+Collecting requests-oauthlib&gt;=0.7.0
+  Using cached requests_oauthlib-1.3.0-py2.py3-none-any.whl (23 kB)
+Collecting importlib-metadata
+  Downloading importlib_metadata-4.8.3-py3-none-any.whl (17 kB)
+Requirement already satisfied: pyasn1&lt;0.5.0,&gt;=0.4.6 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;2,&gt;=1.6.3-&gt;tensorboard&lt;2.7,&gt;=2.6.0-&gt;tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (0.4.8)
+Collecting oauthlib&gt;=3.0.0
+  Using cached oauthlib-3.1.1-py2.py3-none-any.whl (146 kB)
+Building wheels for collected packages: flatdict, sentence-transformers, hdbscan, umap-learn, clang, pynndescent, termcolor
+  Building wheel for flatdict (setup.py) ... done
+  Created wheel for flatdict: filename=flatdict-4.0.1-py3-none-any.whl size=6931 sha256=6863eb7579a8d2f1926e3e988fcd1bd046862c5709bfe688fcdc19f810585748
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/8c/0b/50/16de22650bd1c28ef15caa790b1b61847aef6c1b57fcb5fe3a
+  Building wheel for sentence-transformers (setup.py) ... done
+  Created wheel for sentence-transformers: filename=sentence_transformers-2.1.0-py3-none-any.whl size=120999 sha256=3b040a7e7691f3a27e98f6d04232269e7ced22510401f6eda5c5a7d0fea09cb4
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/4e/6f/20/06e0c1e209742a37ce7a5a9aa4e420a3abd5081c65b4b34d0a
+  Building wheel for hdbscan (pyproject.toml) ... done
+  Created wheel for hdbscan: filename=hdbscan-0.8.27-cp36-cp36m-linux_x86_64.whl size=2667397 sha256=4b1acd89aa45fc8deeb67c23649cfab514884483d38b5ee84ec28bd9be4da891
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/70/52/fe/83ef5a0e879c48df9968d931d41046226e4cb19a166f0223d2
+  Building wheel for umap-learn (setup.py) ... done
+  Created wheel for umap-learn: filename=umap_learn-0.5.2-py3-none-any.whl size=82696 sha256=95c798c0f87005e2a75e25209cf4bd58a0cabff53af88f3f7718d64ca4b43b86
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/21/13/d2/20d08b12788c5c75e5e02cba181b9c8f1e4cdc8616aabf9209
+  Building wheel for clang (setup.py) ... done
+  Created wheel for clang: filename=clang-5.0-py3-none-any.whl size=30702 sha256=789103012b88d87ac8d15c17ead17899898ce4b3de964ef54c44ffd256d10c44
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/22/4c/94/0583f60c9c5b6024ed64f290cb2d43b06bb4f75577dc3c93a7
+  Building wheel for pynndescent (setup.py) ... done
+  Created wheel for pynndescent: filename=pynndescent-0.5.6-py3-none-any.whl size=53931 sha256=517c0a42c507b644aa61a82dd3dfa524687bb06fbb285921be8abe22332bb273
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/84/0d/b8/fe1e8979b56095e4ea147085c997acf209f61e758765074f5a
+  Building wheel for termcolor (setup.py) ... done
+  Created wheel for termcolor: filename=termcolor-1.1.0-py3-none-any.whl size=4829 sha256=f4c2618c0bdf17d56ffd6678b153bf2993491a3072f9bd50317427cd7d0ccf51
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/93/2a/eb/e58dbcbc963549ee4f065ff80a59f274cc7210b6eab962acdc
+Successfully built flatdict sentence-transformers hdbscan umap-learn clang pynndescent termcolor
+Installing collected packages: typing-extensions, pyasn1-modules, oauthlib, cachetools, requests-oauthlib, importlib-metadata, google-auth, tensorboard-plugin-wit, tensorboard-data-server, markdown, grpcio, google-auth-oauthlib, absl-py, torch, tokenizers, termcolor, tensorflow-estimator, tensorboard, sacremoses, pynndescent, opt-einsum, keras-preprocessing, keras, huggingface-hub, gast, flatbuffers, clang, astunparse, wordcloud, umap-learn, transformers, torchvision, tensorflow-hub, tensorflow, sentencepiece, hdbscan, gensim, fastprogress, top2vec, textblob, tensorflow-text, sentence-transformers, fastdownload, spacytextblob, flatdict, fastai, bertopic
+  Attempting uninstall: typing-extensions
+    Found existing installation: typing-extensions 3.10.0.2
+    Uninstalling typing-extensions-3.10.0.2:
+      Successfully uninstalled typing-extensions-3.10.0.2
+  Attempting uninstall: importlib-metadata
+    Found existing installation: importlib-metadata 3.7.0
+    Uninstalling importlib-metadata-3.7.0:
+      Successfully uninstalled importlib-metadata-3.7.0
+<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+pylint 2.12.2 requires typing-extensions&gt;=3.10.0; python_version &lt; &#34;3.10&#34;, but you have typing-extensions 3.7.4.3 which is incompatible.
+astroid 2.9.0 requires typing-extensions&gt;=3.10; python_version &lt; &#34;3.10&#34;, but you have typing-extensions 3.7.4.3 which is incompatible.
+aiobotocore 1.3.0 requires botocore&lt;1.20.50,&gt;=1.20.49, but you have botocore 1.23.25 which is incompatible.</span>
+Successfully installed absl-py-0.15.0 astunparse-1.6.3 bertopic-0.6.0 cachetools-4.2.4 clang-5.0 fastai-2.5.3 fastdownload-0.0.5 fastprogress-1.0.0 flatbuffers-1.12 flatdict-4.0.1 gast-0.4.0 gensim-4.1.2 google-auth-1.35.0 google-auth-oauthlib-0.4.6 grpcio-1.43.0 hdbscan-0.8.27 huggingface-hub-0.4.0 importlib-metadata-4.8.3 keras-2.6.0 keras-preprocessing-1.1.2 markdown-3.3.6 oauthlib-3.1.1 opt-einsum-3.3.0 pyasn1-modules-0.2.8 pynndescent-0.5.6 requests-oauthlib-1.3.0 sacremoses-0.0.47 sentence-transformers-2.1.0 sentencepiece-0.1.96 spacytextblob-3.0.1 tensorboard-2.6.0 tensorboard-data-server-0.6.1 tensorboard-plugin-wit-1.8.1 tensorflow-2.6.2 tensorflow-estimator-2.6.0 tensorflow-hub-0.12.0 tensorflow-text-2.6.0 termcolor-1.1.0 textblob-0.15.3 tokenizers-0.10.3 top2vec-1.0.22 torch-1.10.1 torchvision-0.11.2 transformers-4.15.0 typing-extensions-3.7.4.3 umap-learn-0.5.2 wordcloud-1.8.1
+2022-01-27 02:52:06.315219: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library &#39;libcudart.so.11.0&#39;; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-10.0/lib64:/usr/local/cuda-10.0/extras/CUPTI/lib64:/usr/local/cuda-10.0/lib:/usr/local/cuda-10.0/efa/lib:/opt/amazon/efa/lib:/opt/amazon/efa/lib64:/usr/local/cuda/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/opt/amazon/efa/lib64:/opt/amazon/openmpi/lib64:/usr/local/lib:/usr/lib:/lib:/usr/local/cuda/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/opt/amazon/efa/lib64:/opt/amazon/openmpi/lib64:/usr/local/lib:/usr/lib:/lib:
+2022-01-27 02:52:06.315250: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Collecting en-core-web-md==3.2.0
+  Downloading https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.2.0/en_core_web_md-3.2.0-py3-none-any.whl (45.7 MB)
+     |████████████████████████████████| 45.7 MB 118.1 MB/s            
+Requirement already satisfied: spacy&lt;3.3.0,&gt;=3.2.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from en-core-web-md==3.2.0) (3.2.1)
+Requirement already satisfied: wasabi&lt;1.1.0,&gt;=0.8.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (0.9.0)
+Requirement already satisfied: srsly&lt;3.0.0,&gt;=2.4.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (2.4.2)
+Requirement already satisfied: numpy&gt;=1.15.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (1.19.5)
+Requirement already satisfied: cymem&lt;2.1.0,&gt;=2.0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (2.0.6)
+Requirement already satisfied: spacy-legacy&lt;3.1.0,&gt;=3.0.8 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (3.0.8)
+Requirement already satisfied: catalogue&lt;2.1.0,&gt;=2.0.6 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (2.0.6)
+Requirement already satisfied: packaging&gt;=20.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (21.3)
+Requirement already satisfied: preshed&lt;3.1.0,&gt;=3.0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (3.0.6)
+Requirement already satisfied: setuptools in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (49.6.0.post20210108)
+Requirement already satisfied: murmurhash&lt;1.1.0,&gt;=0.28.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (1.0.6)
+Requirement already satisfied: tqdm&lt;5.0.0,&gt;=4.38.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (4.62.3)
+Requirement already satisfied: jinja2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (2.11.3)
+Requirement already satisfied: thinc&lt;8.1.0,&gt;=8.0.12 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (8.0.13)
+Requirement already satisfied: requests&lt;3.0.0,&gt;=2.13.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (2.26.0)
+Requirement already satisfied: spacy-loggers&lt;2.0.0,&gt;=1.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (1.0.1)
+Requirement already satisfied: pathy&gt;=0.3.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (0.6.1)
+Requirement already satisfied: langcodes&lt;4.0.0,&gt;=3.2.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (3.3.0)
+Requirement already satisfied: blis&lt;0.8.0,&gt;=0.4.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (0.7.5)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,&lt;1.9.0,&gt;=1.7.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (1.8.2)
+Requirement already satisfied: typing-extensions&lt;4.0.0.0,&gt;=3.7.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (3.7.4.3)
+Requirement already satisfied: typer&lt;0.5.0,&gt;=0.3.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (0.4.0)
+Requirement already satisfied: zipp&gt;=0.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from catalogue&lt;2.1.0,&gt;=2.0.6-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (3.4.0)
+Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from packaging&gt;=20.0-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (2.4.7)
+Requirement already satisfied: smart-open&lt;6.0.0,&gt;=5.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pathy&gt;=0.3.5-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (5.2.1)
+Requirement already satisfied: dataclasses&lt;1.0,&gt;=0.6 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pathy&gt;=0.3.5-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (0.8)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (3.1)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (2.0.9)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (2021.5.30)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests&lt;3.0.0,&gt;=2.13.0-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (1.26.7)
+Requirement already satisfied: contextvars&lt;3,&gt;=2.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from thinc&lt;8.1.0,&gt;=8.0.12-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (2.4)
+Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from typer&lt;0.5.0,&gt;=0.3.0-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (7.1.2)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jinja2-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (1.1.1)
+Requirement already satisfied: immutables&gt;=0.9 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from contextvars&lt;3,&gt;=2.4-&gt;thinc&lt;8.1.0,&gt;=8.0.12-&gt;spacy&lt;3.3.0,&gt;=3.2.0-&gt;en-core-web-md==3.2.0) (0.15)
+Installing collected packages: en-core-web-md
+Successfully installed en-core-web-md-3.2.0
+<span class="ansi-green-fg">✔ Download and installation successful</span>
+You can now load the package via spacy.load(&#39;en_core_web_md&#39;)
+Converted 00_core.ipynb.
+Converted 00_utils.ipynb.
+Converted 01_colab_utils.ipynb.
+Converted 02_scattertext.ipynb.
+Converted 02_text_patterns.ipynb.
+Converted 03_classifier.ipynb.
+Converted 04_sentence_transformers.ipynb.
+Converted 98_embedding_projector.ipynb.
+Converted 99_pattern_CORE.ipynb.
+Converted 99_process_CORE_sample.ipynb.
+Converted 99_process_heffernan_ACL_dataset.ipynb.
+Converted 99_summarization.ipynb.
+Converted 99_text_analysis.ipynb.
+Converted archived_dataset_merge.ipynb.
+Converted flat_connecting.ipynb.
+Converted index.ipynb.
+Converted integrate_spreadsheet.ipynb.
+Converted merge_csvs.ipynb.
+Converted recursive_cluster.ipynb.
+Converted stem_only.ipynb.
+Converted topic_clustering.ipynb.
+converting: /home/ec2-user/SageMaker/octoflow/02_text_patterns.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/archived_dataset_merge.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/03_classifier.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/integrate_spreadsheet.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/index.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/00_core.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/topic_clustering.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/04_sentence_transformers.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/00_utils.ipynb
+2022-01-27 02:52:26.609975: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library &#39;libcudart.so.11.0&#39;; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-10.0/lib64:/usr/local/cuda-10.0/extras/CUPTI/lib64:/usr/local/cuda-10.0/lib:/usr/local/cuda-10.0/efa/lib:/opt/amazon/efa/lib:/opt/amazon/efa/lib64:/usr/local/cuda/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/opt/amazon/efa/lib64:/opt/amazon/openmpi/lib64:/usr/local/lib:/usr/lib:/lib:/usr/local/cuda/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/opt/amazon/efa/lib64:/opt/amazon/openmpi/lib64:/usr/local/lib:/usr/lib:/lib:
+2022-01-27 02:52:26.610025: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2022-01-27 02:52:26.901835: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library &#39;libcudart.so.11.0&#39;; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /usr/local/cuda-10.0/lib64:/usr/local/cuda-10.0/extras/CUPTI/lib64:/usr/local/cuda-10.0/lib:/usr/local/cuda-10.0/efa/lib:/opt/amazon/efa/lib:/opt/amazon/efa/lib64:/usr/local/cuda/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/opt/amazon/efa/lib64:/opt/amazon/openmpi/lib64:/usr/local/lib:/usr/lib:/lib:/usr/local/cuda/lib:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64:/opt/amazon/efa/lib64:/opt/amazon/openmpi/lib64:/usr/local/lib:/usr/lib:/lib:
+2022-01-27 02:52:26.901863: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+converting: /home/ec2-user/SageMaker/octoflow/recursive_cluster.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/flat_connecting.ipynb
+converting: /home/ec2-user/SageMaker/octoflow/99_pattern_CORE.ipynb
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -305,7 +624,489 @@ NotebookApp.rate_limit_window=3.0 (secs)
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">octoflow.core</span> <span class="kn">import</span> <span class="o">*</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">octoflow.core</span> <span class="kn">import</span> <span class="n">get_pubmed_records</span><span class="p">,</span> <span class="n">get_segment</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;downloads/concated.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;PMID&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;PMID&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>96440</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">+=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">a</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[1, 2]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">records</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">step</span><span class="p">,</span> <span class="mi">100001</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+    <span class="n">recs</span> <span class="o">=</span> <span class="n">get_pubmed_records</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">idx</span><span class="o">-</span><span class="n">step</span><span class="p">:</span><span class="n">idx</span><span class="p">][</span><span class="s2">&quot;PMID&quot;</span><span class="p">])</span>
+    <span class="n">records</span> <span class="o">+=</span> <span class="n">recs</span><span class="p">[</span><span class="s2">&quot;PubmedArticle&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">records</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>96440</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pydash</span> <span class="kn">import</span> <span class="n">get</span>
+<span class="n">get</span><span class="p">(</span><span class="n">records</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;MedlineCitation.Article.Abstract.AbstractText&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[StringElement(&#39;This is an updated version of the original Cochrane review first published in Issue 4, 2009. There is an ongoing debate about the indications for, and value of, adjuvant pelvic radiotherapy after radical surgery in women with early cervical cancer. Certain combinations of pathological risk factors are thought to represent sufficient risk for recurrence, that they justify the use of postoperative pelvic radiotherapy, though this has never been shown to improve overall survival, and use of more than one type of treatment (surgery and radiotherapy) increases the risks of side effects and complications.&#39;, attributes={&#39;Label&#39;: &#39;BACKGROUND&#39;, &#39;NlmCategory&#39;: &#39;BACKGROUND&#39;}),
+ StringElement(&#39;To evaluate the effectiveness and safety of adjuvant therapies (radiotherapy, chemotherapy followed by radiotherapy, chemoradiation) after radical hysterectomy for early-stage cervical cancer (FIGO stages IB1, IB2 or IIA).&#39;, attributes={&#39;Label&#39;: &#39;OBJECTIVES&#39;, &#39;NlmCategory&#39;: &#39;OBJECTIVE&#39;}),
+ StringElement(&#39;For the original review, we searched the Cochrane Central Register of Controlled Trials (CENTRAL), Issue 4, 2008. The Cochrane Gynaecological Cancer Group Trials Register, MEDLINE (January 1950 to November 2008), EMBASE (1950 to November 2008). We also searched registers of clinical trials, abstracts of scientific meetings, reference lists of included studies and contacted experts in the field. For this update, we extended the database searches to September 2011 and searched the MetaRegister for ongoing trials.&#39;, attributes={&#39;Label&#39;: &#39;SEARCH METHODS&#39;, &#39;NlmCategory&#39;: &#39;METHODS&#39;}),
+ StringElement(&#39;Randomised controlled trials (RCTs) that compared adjuvant therapies (radiotherapy, chemotherapy followed by radiotherapy, or chemoradiation) with no radiotherapy or chemoradiation, in women with a confirmed histological diagnosis of early cervical cancer who had undergone radical hysterectomy and dissection of the pelvic lymph nodes.&#39;, attributes={&#39;Label&#39;: &#39;SELECTION CRITERIA&#39;, &#39;NlmCategory&#39;: &#39;METHODS&#39;}),
+ StringElement(&#39;Two review authors independently abstracted data and assessed risk of bias. Information on grade 3 and 4 adverse events was collected from the trials. Results were pooled using random-effects meta-analyses.&#39;, attributes={&#39;Label&#39;: &#39;DATA COLLECTION AND ANALYSIS&#39;, &#39;NlmCategory&#39;: &#39;METHODS&#39;}),
+ StringElement(&#39;Two RCTs, which compared adjuvant radiotherapy with no adjuvant radiotherapy, met the inclusion criteria; they randomised and assessed 397 women with stage IB cervical cancer. Meta-analysis of these two RCTs indicated no significant difference in survival at 5 years between women who received radiation and those who received no further treatment (risk ratio (RR) = 0.8; 95% confidence interval (CI) 0.3 to 2.4). However, women who received radiation had a significantly lower risk of disease progression at 5 years (RR 0.6; 95% CI 0.4 to 0.9).Although the risk of serious adverse events was consistently higher if women received radiotherapy rather than no further treatment, these increased risks were not statistically significant, probably because the rate of adverse events was low.&#39;, attributes={&#39;Label&#39;: &#39;MAIN RESULTS&#39;, &#39;NlmCategory&#39;: &#39;RESULTS&#39;}),
+ StringElement(&#39;We found evidence, of moderate quality, that radiation decreases the risk of disease progression compared with no further treatment, but little evidence that it might improve overall survival, in stage IB cervical cancer. The evidence on serious adverse events was equivocal.&#39;, attributes={&#39;Label&#39;: &#34;AUTHORS&#39; CONCLUSIONS&#34;, &#39;NlmCategory&#39;: &#39;CONCLUSIONS&#39;})]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;abstract&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="n">record</span><span class="p">,</span> <span class="s2">&quot;MedlineCitation.Article.Abstract.AbstractText.0&quot;</span><span class="p">))</span> <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">records</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;abstract&quot;</span><span class="p">:</span> <span class="s2">&quot;Abstract&quot;</span><span class="p">})</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+
+<span class="n">alphabets</span><span class="o">=</span> <span class="s2">&quot;([A-Za-z])&quot;</span>
+<span class="n">prefixes</span> <span class="o">=</span> <span class="s2">&quot;(Mr|St|Mrs|Ms|Dr)[.]&quot;</span>
+<span class="n">suffixes</span> <span class="o">=</span> <span class="s2">&quot;(Inc|Ltd|Jr|Sr|Co)&quot;</span>
+<span class="n">starters</span> <span class="o">=</span> <span class="s2">&quot;(Mr|Mrs|Ms|Dr|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)&quot;</span>
+<span class="n">acronyms</span> <span class="o">=</span> <span class="s2">&quot;([A-Z][.][A-Z][.](?:[A-Z][.])?)&quot;</span>
+<span class="n">websites</span> <span class="o">=</span> <span class="s2">&quot;[.](com|net|org|io|gov)&quot;</span>
+
+<span class="k">def</span> <span class="nf">split_into_sentences</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;  &quot;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">prefixes</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">1&lt;prd&gt;&quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">websites</span><span class="p">,</span><span class="s2">&quot;&lt;prd&gt;</span><span class="se">\\</span><span class="s2">1&quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;Ph.D&quot;</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span> <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Ph.D.&quot;</span><span class="p">,</span><span class="s2">&quot;Ph&lt;prd&gt;D&lt;prd&gt;&quot;</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot;\s&quot;</span> <span class="o">+</span> <span class="n">alphabets</span> <span class="o">+</span> <span class="s2">&quot;[.] &quot;</span><span class="p">,</span><span class="s2">&quot; </span><span class="se">\\</span><span class="s2">1&lt;prd&gt; &quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">acronyms</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="n">starters</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">1&lt;stop&gt; </span><span class="se">\\</span><span class="s2">2&quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">alphabets</span> <span class="o">+</span> <span class="s2">&quot;[.]&quot;</span> <span class="o">+</span> <span class="n">alphabets</span> <span class="o">+</span> <span class="s2">&quot;[.]&quot;</span> <span class="o">+</span> <span class="n">alphabets</span> <span class="o">+</span> <span class="s2">&quot;[.]&quot;</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">1&lt;prd&gt;</span><span class="se">\\</span><span class="s2">2&lt;prd&gt;</span><span class="se">\\</span><span class="s2">3&lt;prd&gt;&quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">alphabets</span> <span class="o">+</span> <span class="s2">&quot;[.]&quot;</span> <span class="o">+</span> <span class="n">alphabets</span> <span class="o">+</span> <span class="s2">&quot;[.]&quot;</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\\</span><span class="s2">1&lt;prd&gt;</span><span class="se">\\</span><span class="s2">2&lt;prd&gt;&quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="n">suffixes</span><span class="o">+</span><span class="s2">&quot;[.] &quot;</span><span class="o">+</span><span class="n">starters</span><span class="p">,</span><span class="s2">&quot; </span><span class="se">\\</span><span class="s2">1&lt;stop&gt; </span><span class="se">\\</span><span class="s2">2&quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="n">suffixes</span><span class="o">+</span><span class="s2">&quot;[.]&quot;</span><span class="p">,</span><span class="s2">&quot; </span><span class="se">\\</span><span class="s2">1&lt;prd&gt;&quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">alphabets</span> <span class="o">+</span> <span class="s2">&quot;[.]&quot;</span><span class="p">,</span><span class="s2">&quot; </span><span class="se">\\</span><span class="s2">1&lt;prd&gt;&quot;</span><span class="p">,</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;”&quot;</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span> <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.”&quot;</span><span class="p">,</span><span class="s2">&quot;”.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">&quot;</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span> <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;!&quot;</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span> <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;!</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">!&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">&quot;?&quot;</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span> <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;?</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">?&quot;</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="s2">&quot;.&lt;stop&gt;&quot;</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">,</span><span class="s2">&quot;?&lt;stop&gt;&quot;</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">,</span><span class="s2">&quot;!&lt;stop&gt;&quot;</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;prd&gt;&quot;</span><span class="p">,</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;&lt;stop&gt;&quot;</span><span class="p">)</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="n">sentences</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">sentences</span>
+
+<span class="k">def</span> <span class="nf">get_first</span><span class="p">(</span><span class="n">p</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">get</span><span class="p">(</span><span class="n">split_into_sentences</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sentences&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Abstract&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">split_into_sentences</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;first_sent&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sentences&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">get</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+df.reset_index().to_csv("downloads/pm_abstracts_100k.csv", index = False, header=True)
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>PMID</th>
+      <th>Title</th>
+      <th>Authors</th>
+      <th>Citation</th>
+      <th>First Author</th>
+      <th>Journal/Book</th>
+      <th>Publication Year</th>
+      <th>Create Date</th>
+      <th>PMCID</th>
+      <th>NIHMS ID</th>
+      <th>DOI</th>
+      <th>Abstract</th>
+      <th>sentences</th>
+      <th>first_sent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>23706117</td>
+      <td>Screening for cervical cancer: a systematic re...</td>
+      <td>Peirson L, Fitzpatrick-Lewis D, Ciliska D, War...</td>
+      <td>Syst Rev. 2013 May 24;2:35. doi: 10.1186/2046-...</td>
+      <td>Peirson L</td>
+      <td>Syst Rev</td>
+      <td>2013</td>
+      <td>2013/05/28</td>
+      <td>PMC3681632</td>
+      <td>NaN</td>
+      <td>10.1186/2046-4053-2-35</td>
+      <td>The systematic review on which this paper is b...</td>
+      <td>[The systematic review on which this paper is ...</td>
+      <td>The systematic review on which this paper is b...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>22592722</td>
+      <td>Radiotherapy and chemoradiation after surgery ...</td>
+      <td>Rogers L, Siu SS, Luesley D, Bryant A, Dickins...</td>
+      <td>Cochrane Database Syst Rev. 2012 May 16;5(5):C...</td>
+      <td>Rogers L</td>
+      <td>Cochrane Database Syst Rev</td>
+      <td>2012</td>
+      <td>2012/05/18</td>
+      <td>PMC4171000</td>
+      <td>EMS58087</td>
+      <td>10.1002/14651858.CD007583.pub3</td>
+      <td>This is an updated version of the original Coc...</td>
+      <td>[This is an updated version of the original Co...</td>
+      <td>This is an updated version of the original Coc...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>28199532</td>
+      <td>Carcinogenicity of Human Papillomavirus (HPV) ...</td>
+      <td>Clifford GM, Tully S, Franceschi S.</td>
+      <td>Clin Infect Dis. 2017 May 1;64(9):1228-1235. d...</td>
+      <td>Clifford GM</td>
+      <td>Clin Infect Dis</td>
+      <td>2017</td>
+      <td>2017/02/16</td>
+      <td>PMC5399941</td>
+      <td>NaN</td>
+      <td>10.1093/cid/cix135</td>
+      <td>Data on the relative carcinogenic potential of...</td>
+      <td>[Data on the relative carcinogenic potential o...</td>
+      <td>Data on the relative carcinogenic potential of...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>27598026</td>
+      <td>The role of Pap test screening against cervica...</td>
+      <td>Meggiolaro A, Unim B, Semyonov L, Miccoli S, M...</td>
+      <td>Clin Ter. 2016 Jul-Aug;167(4):124-39. doi: 10....</td>
+      <td>Meggiolaro A</td>
+      <td>Clin Ter</td>
+      <td>2016</td>
+      <td>2016/09/07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>10.7417/CT.2016.1942</td>
+      <td>The first aim of this article is to quantify t...</td>
+      <td>[The first aim of this article is to quantify ...</td>
+      <td>The first aim of this article is to quantify t...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>30824727</td>
+      <td>Prognostic Value of Preoperative Systemic Immu...</td>
+      <td>Huang H, Liu Q, Zhu L, Zhang Y, Lu X, Wu Y, Li...</td>
+      <td>Sci Rep. 2019 Mar 1;9(1):3284. doi: 10.1038/s4...</td>
+      <td>Huang H</td>
+      <td>Sci Rep</td>
+      <td>2019</td>
+      <td>2019/03/03</td>
+      <td>PMC6397230</td>
+      <td>NaN</td>
+      <td>10.1038/s41598-019-39150-0</td>
+      <td>The systemic immune-inflammation index (SII) b...</td>
+      <td>[The systemic immune-inflammation index (SII) ...</td>
+      <td>The systemic immune-inflammation index (SII) b...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#     #print(row)</span>
+<span class="c1">#     print(r[&quot;Title&quot;], r[&quot;abstract&quot;])</span>
 </pre></div>
 
     </div>

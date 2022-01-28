@@ -168,31 +168,6 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages/ipykernel_launcher.py:1: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  &#34;&#34;&#34;Entry point for launching an IPython kernel.
-/home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     {% endraw %}
 
@@ -227,7 +202,111 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">dls</span><span class="o">.</span><span class="n">show_batch</span><span class="p">()</span>
 
 <span class="n">learn</span> <span class="o">=</span> <span class="n">text_classifier_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">AWD_LSTM</span><span class="p">,</span> <span class="n">drop_mult</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">FBeta</span><span class="p">(</span><span class="n">beta</span><span class="o">=</span><span class="mi">1</span><span class="p">)])</span>
-<span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages/numpy/core/_asarray.py:83: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray
+  return array(a, dtype, copy=False, order=order)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+      <th>category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>xxbos xxmaj from xxmaj january 2016 to xxmaj january 2019 at xxmaj xxunk xxmaj hospital xxmaj affiliated with xxmaj shanghai xxmaj xxunk xxmaj xxunk xxmaj university xxmaj school of xxmaj medicine , 208 donors were recruited and randomly assigned to four groups : xxup s - ripc group ( no intervention ; &lt; i &gt; n &lt; / i &gt; = 55 ) , xxup d - ripc group ( donors received xxup ripc ; &lt; i &gt; n &lt; / i &gt; = 51 ) , xxup r - ripc group ( recipients received xxup ripc , &lt; i &gt; n &lt; / i &gt; = 51 ) and xxup dr - ripc group ( both donors and recipients received xxup ripc ; &lt; i &gt; n &lt; / i &gt; = 51 ) .</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>xxbos xxmaj the study included 90 patients with xxmaj american xxmaj society of xxmaj anesthesiologists ' ( asa ) class i and xxup ii , in good cardiopulmonary health , who were assigned to one of three groups : xxmaj restrictive group , which received 1 ml / kg / hr intraoperatively and six hours postoperatively ; xxmaj low liberal group , which received 5 ml / kg / hr of xxmaj ringer 's solution intraoperatively and six hours postoperatively and xxmaj high liberal group , which received 15 ml / kg / hr intraoperatively and 10 ml / kg / hr six hours postoperatively .</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>xxbos xxmaj in this single - dose , open - label , crossover study , healthy adults ( age range , 18 - 65 years ) were randomized equally to one of six treatment sequences for three 72 - hour treatment periods with xxup gsp301 ( xxunk xxunk μg - mometasone 50 μg ) , the mometasone xxunk monotherapy component of xxup gsp301 ( mf - xxunk , 50 μg ) , and xxup u.s . xxmaj food and xxmaj drug xxmaj administration - approved mometasone ( mf , 50 μg ) ; all the treatments were administered as two xxunk per xxunk .</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>xxbos xxmaj twenty - five patients with advanced cancer pancreas progressed or failed on 1st line treatments and justified the inclusion criteria were eligible to receive xxmaj docetaxel 75   mg / m &lt; sup&gt;2 &lt; / sup &gt; over xxunk iv infusion on day 1 , xxmaj oxaliplatin 80   mg / m &lt; sup&gt;2 &lt; / sup &gt; over 2   h iv infusion on day 2 , the cycle was repeated every 3 weeks for 6 - 8 cycles unless disease progression or severe toxicity appeared .</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>xxbos xxmaj this paper contributes to the identification of risk factors for xxup koa progression via a robust feature selection ( xxup fs ) methodology that overcomes two crucial challenges : ( i ) the observed high dimensionality and heterogeneity of the available data that are obtained from the xxmaj osteoarthritis xxmaj initiative ( xxup xxunk ) database and ( ii ) a severe class imbalance problem posed by the fact that the xxup koa xxunk class is significantly smaller than the non - xxunk ' class .</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>xxbos xxmaj the objective of this article is to describe and trigger a serious discussion of such challenges , which include : adopting a new concept of health ; positioning self - rated health as the main outcome of the system ; creating a health - oriented model to guide service provision ; facilitating the identification , scaling up , and sustaining of innovations that can create and spread health ; promoting a culture of health promotion ; and encouraging the emergence of xxmaj precision xxmaj health .</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>xxbos xxmaj the xxunk determined that the main barriers to optimal care of community - based patients with xxup niddm are that 1 ) xxup niddm is not considered or managed as a serious problem by most physicians and their patients ; 2 ) the genetic basis for and refractory nature of obesity are not generally appreciated ; and 3 ) as a complex , multisystemic chronic illness , diabetes xxunk poorly in a health care delivery system designed to deal with acute and episodic illnesses .</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>xxbos xxmaj intimate partner violence ( xxup ipv ) is a serious public health problem that disproportionately affects racial / ethnic minorities in the xxup u.s . xxmaj this study examines risk factors for xxup ipv perpetration that are salient for racial / ethnic minorities ; specifically , we test if racial / ethnic discrimination among xxmaj latino men is associated with xxup ipv perpetration , if poor mental health ( xxup xxunk ) mediates this link , and whether relationships differ by immigrant status .</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>xxbos xxmaj the problem lies in the proximity of " truly " and " only . " xxmaj it was indeed the writer 's intention to emphasise " truly " with an xxunk xxunk : " xxmaj are you sure you need it ? " xxmaj however , the effect is xxunk by the xxunk strength of " only . " xxmaj the reader 's unconscious reading may be that , truly , she needs the help that only modern obstetrics can provide .</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">1e-2</span><span class="p">)</span>
 <span class="n">learn</span><span class="o">.</span><span class="n">show_results</span><span class="p">()</span>
 
 
@@ -239,6 +318,233 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>fbeta_score</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.195548</td>
+      <td>0.103302</td>
+      <td>0.961329</td>
+      <td>0.963422</td>
+      <td>00:21</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>fbeta_score</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.059184</td>
+      <td>0.041885</td>
+      <td>0.985051</td>
+      <td>0.985896</td>
+      <td>00:45</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.038300</td>
+      <td>0.028888</td>
+      <td>0.989004</td>
+      <td>0.989575</td>
+      <td>00:46</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>text</th>
+      <th>category</th>
+      <th>category_</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>xxbos xxmaj this observational study reviews data on the number of cases of yaws identified by each of the five yaws detection approaches : 1 ) passive yaws detection at local clinics after staff attended xxmaj neglected xxmaj tropical xxmaj disease awareness workshops , 2 ) community - based case detection carried out in remote communities by hospital staff who relied on community health workers to identify cases , 3 ) yaws screening following mass xxmaj xxunk xxmaj ulcer outreach programs being xxunk in the district , 4 ) school - based screening programs conducted as stand - alone and follow - up activities to mass outreach events , and 5 ) house to house active surveillance activities conducted in thirty - eight communities .</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>xxbos randomized , prospective single center study , primary setting ; 16 patients with moderate chronic rhinosinusitis with polyps ( xxunk ) , corresponding to a xxmaj lund / xxmaj xxunk score of 6 - 12 ; home based electrostimulation therapy ( est ) with amplitude xxunk current ( base frequency of 4 xxrep 3 0 xxmaj hz , frequency band of 100 - 250 xxmaj hz ) over 2 weeks adjuvant to a concurrent sinusitis therapy with topical corticosteroids ; measurement of nasal nitric oxide concentration and self - assessment of complaints with the questionnaire instrument xxup xxunk xxup xxunk ; survey points t0 before xxup est , t1 after xxup est , t2 6 weeks after t1 .</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>xxbos xxmaj the problem with this is that video - feedback teaching of the necessary type is not always available , so we have developed xxunk that we can xxunk out to distant locations , and which focus the attention of both local xxunk and xxunk on what should be learned . xxmaj because it is essential that most of the teaching is done by the live teacher rather than the xxunk , there are always several " discussion points " so that xxunk can ask questions , or describe their own way of dealing with particular situations .</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>xxbos xxmaj the authors performed a prospective economic substudy alongside the xxup xxunk - timi 54 ( prevention of xxmaj cardiovascular xxmaj events in xxmaj patients xxmaj with xxmaj prior xxmaj heart xxmaj attack xxmaj using xxmaj ticagrelor xxmaj compared to xxmaj placebo on a xxmaj background of aspirin - thrombolysis xxmaj in xxmaj myocardial xxmaj infarction 54 ) trial , which randomized xxunk patients to xxup asa alone , ticagrelor 60   mg twice daily   + low - dose xxup asa , or ticagrelor 90   mg twice daily   + low - dose xxup asa .</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>xxbos a total of xxunk patients were grouped according to their tumor diameter : diameter xxunk   cm , xxmaj xxunk ( g &lt; sub &gt; lg &lt; / sub &gt; ) ( n   =   30 ) ; diameter 6 to 8   cm , xxmaj xxunk ( g &lt; sub &gt; md &lt; / sub &gt; ) ( n   =   57 ) ; and diameter &lt; 6   cm , xxmaj xxunk ( g &lt; sub &gt; sm &lt; / sub &gt; ) ( n   =   166 ) .</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>xxbos xxmaj with the xxup who now placing global emphasis on the primary prevention of hypertension , the goals of this proof - of - concept study were to ( i ) examine whether sex differences exist in the ambulatory bp - lowering effects of xxup irt in young , normotensive men and women and ( ii ) determine whether these reductions can be predicted by simple laboratory stress tasks ( a 2 - min sustained isometric contraction and a math task involving xxunk a two - digit number from a series of numbers ) .</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>xxbos xxmaj twelve women and 16 men , both xxunk trained , performed four sessions in a random order : 1 ) xxup bp followed by xxup lp with three - minutes rest ( xxunk with rest ) ; 2 ) xxup lp followed by xxup bp with three - minutes rest ( xxunk with rest ) ; 3 ) xxup bp followed by xxup lp without rest interval ( xxunk no rest ) , and 4 ) xxup lp followed by xxup bp without rest interval ( xxunk no rest ) .</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>xxbos xxmaj evaluation of singlet - singlet energy transfer between tyrosine ( donor ) and tryptophan ( acceptor ) in the biologically active analog i resulted in a low transfer efficiency ( e approximately xxunk ) xxmaj since xxunk of the xxunk and xxunk residues ( analog xxup ii ) produced a transfer efficiency similar to that observed in compound i , the orientation factor did not present a serious problem for the determination of the xxunk xxunk - trp distances in these peptides on the basis of the xxmaj xxunk equation .</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>xxbos xxmaj to measure minimal model parameters during an insulin - modified frequently sampled intravenous glucose tolerance test ( xxunk ) after adaptation to a forage only diet ( xxunk ) or forage supplemented with either starch / sugar - rich ( ss ) or oil / fibre - rich ( ff ) concentrate feeds ; and to assess glucose and insulin responses to a standardised meal challenge ( xxunk , 4   g / kg xxup bw of xxup ss ) after diet adaptation in adult and aged xxunk .</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>input</th>
+      <th>target</th>
+      <th>predicted</th>
+      <th>probability</th>
+      <th>loss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>xxbos xxmaj in metastatic colorectal cancer , no xxunk or on - treatment markers are available to determine the prognosis or efficacy for chemotherapy in combination with bevacizumab .</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0.999539852142334</td>
+      <td>7.683861255645752</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&#39;0&#39;, TensorText(0), TensorText([0.9788, 0.0212]))</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -264,14 +570,70 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>epoch     train_loss  valid_loss  accuracy  fbeta_score  time    
-0         0.039256    0.034981    0.987027  0.987857     00:22     
-epoch     train_loss  valid_loss  accuracy  fbeta_score  time    
-0         0.037926    0.032206    0.988016  0.988824     00:45     
-1         0.030831    0.029084    0.988386  0.989168     00:46     
-</pre>
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>fbeta_score</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.034807</td>
+      <td>0.032858</td>
+      <td>0.988386</td>
+      <td>0.988920</td>
+      <td>00:24</td>
+    </tr>
+  </tbody>
+</table>
 </div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>accuracy</th>
+      <th>fbeta_score</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.036854</td>
+      <td>0.032124</td>
+      <td>0.989375</td>
+      <td>0.989930</td>
+      <td>00:47</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0.020941</td>
+      <td>0.033860</td>
+      <td>0.989128</td>
+      <td>0.989669</td>
+      <td>00:48</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 </div>
 
 </div>
@@ -330,6 +692,7 @@ epoch     train_loss  valid_loss  accuracy  fbeta_score  time
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;Anaphylaxis is a life-threatening emergency of which reliable epidemiological data are lacking&quot;</span><span class="p">)</span>
+<span class="c1">#(&#39;1&#39;, TensorText(1), TensorText([0.0353, 0.9647]))</span>
 </pre></div>
 
     </div>
@@ -341,9 +704,11 @@ epoch     train_loss  valid_loss  accuracy  fbeta_score  time
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>█</pre>
+
+<div class="output_html rendered_html output_subarea ">
+
 </div>
+
 </div>
 
 <div class="output_area">
@@ -351,11 +716,34 @@ epoch     train_loss  valid_loss  accuracy  fbeta_score  time
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(&#39;1&#39;, TensorText(1), TensorText([0.0353, 0.9647]))</pre>
+<pre>(&#39;0&#39;, TensorText(0), TensorText([0.5266, 0.4734]))</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="k">def</span> <span class="nf">predict_batch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">,</span> <span class="n">rm_type_tfms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">with_input</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">dl</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dls</span><span class="o">.</span><span class="n">test_dl</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">rm_type_tfms</span><span class="o">=</span><span class="n">rm_type_tfms</span><span class="p">,</span> <span class="n">num_workers</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_preds</span><span class="p">(</span><span class="n">dl</span><span class="o">=</span><span class="n">dl</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ret</span>
+
+<span class="n">learn</span><span class="o">.</span><span class="n">predict_batch</span> <span class="o">=</span> <span class="n">predict_batch</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -381,8 +769,14 @@ epoch     train_loss  valid_loss  accuracy  fbeta_score  time
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>█</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-24-4eb0c02ad080&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>predicts <span class="ansi-blue-fg">=</span> learn<span class="ansi-blue-fg">.</span>predict_batch<span class="ansi-blue-fg">(</span>df_test<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;text&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: predict_batch() missing 1 required positional argument: &#39;item&#39;</pre>
 </div>
 </div>
 
