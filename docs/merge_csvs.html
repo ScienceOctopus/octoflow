@@ -1116,6 +1116,581 @@ df.reset_index().to_csv("downloads/pm_abstracts_100k.csv", index = False, header
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>sh setup.sh
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Collecting nbdev
+  Using cached nbdev-1.1.23-py3-none-any.whl (46 kB)
+Collecting nbconvert&lt;6
+  Downloading nbconvert-5.6.1-py2.py3-none-any.whl (455 kB)
+     |████████████████████████████████| 455 kB 26.1 MB/s            
+Collecting fastrelease
+  Using cached fastrelease-0.1.12-py3-none-any.whl (14 kB)
+Requirement already satisfied: jupyter in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbdev) (1.0.0)
+Requirement already satisfied: ipykernel in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbdev) (5.5.0)
+Requirement already satisfied: pip in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbdev) (21.3.1)
+Requirement already satisfied: pyyaml in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbdev) (5.4.1)
+Requirement already satisfied: jupyter-client&lt;7.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbdev) (6.1.11)
+Collecting fastcore&gt;=1.3.21
+  Using cached fastcore-1.3.27-py3-none-any.whl (56 kB)
+Requirement already satisfied: nbformat&gt;=4.4.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbdev) (5.1.2)
+Requirement already satisfied: packaging in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbdev) (21.3)
+Collecting ghapi
+  Using cached ghapi-0.1.19-py3-none-any.whl (51 kB)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (2.8.1)
+Requirement already satisfied: tornado&gt;=4.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (6.1)
+Requirement already satisfied: pyzmq&gt;=13 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (22.0.3)
+Requirement already satisfied: jupyter-core&gt;=4.6.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (4.7.1)
+Requirement already satisfied: traitlets in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jupyter-client&lt;7.0-&gt;nbdev) (4.3.3)
+Requirement already satisfied: bleach in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (4.1.0)
+Requirement already satisfied: testpath in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (0.4.4)
+Requirement already satisfied: jinja2&gt;=2.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (2.11.3)
+Requirement already satisfied: entrypoints&gt;=0.2.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (0.3)
+Requirement already satisfied: pygments in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (2.8.0)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (0.8.4)
+Requirement already satisfied: defusedxml in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (0.6.0)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbconvert&lt;6-&gt;nbdev) (1.4.2)
+Requirement already satisfied: ipython-genutils in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbformat&gt;=4.4.0-&gt;nbdev) (0.2.0)
+Requirement already satisfied: jsonschema!=2.5.0,&gt;=2.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from nbformat&gt;=4.4.0-&gt;nbdev) (3.2.0)
+Requirement already satisfied: ipython&gt;=5.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipykernel-&gt;nbdev) (7.16.1)
+Requirement already satisfied: notebook in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jupyter-&gt;nbdev) (6.4.6)
+Requirement already satisfied: qtconsole in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jupyter-&gt;nbdev) (5.0.2)
+Requirement already satisfied: ipywidgets in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jupyter-&gt;nbdev) (7.6.3)
+Requirement already satisfied: jupyter-console in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jupyter-&gt;nbdev) (6.4.0)
+Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from packaging-&gt;nbdev) (2.4.7)
+Requirement already satisfied: pickleshare in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (0.7.5)
+Requirement already satisfied: backcall in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (0.2.0)
+Requirement already satisfied: pexpect in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (4.8.0)
+Requirement already satisfied: decorator in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (4.4.2)
+Requirement already satisfied: setuptools&gt;=18.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (49.6.0.post20210108)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (3.0.5)
+Requirement already satisfied: jedi&gt;=0.10 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (0.17.2)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jinja2&gt;=2.4-&gt;nbconvert&lt;6-&gt;nbdev) (1.1.1)
+Requirement already satisfied: importlib-metadata in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (3.7.0)
+Requirement already satisfied: attrs&gt;=17.4.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (20.3.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (0.17.3)
+Requirement already satisfied: six&gt;=1.11.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (1.15.0)
+Requirement already satisfied: webencodings in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from bleach-&gt;nbconvert&lt;6-&gt;nbdev) (0.5.1)
+Requirement already satisfied: jupyterlab-widgets&gt;=1.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipywidgets-&gt;jupyter-&gt;nbdev) (1.0.0)
+Requirement already satisfied: widgetsnbextension~=3.5.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from ipywidgets-&gt;jupyter-&gt;nbdev) (3.5.1)
+Requirement already satisfied: prometheus-client in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from notebook-&gt;jupyter-&gt;nbdev) (0.9.0)
+Requirement already satisfied: Send2Trash&gt;=1.8.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from notebook-&gt;jupyter-&gt;nbdev) (1.8.0)
+Requirement already satisfied: argon2-cffi in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from notebook-&gt;jupyter-&gt;nbdev) (20.1.0)
+Requirement already satisfied: terminado&gt;=0.8.3 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from notebook-&gt;jupyter-&gt;nbdev) (0.9.2)
+Requirement already satisfied: nest-asyncio&gt;=1.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from notebook-&gt;jupyter-&gt;nbdev) (1.5.4)
+Requirement already satisfied: qtpy in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from qtconsole-&gt;jupyter-&gt;nbdev) (1.9.0)
+Requirement already satisfied: parso&lt;0.8.0,&gt;=0.7.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jedi&gt;=0.10-&gt;ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (0.7.0)
+Requirement already satisfied: wcwidth in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,&lt;3.1.0,&gt;=2.0.0-&gt;ipython&gt;=5.0.0-&gt;ipykernel-&gt;nbdev) (0.2.5)
+Requirement already satisfied: ptyprocess in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from terminado&gt;=0.8.3-&gt;notebook-&gt;jupyter-&gt;nbdev) (0.7.0)
+Requirement already satisfied: cffi&gt;=1.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from argon2-cffi-&gt;notebook-&gt;jupyter-&gt;nbdev) (1.14.5)
+Requirement already satisfied: typing-extensions&gt;=3.6.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from importlib-metadata-&gt;jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (3.10.0.2)
+Requirement already satisfied: zipp&gt;=0.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from importlib-metadata-&gt;jsonschema!=2.5.0,&gt;=2.4-&gt;nbformat&gt;=4.4.0-&gt;nbdev) (3.4.0)
+Requirement already satisfied: pycparser in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from cffi&gt;=1.0.0-&gt;argon2-cffi-&gt;notebook-&gt;jupyter-&gt;nbdev) (2.20)
+Installing collected packages: nbconvert, fastcore, ghapi, fastrelease, nbdev
+  Attempting uninstall: nbconvert
+    Found existing installation: nbconvert 6.0.7
+    Uninstalling nbconvert-6.0.7:
+      Successfully uninstalled nbconvert-6.0.7
+Successfully installed fastcore-1.3.27 fastrelease-0.1.12 ghapi-0.1.19 nbconvert-5.6.1 nbdev-1.1.23
+Collecting fastai
+  Using cached fastai-2.5.3-py3-none-any.whl (189 kB)
+Collecting flatdict
+  Using cached flatdict-4.0.1.tar.gz (8.3 kB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: spacy in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from -r requirements.txt (line 3)) (3.2.1)
+Collecting bertopic
+  Downloading bertopic-0.9.3-py2.py3-none-any.whl (57 kB)
+     |████████████████████████████████| 57 kB 6.4 MB/s             
+Requirement already satisfied: matplotlib in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from -r requirements.txt (line 5)) (3.3.4)
+Collecting pydash
+  Using cached pydash-5.1.0-py3-none-any.whl (84 kB)
+Requirement already satisfied: pandas in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from -r requirements.txt (line 7)) (1.1.5)
+Requirement already satisfied: biopython in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from -r requirements.txt (line 8)) (1.79)
+Collecting spacytextblob
+  Using cached spacytextblob-3.0.1-py3-none-any.whl (4.1 kB)
+Collecting sentence-transformers
+  Using cached sentence-transformers-2.1.0.tar.gz (78 kB)
+  Preparing metadata (setup.py) ... done
+Collecting top2vec
+  Using cached top2vec-1.0.26-py3-none-any.whl (23 kB)
+Requirement already satisfied: pip in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (21.3.1)
+Requirement already satisfied: pyyaml in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (5.4.1)
+Collecting fastprogress&gt;=0.2.4
+  Using cached fastprogress-1.0.0-py3-none-any.whl (12 kB)
+Requirement already satisfied: fastcore&lt;1.4,&gt;=1.3.22 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (1.3.27)
+Requirement already satisfied: scikit-learn in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (0.24.1)
+Collecting torchvision&gt;=0.8.2
+  Downloading torchvision-0.11.2-cp36-cp36m-manylinux1_x86_64.whl (23.3 MB)
+     |████████████████████████████████| 23.3 MB 95.7 MB/s            
+Requirement already satisfied: requests in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (2.26.0)
+Collecting fastdownload&lt;2,&gt;=0.0.5
+  Using cached fastdownload-0.0.5-py3-none-any.whl (13 kB)
+Requirement already satisfied: scipy in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (1.5.3)
+Requirement already satisfied: packaging in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (21.3)
+Collecting torch&lt;1.11,&gt;=1.7.0
+  Downloading torch-1.10.2-cp36-cp36m-manylinux1_x86_64.whl (881.9 MB)
+     |████████████▊                   | 349.4 MB 83.4 MB/s eta 0:00:07 </pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub_data_rate_limit`.
+
+Current values:
+NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+NotebookApp.rate_limit_window=3.0 (secs)
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |█████████████████████████▏      | 692.2 MB 139.3 MB/s eta 0:00:02</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub_data_rate_limit`.
+
+Current values:
+NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+NotebookApp.rate_limit_window=3.0 (secs)
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |████████████████████████████████| 881.9 MB 7.6 kB/s              
+Requirement already satisfied: pillow&gt;6.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from fastai-&gt;-r requirements.txt (line 1)) (8.4.0)
+Requirement already satisfied: spacy-legacy&lt;3.1.0,&gt;=3.0.8 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (3.0.8)
+Requirement already satisfied: typer&lt;0.5.0,&gt;=0.3.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (0.4.0)
+Requirement already satisfied: pathy&gt;=0.3.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (0.6.1)
+Requirement already satisfied: tqdm&lt;5.0.0,&gt;=4.38.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (4.62.3)
+Requirement already satisfied: thinc&lt;8.1.0,&gt;=8.0.12 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (8.0.13)
+Requirement already satisfied: murmurhash&lt;1.1.0,&gt;=0.28.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (1.0.6)
+Requirement already satisfied: langcodes&lt;4.0.0,&gt;=3.2.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (3.3.0)
+Requirement already satisfied: preshed&lt;3.1.0,&gt;=3.0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (3.0.6)
+Requirement already satisfied: srsly&lt;3.0.0,&gt;=2.4.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (2.4.2)
+Requirement already satisfied: typing-extensions&lt;4.0.0.0,&gt;=3.7.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (3.10.0.2)
+Requirement already satisfied: setuptools in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: cymem&lt;2.1.0,&gt;=2.0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (2.0.6)
+Requirement already satisfied: wasabi&lt;1.1.0,&gt;=0.8.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: jinja2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (2.11.3)
+Requirement already satisfied: blis&lt;0.8.0,&gt;=0.4.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (0.7.5)
+Requirement already satisfied: numpy&gt;=1.15.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (1.19.5)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,&lt;1.9.0,&gt;=1.7.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (1.8.2)
+Requirement already satisfied: catalogue&lt;2.1.0,&gt;=2.0.6 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (2.0.6)
+Requirement already satisfied: spacy-loggers&lt;2.0.0,&gt;=1.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from spacy-&gt;-r requirements.txt (line 3)) (1.0.1)
+Collecting plotly&lt;4.14.3,&gt;=4.7.0
+  Downloading plotly-4.14.2-py2.py3-none-any.whl (13.2 MB)
+     |████████████████████████████████| 13.2 MB 28.3 MB/s            
+Collecting hdbscan&gt;=0.8.27
+  Using cached hdbscan-0.8.27.tar.gz (6.4 MB)
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting umap-learn&gt;=0.5.0
+  Using cached umap-learn-0.5.2.tar.gz (86 kB)
+  Preparing metadata (setup.py) ... done
+Collecting bertopic
+  Downloading bertopic-0.9.2-py2.py3-none-any.whl (57 kB)
+     |████████████████████████████████| 57 kB 8.1 MB/s             
+  Downloading bertopic-0.9.1-py2.py3-none-any.whl (55 kB)
+     |████████████████████████████████| 55 kB 7.9 MB/s              
+  Downloading bertopic-0.9.0-py2.py3-none-any.whl (55 kB)
+     |████████████████████████████████| 55 kB 7.4 MB/s              
+  Downloading bertopic-0.8.1-py2.py3-none-any.whl (53 kB)
+     |████████████████████████████████| 53 kB 574 kB/s              
+  Downloading bertopic-0.8.0-py2.py3-none-any.whl (53 kB)
+     |████████████████████████████████| 53 kB 3.5 MB/s              
+  Downloading bertopic-0.7.0-py2.py3-none-any.whl (40 kB)
+     |████████████████████████████████| 40 kB 11.4 MB/s            
+  Downloading bertopic-0.6.0-py2.py3-none-any.whl (25 kB)
+Requirement already satisfied: python-dateutil&gt;=2.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from matplotlib-&gt;-r requirements.txt (line 5)) (2.8.1)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from matplotlib-&gt;-r requirements.txt (line 5)) (1.3.1)
+Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.3 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from matplotlib-&gt;-r requirements.txt (line 5)) (2.4.7)
+Requirement already satisfied: cycler&gt;=0.10 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from matplotlib-&gt;-r requirements.txt (line 5)) (0.10.0)
+Requirement already satisfied: pytz&gt;=2017.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pandas-&gt;-r requirements.txt (line 7)) (2021.1)
+Collecting textblob&lt;0.16.0,&gt;=0.15.3
+  Using cached textblob-0.15.3-py2.py3-none-any.whl (636 kB)
+Collecting transformers&lt;5.0.0,&gt;=4.6.0
+  Using cached transformers-4.16.0-py3-none-any.whl (3.5 MB)
+Collecting tokenizers&gt;=0.10.3
+  Downloading tokenizers-0.11.4-cp36-cp36m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (6.8 MB)
+     |████████████████████████████████| 6.8 MB 60.4 MB/s            
+Requirement already satisfied: nltk in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from sentence-transformers-&gt;-r requirements.txt (line 10)) (3.4.4)
+Collecting sentencepiece
+  Downloading sentencepiece-0.1.96-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+     |████████████████████████████████| 1.2 MB 86.2 MB/s            
+Collecting huggingface-hub
+  Using cached huggingface_hub-0.4.0-py3-none-any.whl (67 kB)
+Collecting gensim&lt;4.0.0
+  Downloading gensim-3.8.3-cp36-cp36m-manylinux1_x86_64.whl (24.2 MB)
+     |████████████████████████████████| 24.2 MB 63.0 MB/s            
+Collecting wordcloud
+  Downloading wordcloud-1.8.1-cp36-cp36m-manylinux1_x86_64.whl (366 kB)
+     |████████████████████████████████| 366 kB 122.0 MB/s            
+Collecting top2vec
+  Downloading top2vec-1.0.25-py3-none-any.whl (23 kB)
+  Downloading top2vec-1.0.24-py3-none-any.whl (22 kB)
+  Downloading top2vec-1.0.23-py3-none-any.whl (22 kB)
+Collecting gensim
+  Downloading gensim-4.1.2-cp36-cp36m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (24.1 MB)
+     |████████████████████████████████| 24.1 MB 133.0 MB/s            
+Collecting top2vec
+  Downloading top2vec-1.0.22-py3-none-any.whl (22 kB)
+Collecting tensorflow-hub
+  Using cached tensorflow_hub-0.12.0-py2.py3-none-any.whl (108 kB)
+Collecting tensorflow-text
+  Downloading tensorflow_text-2.6.0-cp36-cp36m-manylinux1_x86_64.whl (4.4 MB)
+     |████████████████████████████████| 4.4 MB 132.1 MB/s            
+Collecting tensorflow
+  Downloading tensorflow-2.6.2-cp36-cp36m-manylinux2010_x86_64.whl (458.3 MB)
+     |█████████████████████▊          | 310.8 MB 116.1 MB/s eta 0:00:02</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub_data_rate_limit`.
+
+Current values:
+NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+NotebookApp.rate_limit_window=3.0 (secs)
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |████████████████████████████████| 458.3 MB 6.6 kB/s              
+Requirement already satisfied: zipp&gt;=0.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from catalogue&lt;2.1.0,&gt;=2.0.6-&gt;spacy-&gt;-r requirements.txt (line 3)) (3.4.0)
+Requirement already satisfied: six in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from cycler&gt;=0.10-&gt;matplotlib-&gt;-r requirements.txt (line 5)) (1.15.0)
+Requirement already satisfied: joblib&gt;=1.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from hdbscan&gt;=0.8.27-&gt;bertopic-&gt;-r requirements.txt (line 4)) (1.0.1)
+Requirement already satisfied: cython&gt;=0.27 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from hdbscan&gt;=0.8.27-&gt;bertopic-&gt;-r requirements.txt (line 4)) (0.29.22)
+Requirement already satisfied: dataclasses&lt;1.0,&gt;=0.6 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pathy&gt;=0.3.5-&gt;spacy-&gt;-r requirements.txt (line 3)) (0.8)
+Requirement already satisfied: smart-open&lt;6.0.0,&gt;=5.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pathy&gt;=0.3.5-&gt;spacy-&gt;-r requirements.txt (line 3)) (5.2.1)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (2021.5.30)
+Requirement already satisfied: charset-normalizer~=2.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (2.0.9)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (3.1)
+Requirement already satisfied: urllib3&lt;1.27,&gt;=1.21.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from requests-&gt;fastai-&gt;-r requirements.txt (line 1)) (1.26.7)
+Requirement already satisfied: threadpoolctl&gt;=2.0.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from scikit-learn-&gt;fastai-&gt;-r requirements.txt (line 1)) (2.1.0)
+Requirement already satisfied: contextvars&lt;3,&gt;=2.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from thinc&lt;8.1.0,&gt;=8.0.12-&gt;spacy-&gt;-r requirements.txt (line 3)) (2.4)
+Collecting torch&lt;1.11,&gt;=1.7.0
+  Downloading torch-1.10.1-cp36-cp36m-manylinux1_x86_64.whl (881.9 MB)
+     |████████████▊                   | 350.4 MB 142.3 MB/s eta 0:00:04</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub_data_rate_limit`.
+
+Current values:
+NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+NotebookApp.rate_limit_window=3.0 (secs)
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |██████████████████████████      | 716.2 MB 126.6 MB/s eta 0:00:02</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub_data_rate_limit`.
+
+Current values:
+NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+NotebookApp.rate_limit_window=3.0 (secs)
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |████████████████████████████████| 881.9 MB 4.3 kB/s              
+Requirement already satisfied: importlib-metadata in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from transformers&lt;5.0.0,&gt;=4.6.0-&gt;sentence-transformers-&gt;-r requirements.txt (line 10)) (3.7.0)
+Requirement already satisfied: filelock in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from transformers&lt;5.0.0,&gt;=4.6.0-&gt;sentence-transformers-&gt;-r requirements.txt (line 10)) (3.0.12)
+Collecting sacremoses
+  Using cached sacremoses-0.0.47-py2.py3-none-any.whl (895 kB)
+Requirement already satisfied: regex!=2019.12.17 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from transformers&lt;5.0.0,&gt;=4.6.0-&gt;sentence-transformers-&gt;-r requirements.txt (line 10)) (2020.11.13)
+Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from typer&lt;0.5.0,&gt;=0.3.0-&gt;spacy-&gt;-r requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: numba&gt;=0.49 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from umap-learn&gt;=0.5.0-&gt;bertopic-&gt;-r requirements.txt (line 4)) (0.52.0)
+Collecting pynndescent&gt;=0.5
+  Using cached pynndescent-0.5.6.tar.gz (1.1 MB)
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from jinja2-&gt;spacy-&gt;-r requirements.txt (line 3)) (1.1.1)
+Collecting grpcio&lt;2.0,&gt;=1.37.0
+  Downloading grpcio-1.43.0-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.1 MB)
+     |████████████████████████████████| 4.1 MB 87.2 MB/s            
+Collecting astunparse~=1.6.3
+  Using cached astunparse-1.6.3-py2.py3-none-any.whl (12 kB)
+Collecting keras-preprocessing~=1.1.2
+  Using cached Keras_Preprocessing-1.1.2-py2.py3-none-any.whl (42 kB)
+Requirement already satisfied: wheel~=0.35 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (0.36.2)
+Collecting gast==0.4.0
+  Using cached gast-0.4.0-py3-none-any.whl (9.8 kB)
+Requirement already satisfied: wrapt~=1.12.1 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (1.12.1)
+Collecting opt-einsum~=3.3.0
+  Using cached opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+Collecting flatbuffers~=1.12.0
+  Downloading flatbuffers-1.12-py2.py3-none-any.whl (15 kB)
+Requirement already satisfied: h5py~=3.1.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (3.1.0)
+Requirement already satisfied: protobuf&gt;=3.9.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (3.15.2)
+Collecting typing-extensions&lt;4.0.0.0,&gt;=3.7.4
+  Downloading typing_extensions-3.7.4.3-py3-none-any.whl (22 kB)
+Collecting tensorflow-estimator&lt;2.7,&gt;=2.6.0
+  Downloading tensorflow_estimator-2.6.0-py2.py3-none-any.whl (462 kB)
+     |████████████████████████████████| 462 kB 121.2 MB/s            
+Collecting absl-py~=0.10
+  Downloading absl_py-0.15.0-py3-none-any.whl (132 kB)
+     |████████████████████████████████| 132 kB 123.8 MB/s            
+Collecting termcolor~=1.1.0
+  Using cached termcolor-1.1.0.tar.gz (3.9 kB)
+  Preparing metadata (setup.py) ... done
+Collecting keras&lt;2.7,&gt;=2.6.0
+  Downloading keras-2.6.0-py2.py3-none-any.whl (1.3 MB)
+     |████████████████████████████████| 1.3 MB 64.1 MB/s            
+Requirement already satisfied: google-pasta~=0.2 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (0.2.0)
+Collecting clang~=5.0
+  Downloading clang-5.0.tar.gz (30 kB)
+  Preparing metadata (setup.py) ... done
+Collecting tensorboard&lt;2.7,&gt;=2.6.0
+  Downloading tensorboard-2.6.0-py3-none-any.whl (5.6 MB)
+     |████████████████████████████████| 5.6 MB 39.9 MB/s            
+Requirement already satisfied: immutables&gt;=0.9 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from contextvars&lt;3,&gt;=2.4-&gt;thinc&lt;8.1.0,&gt;=8.0.12-&gt;spacy-&gt;-r requirements.txt (line 3)) (0.15)
+Requirement already satisfied: cached-property in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from h5py~=3.1.0-&gt;tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (1.5.1)
+Requirement already satisfied: llvmlite&lt;0.36,&gt;=0.35.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from numba&gt;=0.49-&gt;umap-learn&gt;=0.5.0-&gt;bertopic-&gt;-r requirements.txt (line 4)) (0.35.0)
+Requirement already satisfied: werkzeug&gt;=0.11.15 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from tensorboard&lt;2.7,&gt;=2.6.0-&gt;tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (2.0.2)
+Collecting tensorboard-data-server&lt;0.7.0,&gt;=0.6.0
+  Using cached tensorboard_data_server-0.6.1-py3-none-manylinux2010_x86_64.whl (4.9 MB)
+Collecting google-auth&lt;2,&gt;=1.6.3
+  Downloading google_auth-1.35.0-py2.py3-none-any.whl (152 kB)
+     |████████████████████████████████| 152 kB 122.2 MB/s            
+Collecting tensorboard-plugin-wit&gt;=1.6.0
+  Using cached tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+Collecting google-auth-oauthlib&lt;0.5,&gt;=0.4.1
+  Using cached google_auth_oauthlib-0.4.6-py2.py3-none-any.whl (18 kB)
+Collecting markdown&gt;=2.6.8
+  Using cached Markdown-3.3.6-py3-none-any.whl (97 kB)
+Requirement already satisfied: rsa&lt;5,&gt;=3.1.4 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from google-auth&lt;2,&gt;=1.6.3-&gt;tensorboard&lt;2.7,&gt;=2.6.0-&gt;tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (4.7.2)
+Collecting cachetools&lt;5.0,&gt;=2.0.0
+  Downloading cachetools-4.2.4-py3-none-any.whl (10 kB)
+Collecting pyasn1-modules&gt;=0.2.1
+  Using cached pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+Collecting requests-oauthlib&gt;=0.7.0
+  Using cached requests_oauthlib-1.3.0-py2.py3-none-any.whl (23 kB)
+Collecting importlib-metadata
+  Downloading importlib_metadata-4.8.3-py3-none-any.whl (17 kB)
+Requirement already satisfied: pyasn1&lt;0.5.0,&gt;=0.4.6 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from pyasn1-modules&gt;=0.2.1-&gt;google-auth&lt;2,&gt;=1.6.3-&gt;tensorboard&lt;2.7,&gt;=2.6.0-&gt;tensorflow-&gt;top2vec-&gt;-r requirements.txt (line 12)) (0.4.8)
+Collecting oauthlib&gt;=3.0.0
+  Using cached oauthlib-3.1.1-py2.py3-none-any.whl (146 kB)
+Building wheels for collected packages: flatdict, sentence-transformers, hdbscan, umap-learn, clang, pynndescent, termcolor
+  Building wheel for flatdict (setup.py) ... done
+  Created wheel for flatdict: filename=flatdict-4.0.1-py3-none-any.whl size=6931 sha256=a4ee0641b697d7f78484365a329e527668cabff3e499dba6ea8f919d6a0c84c3
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/8c/0b/50/16de22650bd1c28ef15caa790b1b61847aef6c1b57fcb5fe3a
+  Building wheel for sentence-transformers (setup.py) ... done
+  Created wheel for sentence-transformers: filename=sentence_transformers-2.1.0-py3-none-any.whl size=120999 sha256=df767ab285b47dc9c926836811a3b0096be56449754303e7f884b1096f47abb1
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/4e/6f/20/06e0c1e209742a37ce7a5a9aa4e420a3abd5081c65b4b34d0a
+  Building wheel for hdbscan (pyproject.toml) ... -</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">from</span> <span class="nn">octoflow.core</span> <span class="kn">import</span> <span class="n">replace_outof_vocab_words</span><span class="p">,</span> <span class="n">vocab30k</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;downloads/pm_abstracts_100k.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#df = df.dropna(subset=[&quot;labels&quot;])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;first_sent&quot;</span><span class="p">]</span> <span class="c1">#backup</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_length&quot;</span><span class="p">]</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)))</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_length&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">]</span>
+
+<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1">#df[&quot;labels&quot;] = df[&quot;labels&quot;].astype(int)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">replace_outof_vocab_words</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">vocab30k</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;downloads/pm_abstracts_100k_masked.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 

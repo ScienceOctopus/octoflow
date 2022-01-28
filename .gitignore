@@ -1,5 +1,8 @@
 .jekyll-cache/
 Gemfile.lock  
+
+
+
 *.bak
 .gitattributes
 .last_checked
@@ -10,6 +13,10 @@ Gemfile.lock
 ~*
 _tmp*
 tmp*
+
+cache_dir
+outputs
+runs
 tags
 models
 data

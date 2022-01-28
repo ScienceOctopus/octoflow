@@ -72,9 +72,76 @@ nb_path: "04_sentence_transformers.ipynb"
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>CUDA Version 10.0.130
-Requirement already satisfied: torch==1.6.0 in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (1.6.0)
-Requirement already satisfied: future in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from torch==1.6.0) (0.18.2)
-Requirement already satisfied: numpy in /home/ec2-user/anaconda3/envs/python3/lib/python3.6/site-packages (from torch==1.6.0) (1.19.5)
+Collecting torch==1.6.0
+  Downloading torch-1.6.0-cp37-cp37m-manylinux1_x86_64.whl (748.8 MB)
+     |██████████████▊                 | 345.4 MB 129.5 MB/s eta 0:00:04</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub_data_rate_limit`.
+
+Current values:
+NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+NotebookApp.rate_limit_window=3.0 (secs)
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |█████████████████████████████▏  | 682.4 MB 135.7 MB/s eta 0:00:01</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>IOPub data rate exceeded.
+The notebook server will temporarily stop sending output
+to the client in order to avoid crashing it.
+To change this limit, set the config variable
+`--NotebookApp.iopub_data_rate_limit`.
+
+Current values:
+NotebookApp.iopub_data_rate_limit=1000000.0 (bytes/sec)
+NotebookApp.rate_limit_window=3.0 (secs)
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     |████████████████████████████████| 748.8 MB 12 kB/s               
+Collecting future
+  Downloading future-0.18.2.tar.gz (829 kB)
+     |████████████████████████████████| 829 kB 75.5 MB/s            
+  Preparing metadata (setup.py) ... done
+Requirement already satisfied: numpy in /home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.7/site-packages (from torch==1.6.0) (1.21.4)
+Building wheels for collected packages: future
+  Building wheel for future (setup.py) ... done
+  Created wheel for future: filename=future-0.18.2-py3-none-any.whl size=491070 sha256=2d313aee385042e47edab0af5b6346f0259f6e29dc100d14f3c08ff6e9f144c7
+  Stored in directory: /home/ec2-user/.cache/pip/wheels/56/b0/fe/4410d17b32f1f0c3cf54cdfb2bc04d7b4b8f4ae377e2229ba0
+Successfully built future
+Installing collected packages: future, torch
+  Attempting uninstall: torch
+    Found existing installation: torch 1.10.2
+    Uninstalling torch-1.10.2:
+      Successfully uninstalled torch-1.10.2
+<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+torchvision 0.11.3 requires torch==1.10.2, but you have torch 1.6.0 which is incompatible.
+fastai 2.5.3 requires torch&lt;1.11,&gt;=1.7.0, but you have torch 1.6.0 which is incompatible.</span>
+Successfully installed future-0.18.2 torch-1.6.0
 </pre>
 </div>
 </div>
@@ -127,19 +194,12 @@ Requirement already satisfied: numpy in /home/ec2-user/anaconda3/envs/python3/li
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-2bf413da58f0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> simpletransformers<span class="ansi-blue-fg">.</span>classification <span class="ansi-green-fg">import</span> ClassificationModel<span class="ansi-blue-fg">,</span> ClassificationArgs
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">import</span> pandas <span class="ansi-green-fg">as</span> pd
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">import</span> logging
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">import</span> sklearn
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">import</span> pandas <span class="ansi-green-fg">as</span> pd
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;simpletransformers&#39;</pre>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>42140</pre>
 </div>
+
 </div>
 
 </div>
@@ -172,117 +232,20 @@ Requirement already satisfied: numpy in /home/ec2-user/anaconda3/envs/python3/li
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subdownloads</span><span class="o">/</span><span class="n">pm_abstracts_100k</span><span class="o">.</span><span class="n">csv</span><span class="s2">&quot;])</span>
 <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_nomask&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="c1">#backup</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_length&quot;</span><span class="p">]</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)))</span>
 
-<div class="output_wrapper">
-<div class="output">
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_length&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">]</span>
 
-<div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-3b0085ca14b9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df <span class="ansi-blue-fg">=</span> df<span class="ansi-blue-fg">.</span>dropna<span class="ansi-blue-fg">(</span>subset<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;labels&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> df<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;text_nomask&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> df<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;text&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-red-fg">#backup</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_length&quot;</span><span class="p">]</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text_length&quot;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">octoflow.core</span> <span class="kn">import</span> <span class="n">replace_outof_vocab_words</span><span class="p">,</span> <span class="n">vocab30k</span>
+<span class="kn">from</span> <span class="nn">octoflow.core</span> <span class="kn">import</span> <span class="n">replace_outof_vocab_words</span><span class="p">,</span> <span class="n">vocab30k</span>
 
 <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">replace_outof_vocab_words</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">vocab30k</span><span class="p">))</span>
-</pre></div>
 
-    </div>
-</div>
-</div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.6/site-packages/ipykernel_launcher.py:3: SettingWithCopyWarning: 
-A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value instead
-
-See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-  This is separate from the ipykernel package so we can avoid doing imports until
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 </pre></div>
 
@@ -300,9 +263,24 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;downloads/40k_balanced_pm_acl.csv&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;downloads/40k_pm_masked.csv&quot;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
 
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 <span class="n">transformers_logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;transformers&quot;</span><span class="p">)</span>
 <span class="n">transformers_logger</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
 
@@ -328,10 +306,10 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Some weights of the model checkpoint at distilbert-base-uncased were not used when initializing DistilBertForSequenceClassification: [&#39;vocab_projector.bias&#39;, &#39;vocab_layer_norm.bias&#39;, &#39;vocab_projector.weight&#39;, &#39;vocab_transform.weight&#39;, &#39;vocab_layer_norm.weight&#39;, &#39;vocab_transform.bias&#39;]
+<pre>Some weights of the model checkpoint at distilbert-base-uncased were not used when initializing DistilBertForSequenceClassification: [&#39;vocab_layer_norm.bias&#39;, &#39;vocab_transform.weight&#39;, &#39;vocab_transform.bias&#39;, &#39;vocab_projector.weight&#39;, &#39;vocab_layer_norm.weight&#39;, &#39;vocab_projector.bias&#39;]
 - This IS expected if you are initializing DistilBertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
 - This IS NOT expected if you are initializing DistilBertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
-Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: [&#39;classifier.bias&#39;, &#39;pre_classifier.bias&#39;, &#39;pre_classifier.weight&#39;, &#39;classifier.weight&#39;]
+Some weights of DistilBertForSequenceClassification were not initialized from the model checkpoint at distilbert-base-uncased and are newly initialized: [&#39;classifier.bias&#39;, &#39;classifier.weight&#39;, &#39;pre_classifier.weight&#39;, &#39;pre_classifier.bias&#39;]
 You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
 </pre>
 </div>
@@ -368,12 +346,14 @@ You should probably TRAIN this model on a down-stream task to be able to use it 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
 INFO:simpletransformers.classification.classification_model: Sliding window enabled
-INFO:simpletransformers.classification.classification_model: 33716 features created from 33712 samples.
+INFO:simpletransformers.classification.classification_model: 31091 features created from 31021 samples.
+/home/ec2-user/anaconda3/envs/JupyterSystemEnv/lib/python3.7/site-packages/transformers/optimization.py:309: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use thePyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  FutureWarning,
 INFO:simpletransformers.classification.classification_model: Training of distilbert model complete. Saved to outputs/.
 INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
 INFO:simpletransformers.classification.classification_model: Sliding window enabled
-INFO:simpletransformers.classification.classification_model: 8428 features created from 8428 samples.
-INFO:simpletransformers.classification.classification_model:{&#39;mcc&#39;: 0.9770116679546422, &#39;tp&#39;: 4334, &#39;tn&#39;: 3997, &#39;fp&#39;: 24, &#39;fn&#39;: 73, &#39;acc&#39;: 0.9884907451352634, &#39;eval_loss&#39;: 0.04475676920948417}
+INFO:simpletransformers.classification.classification_model: 7755 features created from 7755 samples.
+INFO:simpletransformers.classification.classification_model:{&#39;mcc&#39;: 0.9784517530608777, &#39;tp&#39;: 4181, &#39;tn&#39;: 3491, &#39;fp&#39;: 27, &#39;fn&#39;: 56, &#39;acc&#39;: 0.9892972275951, &#39;eval_loss&#39;: 0.041088929229970844}
 </pre>
 </div>
 </div>
@@ -391,7 +371,24 @@ INFO:simpletransformers.classification.classification_model:{&#39;mcc&#39;: 0.97
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfx</span> <span class="o">=</span> <span class="n">dfx</span><span class="p">[</span><span class="n">dfx</span><span class="p">[</span><span class="s2">&quot;first_sent&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">type</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfx</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;downloads/pm_abstracts_100k.csv&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -407,29 +404,29 @@ INFO:simpletransformers.classification.classification_model:{&#39;mcc&#39;: 0.97
 <pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-182-69c80ef4e2bd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">&lt;ipython-input-16-69c80ef4e2bd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>dfx <span class="ansi-blue-fg">=</span> dfx<span class="ansi-blue-fg">[</span>dfx<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;first_sent&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>map<span class="ansi-blue-fg">(</span>type<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">==</span> str<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>reset_index<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-green-fg">~/anaconda3/envs/python3/lib/python3.6/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">reset_index</span><span class="ansi-blue-fg">(self, level, drop, inplace, col_level, col_fill)</span>
-<span class="ansi-green-intense-fg ansi-bold">   4857</span>                 <span class="ansi-red-fg"># to ndarray and maybe infer different dtype</span>
-<span class="ansi-green-intense-fg ansi-bold">   4858</span>                 level_values <span class="ansi-blue-fg">=</span> _maybe_casted_values<span class="ansi-blue-fg">(</span>lev<span class="ansi-blue-fg">,</span> lab<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 4859</span><span class="ansi-red-fg">                 </span>new_obj<span class="ansi-blue-fg">.</span>insert<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> name<span class="ansi-blue-fg">,</span> level_values<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   4860</span> 
-<span class="ansi-green-intense-fg ansi-bold">   4861</span>         new_obj<span class="ansi-blue-fg">.</span>index <span class="ansi-blue-fg">=</span> new_index
+<span class="ansi-green-fg">~/anaconda3/envs/JupyterSystemEnv/lib/python3.7/site-packages/pandas/util/_decorators.py</span> in <span class="ansi-cyan-fg">wrapper</span><span class="ansi-blue-fg">(*args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    309</span>                     stacklevel<span class="ansi-blue-fg">=</span>stacklevel<span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">    310</span>                 )
+<span class="ansi-green-fg">--&gt; 311</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> func<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    312</span> 
+<span class="ansi-green-intense-fg ansi-bold">    313</span>         <span class="ansi-green-fg">return</span> wrapper
 
-<span class="ansi-green-fg">~/anaconda3/envs/python3/lib/python3.6/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">insert</span><span class="ansi-blue-fg">(self, loc, column, value, allow_duplicates)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3626</span>         self<span class="ansi-blue-fg">.</span>_ensure_valid_index<span class="ansi-blue-fg">(</span>value<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3627</span>         value <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_sanitize_column<span class="ansi-blue-fg">(</span>column<span class="ansi-blue-fg">,</span> value<span class="ansi-blue-fg">,</span> broadcast<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">-&gt; 3628</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>_mgr<span class="ansi-blue-fg">.</span>insert<span class="ansi-blue-fg">(</span>loc<span class="ansi-blue-fg">,</span> column<span class="ansi-blue-fg">,</span> value<span class="ansi-blue-fg">,</span> allow_duplicates<span class="ansi-blue-fg">=</span>allow_duplicates<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3629</span> 
-<span class="ansi-green-intense-fg ansi-bold">   3630</span>     <span class="ansi-green-fg">def</span> assign<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">-&gt;</span> <span class="ansi-blue-fg">&#34;DataFrame&#34;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">~/anaconda3/envs/JupyterSystemEnv/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">reset_index</span><span class="ansi-blue-fg">(self, level, drop, inplace, col_level, col_fill)</span>
+<span class="ansi-green-intense-fg ansi-bold">   5797</span>                     )
+<span class="ansi-green-intense-fg ansi-bold">   5798</span> 
+<span class="ansi-green-fg">-&gt; 5799</span><span class="ansi-red-fg">                 </span>new_obj<span class="ansi-blue-fg">.</span>insert<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> name<span class="ansi-blue-fg">,</span> level_values<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   5800</span> 
+<span class="ansi-green-intense-fg ansi-bold">   5801</span>         new_obj<span class="ansi-blue-fg">.</span>index <span class="ansi-blue-fg">=</span> new_index
 
-<span class="ansi-green-fg">~/anaconda3/envs/python3/lib/python3.6/site-packages/pandas/core/internals/managers.py</span> in <span class="ansi-cyan-fg">insert</span><span class="ansi-blue-fg">(self, loc, item, value, allow_duplicates)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1184</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> allow_duplicates <span class="ansi-green-fg">and</span> item <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>items<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1185</span>             <span class="ansi-red-fg"># Should this be a different kind of error??</span>
-<span class="ansi-green-fg">-&gt; 1186</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#34;cannot insert {item}, already exists&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1187</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1188</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isinstance<span class="ansi-blue-fg">(</span>loc<span class="ansi-blue-fg">,</span> int<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">~/anaconda3/envs/JupyterSystemEnv/lib/python3.7/site-packages/pandas/core/frame.py</span> in <span class="ansi-cyan-fg">insert</span><span class="ansi-blue-fg">(self, loc, column, value, allow_duplicates)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4412</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> allow_duplicates <span class="ansi-green-fg">and</span> column <span class="ansi-green-fg">in</span> self<span class="ansi-blue-fg">.</span>columns<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   4413</span>             <span class="ansi-red-fg"># Should this be a different kind of error??</span>
+<span class="ansi-green-fg">-&gt; 4414</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> ValueError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">f&#34;cannot insert {column}, already exists&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4415</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> isinstance<span class="ansi-blue-fg">(</span>loc<span class="ansi-blue-fg">,</span> int<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   4416</span>             <span class="ansi-green-fg">raise</span> TypeError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;loc must be int&#34;</span><span class="ansi-blue-fg">)</span>
 
 <span class="ansi-red-fg">ValueError</span>: cannot insert level_0, already exists</pre>
 </div>
@@ -489,479 +486,10 @@ INFO:simpletransformers.classification.classification_model:{&#39;mcc&#39;: 0.97
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># df = dfx</span>
-<span class="c1"># step = 10000</span>
-<span class="c1"># for idx in range(step, 100001, step):</span>
-<span class="c1">#     print(idx-step, idx) #df[idx-step:idx])</span>
-<span class="c1">#     sl = df[idx-step:idx]</span>
-<span class="c1">#     sl= sl[&quot;first_sent&quot;]</span>
-<span class="c1">#     batch = model.predict(list(sl))</span>
-<span class="c1">#     batches += batch[0]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicts</span> <span class="o">=</span> <span class="n">stepwise</span><span class="p">(</span><span class="mi">4000</span><span class="p">,</span> <span class="n">dfx</span><span class="p">[</span><span class="s2">&quot;first_sent&quot;</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>0 4000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>4000 8000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>8000 12000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>12000 16000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>16000 20000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>20000 24000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>24000 28000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>28000 32000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>32000 36000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>36000 40000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>40000 44000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>44000 48000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>48000 52000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>52000 56000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>56000 60000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>60000 64000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>64000 68000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>68000 72000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>72000 76000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>76000 80000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>80000 84000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>84000 88000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>88000 92000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 4000 features created from 4000 samples.
-INFO:simpletransformers.classification.classification_model: Converting to features started. Cache is not used.
-INFO:simpletransformers.classification.classification_model: Sliding window enabled
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>92000 96000
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>INFO:simpletransformers.classification.classification_model: 3796 features created from 3796 samples.
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
